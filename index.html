@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Free Fire Emote Panel</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #080b12;
+      color: white;
+    }
+
+    /* Header */
+    header {
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0d111c;
+      border-bottom: 1px solid #202838;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #ffb300;
+    }
+
+    nav a {
+      color: #bbb;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #ffb300;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 70px 20px 45px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #ffb300;
+    }
+
+    .hero p {
+      color: #9ca3af;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 25px;
+      background: #ffb300;
+      color: #080b12;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Main */
+    main {
+      width: 86%;
+      max-width: 1200px;
+      margin: auto;
+      padding-bottom: 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 20px 0 25px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+    }
+
+    .section-title p {
+      color: #858b98;
+      margin-top: 8px;
+    }
+
+    /* Search */
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      width: 100%;
+      max-width: 550px;
+      padding: 15px 18px;
+      border-radius: 9px;
+      border: 1px solid #252d3d;
+      outline: none;
+      background: #111722;
+      color: white;
+      font-size: 15px;
+    }
+
+    .search-box input:focus {
+      border-color: #ffb300;
+    }
+
+    /* Categories */
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 28px;
+    }
+
+    .category {
+      border: 1px solid #293244;
+      background: #111722;
+      color: #aaa;
+      padding: 9px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .category.active,
+    .category:hover {
+      background: #ffb300;
+      color: #080b12;
+      border-color: #ffb300;
+    }
+
+    /* Emotes */
+    .emote-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 18px;
+    }
+
+    .emote-card {
+      background: #111722;
+      border: 1px solid #202838;
+      border-radius: 13px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.25s;
+    }
+
+    .emote-card:hover {
+      transform: translateY(-5px);
+      border-color: #ffb300;
+    }
+
+    .emote-icon {
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 58px;
+      background: #0b0f17;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .emote-card h3 {
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .emote-card p {
+      color: #777f8f;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .use-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 7px;
+      background: #ffb300;
+      color: #080b12;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .use-btn:hover {
+      background: #ffc43d;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #202838;
+      color: #707887;
+      font-size: 13px;
+    }
+
+    /* Popup */
+    .popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 20;
+    }
+
+    .popup-box {
+      width: 100%;
+      max-width: 400px;
+      background: #111722;
+      border: 1px solid #30394b;
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .popup-box .big-icon {
+      font-size: 65px;
+      margin-bottom: 15px;
+    }
+
+    .popup-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .popup-box p {
+      color: #9299a7;
+      line-height: 1.5;
+    }
+
+    .close-btn {
+      margin-top: 20px;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      background: #ffb300;
+      font-weight: bold;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        padding: 16px 5%;
+      }
+
+      nav {
+        display: none;
+      }
+
+      main {
+        width: 92%;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .emote-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .emote-card {
+        padding: 13px;
+      }
+
+      .emote-icon {
+        height: 90px;
+        font-size: 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">EMOTE<span>PANEL</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#emotes">Emotes</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+
+  <section class="hero" id="home">
+    <h1>FREE FIRE <span>EMOTES</span></h1>
+
+    <p>
+      Explore your favorite emotes in one simple and modern panel.
+      Fast, clean and free for everyone.
+    </p>
+
+    <a href="#emotes" class="hero-btn">EXPLORE EMOTES</a>
+  </section>
+
+
+  <main id="emotes">
+
+    <div class="section-title">
+      <h2>Emote Panel</h2>
+      <p>Search and explore available emotes.</p>
+    </div>
+
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search emote..."
+      >
+    </div>
+
+
+    <div class="categories">
+      <button class="category active" data-category="all">All</button>
+      <button class="category" data-category="fun">Fun</button>
+      <button class="category" data-category="dance">Dance</button>
+      <button class="category" data-category="special">Special</button>
+    </div>
+
+
+    <div class="emote-grid" id="emoteGrid">
+
+      <div class="emote-card" data-name="Laugh" data-category="fun">
+        <div class="emote-icon">😂</div>
+        <h3>Laugh</h3>
+        <p>Fun Emote</p>
+        <button class="use-btn" onclick="openEmote('Laugh','😂')">
+          View Emote
+        </button>
+      </div>
+
+
+      <div class="emote-card" data-name="Dance" data-category="dance">
+        <div class="emote-icon">🕺</div>
+        <h3>Dance</h3>
+        <p>Dance Emote</p>
+        <button class="use-btn" onclick="openEmote('Dance','🕺')">
+          View Emote
+        </button>
+      </div>
+
+
+      <div class="emote-card" data-name="Fire" data-category="special">
+        <div class="emote-icon">🔥</div>
+        <h3>Fire</h3>
+        <p>Special Emote</p>
+        <button class="use-btn" onclick="openEmote('Fire','🔥')">
+          View Emote
+        </button>
+      </div>
+
+
+      <div class="emote-card" data-name="Cool" data-category="special">
+        <div class="emote-icon">😎</div>
+        <h3>Cool</h3>
+        <p>Special Emote</p>
+        <button class="use-btn" onclick="openEmote('Cool','😎')">
+          View Emote
+        </button>
+      </div>
+
+
+      <div class="emote-card" data-name="Love" data-category="fun">
+        <div class="emote-icon">❤️</div>
+        <h3>Love</h3>
+        <p>Fun Emote</p>
+        <button class="use-btn" onclick="openEmote('Love','❤️')">
+          View Emote
+        </button>
+      </div>
+
+
+      <div class="emote-card" data-name="Victory" data-category="special">
+        <div class="emote-icon">🏆</div>
+        <h3>Victory</h3>
+        <p>Special Emote</p>
+        <button class="use-btn" onclick="openEmote('Victory','🏆')">
+          View Emote
+        </button>
+      </div>
+
+
+      <div class="emote-card" data-name="Party" data-category="dance">
+        <div class="emote-icon">🎉</div>
+        <h3>Party</h3>
+        <p>Dance Emote</p>
+        <button class="use-btn" onclick="openEmote('Party','🎉')">
+          View Emote
+        </button>
+      </div>
+
+
+      <div class="emote-card" data-name="Power" data-category="special">
+        <div class="emote-icon">⚡</div>
+        <h3>Power</h3>
+        <p>Special Emote</p>
+        <button class="use-btn" onclick="openEmote('Power','⚡')">
+          View Emote
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer id="about">
+    <p>© 2026 Free Fire Emote Panel — Fan-made website.</p>
+  </footer>
+
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+
+    <div class="popup-box">
+
+      <div class="big-icon" id="popupIcon">🔥</div>
+
+      <h2 id="popupTitle">Emote</h2>
+
+      <p>
+        This is a fan-made emote information panel.
+        It does not modify game files or provide anti-ban protection.
+      </p>
+
+      <button class="close-btn" onclick="closePopup()">
+        Close
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    const search = document.getElementById("search");
+    const cards = document.querySelectorAll(".emote-card");
+    const categories = document.querySelectorAll(".category");
+
+    search.addEventListener("input", function () {
+
+      const value = search.value.toLowerCase();
+
+      cards.forEach(card => {
+
+        const name = card.dataset.name.toLowerCase();
+
+        if (name.includes(value)) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+
+      });
+
+    });
+
+
+    categories.forEach(button => {
+
+      button.addEventListener("click", function () {
+
+        categories.forEach(btn => {
+          btn.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        const category = this.dataset.category;
+
+        cards.forEach(card => {
+
+          if (
+            category === "all" ||
+            card.dataset.category === category
+          ) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+
+        });
+
+      });
+
+    });
+
+
+    function openEmote(name, icon) {
+
+      document.getElementById("popupTitle").textContent = name;
+      document.getElementById("popupIcon").textContent = icon;
+
+      document.getElementById("popup").style.display = "flex";
+    }
+
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+
+    document.getElementById("popup").addEventListener("click", function(e) {
+
+      if (e.target === this) {
+        closePopup();
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
