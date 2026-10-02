@@ -1,990 +1,1132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ꓣⲉⲭυⲋ - Free Fire Emote Panel</title>
-
-<meta name="description" content="Explore Free Fire emote categories in a modern fan-made panel by ꓣⲉⲭυⲋ.">
-<meta name="keywords" content="Free Fire Emotes, Free Fire Emote Panel, Rare Emotes, New Emotes, Squad Emotes, Duo Emotes">
-<meta name="author" content="ꓣⲉⲭυⲋ">
-<meta name="robots" content="index, follow">
-
-<meta name="google-site-verification" content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk">
-
-<link rel="canonical" href="https://rexus16official.github.io/Free-Fire-Emote-Panel/">
-
-<meta property="og:title" content="ꓣⲉⲭυⲋ - Free Fire Emote Panel">
-<meta property="og:description" content="Explore Free Fire emote categories in a modern fan-made panel.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://rexus16official.github.io/Free-Fire-Emote-Panel/">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#05070c;
-    color:#fff;
-    overflow-x:hidden;
-}
-
-/* ===== BACKGROUND ===== */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-3;
-
-    background:
-    linear-gradient(
-        rgba(3,5,10,.78),
-        rgba(3,5,10,.94)
-    ),
-    url("https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/202210/82fe305f7dbb9f25e68996f8f719e576.jpg");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-}
-
-/* ===== NAVBAR ===== */
-
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:18px 7%;
-
-    background:rgba(5,7,12,.85);
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid rgba(255,174,0,.25);
-}
-
-.logo{
-    font-size:30px;
-    font-weight:900;
-    letter-spacing:2px;
-
-    color:#ffb000;
-
-    text-shadow:
-        0 0 10px rgba(255,176,0,.7),
-        0 0 25px rgba(255,100,0,.3);
-}
-
-.nav-links{
-    display:flex;
-    gap:28px;
-}
-
-.nav-links a{
-    color:#ddd;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:#ffb000;
-    text-shadow:0 0 10px #ffb000;
-}
-
-/* ===== HERO ===== */
-
-.hero{
-    min-height:620px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:80px 20px;
-
-    background:
-    radial-gradient(
-        circle at center,
-        rgba(255,145,0,.16),
-        transparent 45%
-    );
-}
-
-.hero-content{
-    max-width:900px;
-}
-
-.badge{
-    display:inline-block;
-
-    padding:8px 18px;
-    margin-bottom:20px;
-
-    border:1px solid rgba(255,176,0,.5);
-    border-radius:30px;
-
-    color:#ffb000;
-    background:rgba(255,176,0,.08);
-
-    font-size:13px;
-    font-weight:bold;
-
-    box-shadow:0 0 20px rgba(255,176,0,.1);
-}
-
-.hero h1{
-    font-size:clamp(45px,8vw,90px);
-    font-weight:1000;
-    line-height:1;
-
-    margin-bottom:22px;
-
-    text-transform:uppercase;
-
-    text-shadow:
-        0 0 20px rgba(255,176,0,.25);
-}
-
-.hero h1 span{
-    color:#ffb000;
-}
-
-.hero p{
-    max-width:650px;
-    margin:auto;
-
-    color:#b8bec9;
-    line-height:1.8;
-    font-size:17px;
-}
-
-.hero-buttons{
-    margin-top:32px;
-
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.primary-btn,
-.secondary-btn{
-    padding:14px 25px;
-
-    border-radius:9px;
-
-    font-weight:bold;
-    cursor:pointer;
-
-    text-decoration:none;
-
-    transition:.3s;
-}
-
-.primary-btn{
-    background:#ffb000;
-    color:#05070c;
-
-    box-shadow:
-        0 0 20px rgba(255,176,0,.25);
-}
-
-.primary-btn:hover{
-    transform:translateY(-3px);
-    box-shadow:
-        0 0 30px rgba(255,176,0,.5);
-}
-
-.secondary-btn{
-    border:1px solid #343b49;
-    color:white;
-    background:rgba(255,255,255,.04);
-}
-
-.secondary-btn:hover{
-    border-color:#ffb000;
-    color:#ffb000;
-}
-
-/* ===== MAIN ===== */
-
-.container{
-    width:90%;
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:80px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:15px;
-}
-
-.section-title h2{
-    font-size:38px;
-}
-
-.section-title span{
-    color:#ffb000;
-}
-
-.section-title p{
-    color:#8f98a6;
-    margin-top:10px;
-}
-
-/* ===== SEARCH ===== */
-
-.search-box{
-    max-width:650px;
-    margin:35px auto;
-
-    position:relative;
-}
-
-.search-box input{
-    width:100%;
-
-    padding:17px 20px;
-
-    border-radius:12px;
-
-    border:1px solid #293141;
-
-    background:rgba(10,14,22,.85);
-
-    color:white;
-
-    outline:none;
-
-    font-size:15px;
-
-    transition:.3s;
-}
-
-.search-box input:focus{
-    border-color:#ffb000;
-
-    box-shadow:
-        0 0 20px rgba(255,176,0,.12);
-}
-
-/* ===== CARDS ===== */
-
-.cards{
-    display:grid;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(220px,1fr));
-
-    gap:22px;
-}
-
-.card{
-    position:relative;
-
-    padding:32px 22px;
-
-    min-height:230px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    background:
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ꓣⲉⲭυⲋ - Free Fire Emote Panel</title>
+
+  <meta name="description"
+        content="Explore Free Fire emote categories in a modern fan-made panel by ꓣⲉⲭυⲋ.">
+
+  <meta name="keywords"
+        content="Free Fire Emotes, Free Fire Emote Panel, Rare Emotes, Gun Emotes, Squad Emotes, Duo Emotes">
+
+  <meta name="author" content="ꓣⲉⲭυⲋ">
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="google-site-verification"
+        content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk">
+
+  <link rel="canonical"
+        href="https://rexus16official.github.io/Free-Fire-Emote-Panel/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ꓣⲉⲭυⲋ - Free Fire Emote Panel">
+  <meta property="og:description"
+        content="Explore Free Fire emotes in a modern fan-made gaming panel.">
+  <meta property="og:type" content="website">
+  <meta property="og:url"
+        content="https://rexus16official.github.io/Free-Fire-Emote-Panel/">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 132, 0, 0.22), transparent 28%),
+        radial-gradient(circle at 85% 30%, rgba(255, 193, 7, 0.12), transparent 25%),
+        linear-gradient(135deg, #050505 0%, #101010 45%, #17110a 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ===== BACKGROUND EFFECT ===== */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+
+      background:
         linear-gradient(
-            145deg,
-            rgba(19,25,37,.94),
-            rgba(7,10,16,.96)
+          135deg,
+          transparent 0%,
+          rgba(255, 126, 0, 0.06) 45%,
+          transparent 46%,
+          transparent 65%,
+          rgba(255, 170, 0, 0.04) 66%,
+          transparent 67%
         );
 
-    border:1px solid #252d3b;
+      background-size: 520px 520px;
+    }
 
-    border-radius:18px;
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
 
-    overflow:hidden;
+      background:
+        radial-gradient(circle at center, transparent 35%, rgba(0,0,0,0.45) 100%);
+    }
 
-    transition:.35s;
-}
+    /* ===== NAVBAR ===== */
 
-.card::before{
-    content:"";
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
-    position:absolute;
+      width: 100%;
 
-    top:-80px;
-    left:-80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-    width:160px;
-    height:160px;
+      padding: 17px 7%;
 
-    background:#ffb000;
+      background: rgba(5, 5, 5, 0.88);
+      backdrop-filter: blur(14px);
 
-    opacity:.04;
+      border-bottom: 1px solid rgba(255, 140, 0, 0.22);
+    }
 
-    border-radius:50%;
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #ffffff;
 
-    transition:.4s;
-}
+      text-shadow:
+        0 0 8px rgba(255, 140, 0, 0.7),
+        0 0 18px rgba(255, 100, 0, 0.25);
+    }
 
-.card:hover{
-    transform:translateY(-8px);
+    .logo span {
+      color: #ff9d00;
+    }
 
-    border-color:#ffb000;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
 
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.5),
-        0 0 25px rgba(255,176,0,.08);
-}
+    nav ul li a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
 
-.card:hover::before{
-    transform:scale(2);
-}
+      transition: 0.25s;
+    }
 
-.card-icon{
-    width:65px;
-    height:65px;
+    nav ul li a:hover {
+      color: #ff9d00;
+      text-shadow: 0 0 10px rgba(255, 157, 0, 0.5);
+    }
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    /* ===== HERO ===== */
 
-    margin-bottom:18px;
+    .hero {
+      min-height: 570px;
 
-    border-radius:16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-    background:rgba(255,176,0,.08);
+      text-align: center;
 
-    border:1px solid rgba(255,176,0,.25);
+      padding: 80px 20px 70px;
 
-    font-size:30px;
+      position: relative;
+    }
 
-    box-shadow:
-        inset 0 0 20px rgba(255,176,0,.05);
-}
+    .hero::before {
+      content: "";
+      position: absolute;
 
-.card h3{
-    font-size:20px;
-    margin-bottom:9px;
-}
+      width: 600px;
+      height: 300px;
 
-.card p{
-    color:#8f98a6;
+      background: radial-gradient(
+        ellipse,
+        rgba(255, 126, 0, 0.18),
+        transparent 70%
+      );
 
-    font-size:14px;
-    line-height:1.5;
+      filter: blur(15px);
+      pointer-events: none;
+    }
 
-    margin-bottom:20px;
-}
+    .badge {
+      position: relative;
 
-.view-btn{
-    padding:10px 20px;
+      padding: 8px 17px;
+      margin-bottom: 20px;
 
-    border:0;
-    border-radius:8px;
+      border: 1px solid rgba(255, 157, 0, 0.45);
+      border-radius: 30px;
 
-    background:#ffb000;
-    color:#07090d;
+      background: rgba(255, 126, 0, 0.08);
 
-    font-weight:800;
+      color: #ffad32;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
 
-    cursor:pointer;
+      box-shadow: 0 0 20px rgba(255, 126, 0, 0.08);
+    }
 
-    transition:.3s;
-}
+    .hero h1 {
+      position: relative;
 
-.view-btn:hover{
-    transform:scale(1.05);
+      font-size: clamp(38px, 7vw, 76px);
+      line-height: 1.05;
 
-    box-shadow:
-        0 0 18px rgba(255,176,0,.35);
-}
+      font-weight: 1000;
+      letter-spacing: 2px;
 
-/* ===== ABOUT ===== */
+      text-transform: uppercase;
 
-.about-box{
-    padding:40px;
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #ffffff 48%,
+        #ffad28 100%
+      );
 
-    background:rgba(10,14,22,.75);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 
-    border:1px solid #252d3b;
+      text-shadow: 0 0 30px rgba(255, 126, 0, 0.12);
+    }
 
-    border-radius:18px;
+    .hero p {
+      position: relative;
 
-    text-align:center;
-}
+      max-width: 650px;
 
-.about-box h2{
-    margin-bottom:15px;
-}
+      margin-top: 20px;
 
-.about-box h2 span{
-    color:#ffb000;
-}
+      color: #bdbdbd;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-.about-box p{
-    color:#a8b0bd;
+    /* ===== SEARCH ===== */
 
-    line-height:1.8;
+    .search-box {
+      position: relative;
 
-    max-width:800px;
+      width: min(600px, 90%);
 
-    margin:auto;
-}
+      margin-top: 35px;
+    }
 
-/* ===== FOOTER ===== */
+    .search-box input {
+      width: 100%;
 
-footer{
-    padding:30px 20px;
+      padding: 17px 22px;
 
-    text-align:center;
+      border: 1px solid rgba(255, 157, 0, 0.25);
+      border-radius: 12px;
 
-    background:#03050a;
+      outline: none;
 
-    border-top:1px solid #202633;
+      background: rgba(15, 15, 15, 0.9);
 
-    color:#737d8d;
+      color: #fff;
 
-    font-size:13px;
-}
+      font-size: 15px;
 
-footer strong{
-    color:#ffb000;
-}
+      box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.35),
+        inset 0 0 20px rgba(255, 126, 0, 0.02);
 
-/* ===== POPUP ===== */
+      transition: 0.3s;
+    }
 
-.popup{
-    position:fixed;
+    .search-box input::placeholder {
+      color: #777;
+    }
 
-    inset:0;
+    .search-box input:focus {
+      border-color: #ff9d00;
 
-    z-index:2000;
+      box-shadow:
+        0 0 0 3px rgba(255, 157, 0, 0.08),
+        0 10px 40px rgba(0, 0, 0, 0.45);
+    }
 
-    display:none;
+    /* ===== SECTION ===== */
 
-    align-items:center;
-    justify-content:center;
+    .section {
+      padding: 80px 7%;
+      position: relative;
+    }
 
-    padding:20px;
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
 
-    background:rgba(0,0,0,.78);
+    .section-title h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
 
-    backdrop-filter:blur(8px);
-}
+    .section-title p {
+      color: #888;
+      font-size: 14px;
+    }
 
-.popup-box{
-    width:100%;
-    max-width:420px;
+    /* ===== CATEGORY GRID ===== */
 
-    padding:40px 30px;
+    .categories {
+      max-width: 1200px;
+      margin: auto;
 
-    text-align:center;
+      display: grid;
 
-    border-radius:20px;
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
 
-    background:
+      gap: 22px;
+    }
+
+    .category-card {
+      position: relative;
+
+      padding: 30px 22px;
+
+      min-height: 230px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background:
         linear-gradient(
-            145deg,
-            #151b27,
-            #080b12
+          145deg,
+          rgba(30, 30, 30, 0.96),
+          rgba(12, 12, 12, 0.96)
         );
 
-    border:1px solid rgba(255,176,0,.4);
+      border: 1px solid rgba(255, 255, 255, 0.07);
 
-    box-shadow:
-        0 25px 80px rgba(0,0,0,.7),
-        0 0 30px rgba(255,176,0,.08);
+      border-radius: 18px;
 
-    animation:popup .25s ease;
-}
+      overflow: hidden;
 
-.popup-icon{
-    font-size:55px;
-    margin-bottom:15px;
-}
-
-.popup-box h2{
-    color:#ffb000;
-    margin-bottom:12px;
-}
-
-.popup-box p{
-    color:#a8b0bd;
-    line-height:1.6;
-}
-
-.close-btn{
-    margin-top:25px;
-
-    padding:11px 25px;
-
-    border:0;
-    border-radius:8px;
-
-    background:#ffb000;
-    color:#080a0f;
-
-    font-weight:bold;
-
-    cursor:pointer;
-}
-
-@keyframes popup{
-    from{
-        transform:scale(.85);
-        opacity:0;
+      transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
     }
 
-    to{
-        transform:scale(1);
-        opacity:1;
-    }
-}
+    .category-card::before {
+      content: "";
 
-/* ===== MOBILE ===== */
+      position: absolute;
 
-@media(max-width:700px){
+      top: -100px;
+      left: 50%;
 
-    .navbar{
-        padding:16px 5%;
-    }
+      width: 180px;
+      height: 180px;
 
-    .logo{
-        font-size:23px;
-    }
+      transform: translateX(-50%);
 
-    .nav-links{
-        display:none;
+      background: rgba(255, 126, 0, 0.12);
+
+      filter: blur(45px);
+
+      transition: 0.3s;
     }
 
-    .hero{
-        min-height:540px;
+    .category-card:hover {
+      transform: translateY(-8px);
+
+      border-color: rgba(255, 157, 0, 0.45);
+
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(255, 126, 0, 0.08);
     }
 
-    .hero h1{
-        font-size:46px;
+    .category-card:hover::before {
+      background: rgba(255, 126, 0, 0.2);
     }
 
-    .hero p{
-        font-size:15px;
+    .icon {
+      position: relative;
+
+      width: 72px;
+      height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 18px;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 157, 0, 0.15),
+          rgba(255, 126, 0, 0.03)
+        );
+
+      border: 1px solid rgba(255, 157, 0, 0.18);
+
+      font-size: 34px;
+
+      box-shadow:
+        inset 0 0 25px rgba(255, 126, 0, 0.05);
     }
 
-    .container{
-        padding:60px 0;
+    .category-card h3 {
+      position: relative;
+
+      font-size: 19px;
+      margin-bottom: 8px;
     }
 
-    .section-title h2{
-        font-size:30px;
+    .category-card p {
+      position: relative;
+
+      color: #888;
+      font-size: 13px;
+
+      margin-bottom: 20px;
     }
 
-    .cards{
-        grid-template-columns:1fr;
+    .view-btn {
+      position: relative;
+
+      border: none;
+
+      padding: 10px 20px;
+
+      border-radius: 8px;
+
+      background: linear-gradient(
+        135deg,
+        #ffb000,
+        #ff7600
+      );
+
+      color: #111;
+
+      font-size: 12px;
+      font-weight: 900;
+
+      cursor: pointer;
+
+      transition: 0.25s;
     }
 
-    .about-box{
-        padding:28px 20px;
-    }
-}
+    .view-btn:hover {
+      transform: scale(1.05);
 
-</style>
+      box-shadow:
+        0 0 18px rgba(255, 145, 0, 0.35);
+    }
+
+    /* ===== ABOUT ===== */
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+
+      padding: 35px;
+
+      background: rgba(16, 16, 16, 0.8);
+
+      border: 1px solid rgba(255, 255, 255, 0.06);
+
+      border-radius: 18px;
+
+      text-align: center;
+    }
+
+    .about h2 {
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      color: #999;
+
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .warning {
+      margin-top: 20px;
+
+      padding: 12px;
+
+      border-radius: 10px;
+
+      background: rgba(255, 157, 0, 0.06);
+
+      border: 1px solid rgba(255, 157, 0, 0.12);
+
+      color: #bdbdbd;
+
+      font-size: 12px;
+    }
+
+    /* ===== FOOTER ===== */
+
+    footer {
+      margin-top: 40px;
+
+      padding: 30px 20px;
+
+      text-align: center;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+      background: rgba(5, 5, 5, 0.7);
+    }
+
+    footer .footer-logo {
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      color: #666;
+      font-size: 12px;
+    }
+
+    /* ===== POPUP ===== */
+
+    .popup {
+      position: fixed;
+
+      inset: 0;
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 20px;
+
+      background: rgba(0, 0, 0, 0.78);
+
+      backdrop-filter: blur(8px);
+
+      z-index: 2000;
+    }
+
+    .popup.active {
+      display: flex;
+    }
+
+    .popup-box {
+      width: min(430px, 100%);
+
+      padding: 40px 30px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          145deg,
+          #1b1b1b,
+          #0c0c0c
+        );
+
+      border: 1px solid rgba(255, 157, 0, 0.3);
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.7),
+        0 0 35px rgba(255, 126, 0, 0.08);
+
+      animation: popupIn 0.25s ease;
+    }
+
+    @keyframes popupIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .popup-box .popup-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .popup-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .popup-box p {
+      color: #999;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .close-btn {
+      margin-top: 25px;
+
+      padding: 10px 25px;
+
+      border: none;
+      border-radius: 8px;
+
+      background: #ff9d00;
+
+      color: #111;
+
+      font-weight: 900;
+
+      cursor: pointer;
+    }
+
+    /* ===== NO RESULTS ===== */
+
+    .no-results {
+      display: none;
+
+      text-align: center;
+
+      color: #777;
+
+      padding: 30px;
+    }
+
+    /* ===== MOBILE ===== */
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      nav ul {
+        gap: 14px;
+      }
+
+      nav ul li a {
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: 520px;
+        padding-top: 65px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .section {
+        padding: 65px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 28px;
+      }
+
+      .categories {
+        grid-template-columns: 1fr;
+      }
+
+      .category-card {
+        min-height: 215px;
+      }
+    }
+
+    @media (max-width: 430px) {
+
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav ul {
+        gap: 20px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .badge {
+        font-size: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
+  <!-- ===== NAVBAR ===== -->
 
-<header class="navbar">
-
-    <div class="logo">ꓣⲉⲭυⲋ</div>
-
-    <nav class="nav-links">
-        <a href="#home">HOME</a>
-        <a href="#emotes">EMOTES</a>
-        <a href="#about">ABOUT</a>
-    </nav>
-
-</header>
-
-
-<!-- ===== HERO ===== -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <div class="badge">
-            🎮 FAN-MADE FREE FIRE PROJECT
-        </div>
-
-        <h1>
-            FREE FIRE<br>
-            <span>EMOTE PANEL</span>
-        </h1>
-
-        <p>
-            Discover different Free Fire emote categories
-            in a clean, modern and gaming-inspired panel
-            created by ꓣⲉⲭυⲋ.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#emotes" class="primary-btn">
-                EXPLORE EMOTES
-            </a>
-
-            <a href="#about" class="secondary-btn">
-                ABOUT PROJECT
-            </a>
-
-        </div>
-
+  <nav>
+    <div class="logo">
+      ꓣⲉⲭυⲋ<span>•</span>
     </div>
 
-</section>
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#emotes">EMOTES</a></li>
+      <li><a href="#about">ABOUT</a></li>
+    </ul>
+  </nav>
 
 
-<!-- ===== EMOTES ===== -->
+  <!-- ===== HERO ===== -->
 
-<section class="container" id="emotes">
+  <section class="hero" id="home">
+
+    <div class="badge">
+      FAN-MADE FREE FIRE PROJECT
+    </div>
+
+    <h1>
+      FREE FIRE<br>
+      EMOTE PANEL
+    </h1>
+
+    <p>
+      Explore your favorite Free Fire emote categories
+      in one simple, modern and gaming-style panel.
+    </p>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search emote category..."
+        autocomplete="off"
+      >
+    </div>
+
+  </section>
+
+
+  <!-- ===== EMOTES ===== -->
+
+  <section class="section" id="emotes">
 
     <div class="section-title">
 
-        <h2>
-            EMOTE <span>CATEGORIES</span>
-        </h2>
+      <h2>EMOTE CATEGORIES</h2>
+
+      <p>
+        Choose a category to explore
+      </p>
+
+    </div>
+
+
+    <div class="categories" id="categoryGrid">
+
+
+      <!-- RARE -->
+
+      <div
+        class="category-card"
+        data-name="rare emotes"
+      >
+
+        <div class="icon">
+          💎
+        </div>
+
+        <h3>
+          Rare Emotes
+        </h3>
 
         <p>
-            Select a category to explore upcoming content.
-        </p>
-
-    </div>
-
-
-    <!-- SEARCH -->
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            id="search"
-            placeholder="🔎 Search emote category..."
-        >
-
-    </div>
-
-
-    <!-- CARDS -->
-
-    <div class="cards" id="cards">
-
-
-        <!-- RARE -->
-
-        <div class="card" data-name="rare emotes">
-
-            <div class="card-icon">
-                💎
-            </div>
-
-            <h3>
-                Rare Emotes
-            </h3>
-
-            <p>
-                Discover rare and exclusive emotes.
-            </p>
-
-            <button
-                class="view-btn"
-                onclick="comingSoon('Rare Emotes')"
-            >
-                VIEW
-            </button>
-
-        </div>
-
-
-        <!-- MAX GUN -->
-
-        <div class="card" data-name="max gun emotes">
-
-            <div class="card-icon">
-                🔥
-            </div>
-
-            <h3>
-                Max Gun Emotes
-            </h3>
-
-            <p>
-                Special emote collection coming soon.
-            </p>
-
-            <button
-                class="view-btn"
-                onclick="comingSoon('Max Gun Emotes')"
-            >
-                VIEW
-            </button>
-
-        </div>
-
-
-        <!-- NEW -->
-
-        <div class="card" data-name="new emotes">
-
-            <div class="card-icon">
-                ✨
-            </div>
-
-            <h3>
-                New Emotes
-            </h3>
-
-            <p>
-                Explore the latest emote collection.
-            </p>
-
-            <button
-                class="view-btn"
-                onclick="comingSoon('New Emotes')"
-            >
-                VIEW
-            </button>
-
-        </div>
-
-
-        <!-- SQUAD -->
-
-        <div class="card" data-name="squad emotes">
-
-            <div class="card-icon">
-                👥
-            </div>
-
-            <h3>
-                Squad Emotes
-            </h3>
-
-            <p>
-                Emotes made for squad moments.
-            </p>
-
-            <button
-                class="view-btn"
-                onclick="comingSoon('Squad Emotes')"
-            >
-                VIEW
-            </button>
-
-        </div>
-
-
-        <!-- DUO -->
-
-        <div class="card" data-name="duo emotes">
-
-            <div class="card-icon">
-                🤝
-            </div>
-
-            <h3>
-                Duo Emotes
-            </h3>
-
-            <p>
-                Duo emote collection coming soon.
-            </p>
-
-            <button
-                class="view-btn"
-                onclick="comingSoon('Duo Emotes')"
-            >
-                VIEW
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ===== ABOUT ===== -->
-
-<section class="container" id="about">
-
-    <div class="about-box">
-
-        <h2>
-            ABOUT <span>ꓣⲉⲭυⲋ</span>
-        </h2>
-
-        <p>
-            Free Fire Emote Panel is a fan-made informational
-            project created by ꓣⲉⲭυⲋ.
-            The website is designed to organize and present
-            emote categories in a simple and modern interface.
-            This project does not modify game files or provide
-            anti-ban protection.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ===== FOOTER ===== -->
-
-<footer>
-
-    © 2026
-    <strong>ꓣⲉⲭυⲋ</strong>
-    — Free Fire Emote Panel
-
-    <br><br>
-
-    Fan-made website. Not affiliated with Garena.
-
-</footer>
-
-
-<!-- ===== POPUP ===== -->
-
-<div class="popup" id="popup">
-
-    <div class="popup-box">
-
-        <div class="popup-icon">
-            🚀
-        </div>
-
-        <h2>
-            COMING SOON
-        </h2>
-
-        <p id="popupText">
-            New content is currently under development.
+          Rare and classic emote collection
         </p>
 
         <button
-            class="close-btn"
-            onclick="closePopup()"
+          class="view-btn"
+          onclick="openPopup('Rare Emotes')"
         >
-            CLOSE
+          VIEW
         </button>
+
+      </div>
+
+
+      <!-- MAX GUN -->
+
+      <div
+        class="category-card"
+        data-name="max gun emotes gun"
+      >
+
+        <div class="icon">
+          🔥
+        </div>
+
+        <h3>
+          Max Gun Emotes
+        </h3>
+
+        <p>
+          Gun-themed emote collection
+        </p>
+
+        <button
+          class="view-btn"
+          onclick="openPopup('Max Gun Emotes')"
+        >
+          VIEW
+        </button>
+
+      </div>
+
+
+      <!-- NEW -->
+
+      <div
+        class="category-card"
+        data-name="new emotes latest"
+      >
+
+        <div class="icon">
+          ✨
+        </div>
+
+        <h3>
+          New Emotes
+        </h3>
+
+        <p>
+          Latest emote category
+        </p>
+
+        <button
+          class="view-btn"
+          onclick="openPopup('New Emotes')"
+        >
+          VIEW
+        </button>
+
+      </div>
+
+
+      <!-- SQUAD -->
+
+      <div
+        class="category-card"
+        data-name="squad emotes team"
+      >
+
+        <div class="icon">
+          👥
+        </div>
+
+        <h3>
+          Squad Emotes
+        </h3>
+
+        <p>
+          Emotes for squad moments
+        </p>
+
+        <button
+          class="view-btn"
+          onclick="openPopup('Squad Emotes')"
+        >
+          VIEW
+        </button>
+
+      </div>
+
+
+      <!-- DUO -->
+
+      <div
+        class="category-card"
+        data-name="duo emotes friends"
+      >
+
+        <div class="icon">
+          🤝
+        </div>
+
+        <h3>
+          Duo Emotes
+        </h3>
+
+        <p>
+          Emotes made for duo moments
+        </p>
+
+        <button
+          class="view-btn"
+          onclick="openPopup('Duo Emotes')"
+        >
+          VIEW
+        </button>
+
+      </div>
+
 
     </div>
 
-</div>
+
+    <div
+      class="no-results"
+      id="noResults"
+    >
+      No category found.
+    </div>
+
+  </section>
 
 
-<script>
+  <!-- ===== ABOUT ===== -->
 
-/* ===== SEARCH ===== */
+  <section
+    class="section"
+    id="about"
+  >
 
-const search = document.getElementById("search");
+    <div class="about">
 
-const cards = document.querySelectorAll(".card");
+      <h2>
+        ABOUT ꓣⲉⲭυⲋ
+      </h2>
 
-search.addEventListener("input", function(){
+      <p>
+        This is a fan-made Free Fire emote project created
+        for informational and entertainment purposes.
+        The website does not modify game files, provide
+        anti-ban protection, or interact with game accounts.
+      </p>
 
-    const value = this.value.toLowerCase().trim();
+      <div class="warning">
+        Free Fire is a trademark of Garena.
+        This website is not affiliated with or endorsed by Garena.
+      </div>
 
-    cards.forEach(function(card){
+    </div>
 
-        const name =
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+
+  <footer>
+
+    <div class="footer-logo">
+      ꓣⲉⲭυⲋ
+    </div>
+
+    <p>
+      Fan-made website • Not affiliated with Garena
+    </p>
+
+  </footer>
+
+
+  <!-- ===== POPUP ===== -->
+
+  <div
+    class="popup"
+    id="popup"
+  >
+
+    <div class="popup-box">
+
+      <div class="popup-icon">
+        ⚡
+      </div>
+
+      <h2 id="popupTitle">
+        COMING SOON
+      </h2>
+
+      <p>
+        This category is currently being prepared.
+        More emotes will be added soon.
+      </p>
+
+      <button
+        class="close-btn"
+        onclick="closePopup()"
+      >
+        CLOSE
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ===== JAVASCRIPT ===== -->
+
+  <script>
+
+    /* SEARCH */
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+    const cards =
+      document.querySelectorAll(".category-card");
+
+    const noResults =
+      document.getElementById("noResults");
+
+
+    searchInput.addEventListener(
+      "input",
+      function () {
+
+        const search =
+          this.value.toLowerCase().trim();
+
+        let visibleCards = 0;
+
+
+        cards.forEach(function (card) {
+
+          const name =
             card.getAttribute("data-name");
 
-        if(name.includes(value)){
+          if (name.includes(search)) {
 
             card.style.display = "flex";
 
-        }else{
+            visibleCards++;
+
+          } else {
 
             card.style.display = "none";
 
+          }
+
+        });
+
+
+        if (visibleCards === 0) {
+
+          noResults.style.display = "block";
+
+        } else {
+
+          noResults.style.display = "none";
+
         }
 
-    });
+      }
+    );
 
-});
 
+    /* POPUP */
 
-/* ===== COMING SOON ===== */
+    function openPopup(category) {
 
-function comingSoon(category){
-
-    const popup =
+      const popup =
         document.getElementById("popup");
 
-    const text =
-        document.getElementById("popupText");
-
-    text.innerHTML =
-        "<strong>" +
-        category +
-        "</strong> is coming soon.<br><br>" +
-        "New content will be added in a future update.";
-
-    popup.style.display = "flex";
-
-}
+      const popupTitle =
+        document.getElementById("popupTitle");
 
 
-/* ===== CLOSE POPUP ===== */
-
-function closePopup(){
-
-    document.getElementById("popup").style.display = "none";
-
-}
+      popupTitle.innerText =
+        category.toUpperCase();
 
 
-/* ===== CLOSE BY CLICKING OUTSIDE ===== */
-
-document
-.getElementById("popup")
-.addEventListener("click",function(event){
-
-    if(event.target === this){
-
-        closePopup();
+      popup.classList.add("active");
 
     }
 
-});
 
-</script>
+    function closePopup() {
+
+      document
+        .getElementById("popup")
+        .classList.remove("active");
+
+    }
+
+
+    /* CLOSE POPUP BY CLICKING OUTSIDE */
+
+    document
+      .getElementById("popup")
+      .addEventListener(
+        "click",
+        function (event) {
+
+          if (event.target === this) {
+
+            closePopup();
+
+          }
+
+        }
+      );
+
+
+    /* ESC KEY */
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (event.key === "Escape") {
+
+          closePopup();
+
+        }
+
+      }
+    );
+
+  </script>
 
 </body>
 </html>
