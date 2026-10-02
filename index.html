@@ -2,247 +2,988 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rexus16Official | Free Fire Emote Panel</title>
+<title>ꓣⲉⲭυⲋ - Free Fire Emote Panel</title>
 
-<meta name="description" content="Professional Free Fire Emote Panel by Rexus16Official. Browse emotes with a modern gaming interface.">
-<meta name="keywords" content="Free Fire, Emotes, Free Fire Emote Panel, Rexus16Official">
-<meta name="author" content="Rexus16Official">
-<meta name="robots" content="index,follow">
-<meta name="google-site-verification" content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk" />
+<meta name="description" content="Explore Free Fire emote categories in a modern fan-made panel by ꓣⲉⲭυⲋ.">
+<meta name="keywords" content="Free Fire Emotes, Free Fire Emote Panel, Rare Emotes, New Emotes, Squad Emotes, Duo Emotes">
+<meta name="author" content="ꓣⲉⲭυⲋ">
+<meta name="robots" content="index, follow">
+
+<meta name="google-site-verification" content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk">
 
 <link rel="canonical" href="https://rexus16official.github.io/Free-Fire-Emote-Panel/">
 
+<meta property="og:title" content="ꓣⲉⲭυⲋ - Free Fire Emote Panel">
+<meta property="og:description" content="Explore Free Fire emote categories in a modern fan-made panel.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rexus16official.github.io/Free-Fire-Emote-Panel/">
+
 <style>
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#0b0f17;
-color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#05070c;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-header{
-background:#111827;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:100;
+/* ===== BACKGROUND ===== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-3;
+
+    background:
+    linear-gradient(
+        rgba(3,5,10,.78),
+        rgba(3,5,10,.94)
+    ),
+    url("https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/202210/82fe305f7dbb9f25e68996f8f719e576.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 7%;
+
+    background:rgba(5,7,12,.85);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,174,0,.25);
 }
 
 .logo{
-font-size:28px;
-font-weight:700;
-color:#fbbf24;
+    font-size:30px;
+    font-weight:900;
+    letter-spacing:2px;
+
+    color:#ffb000;
+
+    text-shadow:
+        0 0 10px rgba(255,176,0,.7),
+        0 0 25px rgba(255,100,0,.3);
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
+.nav-links{
+    display:flex;
+    gap:28px;
 }
+
+.nav-links a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ffb000;
+    text-shadow:0 0 10px #ffb000;
+}
+
+/* ===== HERO ===== */
 
 .hero{
-padding:100px 20px;
-text-align:center;
-background:linear-gradient(135deg,#111827,#1f2937);
+    min-height:620px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,145,0,.16),
+        transparent 45%
+    );
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.badge{
+    display:inline-block;
+
+    padding:8px 18px;
+    margin-bottom:20px;
+
+    border:1px solid rgba(255,176,0,.5);
+    border-radius:30px;
+
+    color:#ffb000;
+    background:rgba(255,176,0,.08);
+
+    font-size:13px;
+    font-weight:bold;
+
+    box-shadow:0 0 20px rgba(255,176,0,.1);
 }
 
 .hero h1{
-font-size:55px;
-color:#fbbf24;
-margin-bottom:15px;
+    font-size:clamp(45px,8vw,90px);
+    font-weight:1000;
+    line-height:1;
+
+    margin-bottom:22px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 0 20px rgba(255,176,0,.25);
+}
+
+.hero h1 span{
+    color:#ffb000;
 }
 
 .hero p{
-max-width:700px;
-margin:auto;
-color:#cbd5e1;
-line-height:1.7;
+    max-width:650px;
+    margin:auto;
+
+    color:#b8bec9;
+    line-height:1.8;
+    font-size:17px;
 }
 
-.hero button{
-margin-top:25px;
-padding:14px 30px;
-border:none;
-border-radius:8px;
-background:#fbbf24;
-font-weight:bold;
-cursor:pointer;
+.hero-buttons{
+    margin-top:32px;
+
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
 }
+
+.primary-btn,
+.secondary-btn{
+    padding:14px 25px;
+
+    border-radius:9px;
+
+    font-weight:bold;
+    cursor:pointer;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.primary-btn{
+    background:#ffb000;
+    color:#05070c;
+
+    box-shadow:
+        0 0 20px rgba(255,176,0,.25);
+}
+
+.primary-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 0 30px rgba(255,176,0,.5);
+}
+
+.secondary-btn{
+    border:1px solid #343b49;
+    color:white;
+    background:rgba(255,255,255,.04);
+}
+
+.secondary-btn:hover{
+    border-color:#ffb000;
+    color:#ffb000;
+}
+
+/* ===== MAIN ===== */
 
 .container{
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:40px 0;
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 0;
 }
 
-.search{
-width:100%;
-padding:14px;
-border:none;
-border-radius:10px;
-background:#1f2937;
-color:white;
-margin-bottom:25px;
+.section-title{
+    text-align:center;
+    margin-bottom:15px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.section-title h2{
+    font-size:38px;
+}
+
+.section-title span{
+    color:#ffb000;
+}
+
+.section-title p{
+    color:#8f98a6;
+    margin-top:10px;
+}
+
+/* ===== SEARCH ===== */
+
+.search-box{
+    max-width:650px;
+    margin:35px auto;
+
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+
+    padding:17px 20px;
+
+    border-radius:12px;
+
+    border:1px solid #293141;
+
+    background:rgba(10,14,22,.85);
+
+    color:white;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.search-box input:focus{
+    border-color:#ffb000;
+
+    box-shadow:
+        0 0 20px rgba(255,176,0,.12);
+}
+
+/* ===== CARDS ===== */
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:22px;
 }
 
 .card{
-background:#111827;
-border-radius:15px;
-overflow:hidden;
-transition:0.3s;
+    position:relative;
+
+    padding:32px 22px;
+
+    min-height:230px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(19,25,37,.94),
+            rgba(7,10,16,.96)
+        );
+
+    border:1px solid #252d3b;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.card::before{
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+    left:-80px;
+
+    width:160px;
+    height:160px;
+
+    background:#ffb000;
+
+    opacity:.04;
+
+    border-radius:50%;
+
+    transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+    transform:translateY(-8px);
+
+    border-color:#ffb000;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.5),
+        0 0 25px rgba(255,176,0,.08);
 }
 
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
+.card:hover::before{
+    transform:scale(2);
 }
 
-.card-content{
-padding:15px;
-text-align:center;
+.card-icon{
+    width:65px;
+    height:65px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:18px;
+
+    border-radius:16px;
+
+    background:rgba(255,176,0,.08);
+
+    border:1px solid rgba(255,176,0,.25);
+
+    font-size:30px;
+
+    box-shadow:
+        inset 0 0 20px rgba(255,176,0,.05);
 }
 
 .card h3{
-margin-bottom:10px;
+    font-size:20px;
+    margin-bottom:9px;
 }
 
-.card button{
-padding:10px 20px;
-border:none;
-border-radius:8px;
-background:#fbbf24;
-cursor:pointer;
-font-weight:bold;
+.card p{
+    color:#8f98a6;
+
+    font-size:14px;
+    line-height:1.5;
+
+    margin-bottom:20px;
 }
+
+.view-btn{
+    padding:10px 20px;
+
+    border:0;
+    border-radius:8px;
+
+    background:#ffb000;
+    color:#07090d;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.view-btn:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 18px rgba(255,176,0,.35);
+}
+
+/* ===== ABOUT ===== */
+
+.about-box{
+    padding:40px;
+
+    background:rgba(10,14,22,.75);
+
+    border:1px solid #252d3b;
+
+    border-radius:18px;
+
+    text-align:center;
+}
+
+.about-box h2{
+    margin-bottom:15px;
+}
+
+.about-box h2 span{
+    color:#ffb000;
+}
+
+.about-box p{
+    color:#a8b0bd;
+
+    line-height:1.8;
+
+    max-width:800px;
+
+    margin:auto;
+}
+
+/* ===== FOOTER ===== */
 
 footer{
-background:#111827;
-text-align:center;
-padding:25px;
-color:#94a3b8;
-margin-top:50px;
+    padding:30px 20px;
+
+    text-align:center;
+
+    background:#03050a;
+
+    border-top:1px solid #202633;
+
+    color:#737d8d;
+
+    font-size:13px;
 }
 
-@media(max-width:768px){
-.hero h1{
-font-size:38px;
+footer strong{
+    color:#ffb000;
 }
+
+/* ===== POPUP ===== */
+
+.popup{
+    position:fixed;
+
+    inset:0;
+
+    z-index:2000;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    background:rgba(0,0,0,.78);
+
+    backdrop-filter:blur(8px);
 }
+
+.popup-box{
+    width:100%;
+    max-width:420px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151b27,
+            #080b12
+        );
+
+    border:1px solid rgba(255,176,0,.4);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.7),
+        0 0 30px rgba(255,176,0,.08);
+
+    animation:popup .25s ease;
+}
+
+.popup-icon{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.popup-box h2{
+    color:#ffb000;
+    margin-bottom:12px;
+}
+
+.popup-box p{
+    color:#a8b0bd;
+    line-height:1.6;
+}
+
+.close-btn{
+    margin-top:25px;
+
+    padding:11px 25px;
+
+    border:0;
+    border-radius:8px;
+
+    background:#ffb000;
+    color:#080a0f;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.85);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:700px){
+
+    .navbar{
+        padding:16px 5%;
+    }
+
+    .logo{
+        font-size:23px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        min-height:540px;
+    }
+
+    .hero h1{
+        font-size:46px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .container{
+        padding:60px 0;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .about-box{
+        padding:28px 20px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">Rexus16Official</div>
+<!-- ===== NAVBAR ===== -->
 
-<nav>
-<a href="#">Home</a>
-<a href="#emotes">Emotes</a>
-<a href="#about">About</a>
-</nav>
+<header class="navbar">
+
+    <div class="logo">ꓣⲉⲭυⲋ</div>
+
+    <nav class="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#emotes">EMOTES</a>
+        <a href="#about">ABOUT</a>
+    </nav>
+
 </header>
 
-<section class="hero">
-<h1>FREE FIRE EMOTE PANEL</h1>
 
-<p>
-Browse Free Fire emotes in a professional gaming-style interface.
-Fast, responsive and optimized for desktop and mobile devices.
-</p>
+<!-- ===== HERO ===== -->
 
-<button onclick="document.getElementById('emotes').scrollIntoView({behavior:'smooth'})">
-Explore Emotes
-</button>
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            🎮 FAN-MADE FREE FIRE PROJECT
+        </div>
+
+        <h1>
+            FREE FIRE<br>
+            <span>EMOTE PANEL</span>
+        </h1>
+
+        <p>
+            Discover different Free Fire emote categories
+            in a clean, modern and gaming-inspired panel
+            created by ꓣⲉⲭυⲋ.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#emotes" class="primary-btn">
+                EXPLORE EMOTES
+            </a>
+
+            <a href="#about" class="secondary-btn">
+                ABOUT PROJECT
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
 
-<div class="container" id="emotes">
 
-<input type="text" class="search" id="search" placeholder="Search emotes...">
+<!-- ===== EMOTES ===== -->
 
-<div class="grid" id="grid">
+<section class="container" id="emotes">
 
-<div class="card">
-<img src="https://via.placeholder.com/400x250?text=Dragon+Fist" alt="Dragon Fist">
-<div class="card-content">
-<h3>Dragon Fist</h3>
-<button>View</button>
-</div>
-</div>
+    <div class="section-title">
 
-<div class="card">
-<img src="https://via.placeholder.com/400x250?text=Top+DJ" alt="Top DJ">
-<div class="card-content">
-<h3>Top DJ</h3>
-<button>View</button>
-</div>
-</div>
+        <h2>
+            EMOTE <span>CATEGORIES</span>
+        </h2>
 
-<div class="card">
-<img src="https://via.placeholder.com/400x250?text=FFWC+Throne" alt="FFWC Throne">
-<div class="card-content">
-<h3>FFWC Throne</h3>
-<button>View</button>
-</div>
-</div>
+        <p>
+            Select a category to explore upcoming content.
+        </p>
 
-<div class="card">
-<img src="https://via.placeholder.com/400x250?text=Party+Dance" alt="Party Dance">
-<div class="card-content">
-<h3>Party Dance</h3>
-<button>View</button>
-</div>
-</div>
+    </div>
 
-</div>
-</div>
 
-<section id="about" class="container">
-<h2 style="color:#fbbf24;margin-bottom:10px;">About</h2>
+    <!-- SEARCH -->
 
-<p style="color:#cbd5e1;line-height:1.8;">
-This fan-made Free Fire Emote Panel was created by Rexus16Official for educational and entertainment purposes. Free Fire and related assets belong to their respective owners.
-</p>
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="🔎 Search emote category..."
+        >
+
+    </div>
+
+
+    <!-- CARDS -->
+
+    <div class="cards" id="cards">
+
+
+        <!-- RARE -->
+
+        <div class="card" data-name="rare emotes">
+
+            <div class="card-icon">
+                💎
+            </div>
+
+            <h3>
+                Rare Emotes
+            </h3>
+
+            <p>
+                Discover rare and exclusive emotes.
+            </p>
+
+            <button
+                class="view-btn"
+                onclick="comingSoon('Rare Emotes')"
+            >
+                VIEW
+            </button>
+
+        </div>
+
+
+        <!-- MAX GUN -->
+
+        <div class="card" data-name="max gun emotes">
+
+            <div class="card-icon">
+                🔥
+            </div>
+
+            <h3>
+                Max Gun Emotes
+            </h3>
+
+            <p>
+                Special emote collection coming soon.
+            </p>
+
+            <button
+                class="view-btn"
+                onclick="comingSoon('Max Gun Emotes')"
+            >
+                VIEW
+            </button>
+
+        </div>
+
+
+        <!-- NEW -->
+
+        <div class="card" data-name="new emotes">
+
+            <div class="card-icon">
+                ✨
+            </div>
+
+            <h3>
+                New Emotes
+            </h3>
+
+            <p>
+                Explore the latest emote collection.
+            </p>
+
+            <button
+                class="view-btn"
+                onclick="comingSoon('New Emotes')"
+            >
+                VIEW
+            </button>
+
+        </div>
+
+
+        <!-- SQUAD -->
+
+        <div class="card" data-name="squad emotes">
+
+            <div class="card-icon">
+                👥
+            </div>
+
+            <h3>
+                Squad Emotes
+            </h3>
+
+            <p>
+                Emotes made for squad moments.
+            </p>
+
+            <button
+                class="view-btn"
+                onclick="comingSoon('Squad Emotes')"
+            >
+                VIEW
+            </button>
+
+        </div>
+
+
+        <!-- DUO -->
+
+        <div class="card" data-name="duo emotes">
+
+            <div class="card-icon">
+                🤝
+            </div>
+
+            <h3>
+                Duo Emotes
+            </h3>
+
+            <p>
+                Duo emote collection coming soon.
+            </p>
+
+            <button
+                class="view-btn"
+                onclick="comingSoon('Duo Emotes')"
+            >
+                VIEW
+            </button>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- ===== ABOUT ===== -->
+
+<section class="container" id="about">
+
+    <div class="about-box">
+
+        <h2>
+            ABOUT <span>ꓣⲉⲭυⲋ</span>
+        </h2>
+
+        <p>
+            Free Fire Emote Panel is a fan-made informational
+            project created by ꓣⲉⲭυⲋ.
+            The website is designed to organize and present
+            emote categories in a simple and modern interface.
+            This project does not modify game files or provide
+            anti-ban protection.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
 
 <footer>
-© 2026 Rexus16Official — Free Fire Emote Panel
+
+    © 2026
+    <strong>ꓣⲉⲭυⲋ</strong>
+    — Free Fire Emote Panel
+
+    <br><br>
+
+    Fan-made website. Not affiliated with Garena.
+
 </footer>
 
+
+<!-- ===== POPUP ===== -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-box">
+
+        <div class="popup-icon">
+            🚀
+        </div>
+
+        <h2>
+            COMING SOON
+        </h2>
+
+        <p id="popupText">
+            New content is currently under development.
+        </p>
+
+        <button
+            class="close-btn"
+            onclick="closePopup()"
+        >
+            CLOSE
+        </button>
+
+    </div>
+
+</div>
+
+
 <script>
-const search=document.getElementById("search");
 
-search.addEventListener("keyup",()=>{
-const value=search.value.toLowerCase();
-const cards=document.querySelectorAll(".card");
+/* ===== SEARCH ===== */
 
-cards.forEach(card=>{
-const text=card.innerText.toLowerCase();
-card.style.display=text.includes(value)?"block":"none";
+const search = document.getElementById("search");
+
+const cards = document.querySelectorAll(".card");
+
+search.addEventListener("input", function(){
+
+    const value = this.value.toLowerCase().trim();
+
+    cards.forEach(function(card){
+
+        const name =
+            card.getAttribute("data-name");
+
+        if(name.includes(value)){
+
+            card.style.display = "flex";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
 });
+
+
+/* ===== COMING SOON ===== */
+
+function comingSoon(category){
+
+    const popup =
+        document.getElementById("popup");
+
+    const text =
+        document.getElementById("popupText");
+
+    text.innerHTML =
+        "<strong>" +
+        category +
+        "</strong> is coming soon.<br><br>" +
+        "New content will be added in a future update.";
+
+    popup.style.display = "flex";
+
+}
+
+
+/* ===== CLOSE POPUP ===== */
+
+function closePopup(){
+
+    document.getElementById("popup").style.display = "none";
+
+}
+
+
+/* ===== CLOSE BY CLICKING OUTSIDE ===== */
+
+document
+.getElementById("popup")
+.addEventListener("click",function(event){
+
+    if(event.target === this){
+
+        closePopup();
+
+    }
+
 });
+
 </script>
 
 </body>
