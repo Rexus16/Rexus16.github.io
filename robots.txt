@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rexus16official.github.io/Free-Fire-Emote-Panel/sitemap.xml
