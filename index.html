@@ -7,279 +7,221 @@
 
   <title>ꓣⲉⲭυⲋ - Free Fire Emote Panel</title>
 
-  <meta name="description"
-        content="Explore Free Fire emote categories in a modern fan-made panel by ꓣⲉⲭυⲋ.">
-
-  <meta name="keywords"
-        content="Free Fire Emotes, Free Fire Emote Panel, Rare Emotes, Gun Emotes, Squad Emotes, Duo Emotes">
-
+  <meta name="description" content="Explore Free Fire emote categories in a modern fan-made panel by ꓣⲉⲭυⲋ.">
+  <meta name="keywords" content="Free Fire Emotes, Free Fire Emote Panel, Rare Emotes, Squad Emotes, Duo Emotes">
   <meta name="author" content="ꓣⲉⲭυⲋ">
-
   <meta name="robots" content="index, follow">
 
-  <meta name="google-site-verification"
-        content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk">
+  <meta name="google-site-verification" content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk">
 
-  <link rel="canonical"
-        href="https://rexus16official.github.io/Free-Fire-Emote-Panel/">
+  <link rel="canonical" href="https://rexus16official.github.io/Free-Fire-Emote-Panel/">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="ꓣⲉⲭυⲋ - Free Fire Emote Panel">
-  <meta property="og:description"
-        content="Explore Free Fire emotes in a modern fan-made gaming panel.">
+  <meta property="og:description" content="Explore Free Fire emotes in a modern fan-made gaming panel.">
   <meta property="og:type" content="website">
-  <meta property="og:url"
-        content="https://rexus16official.github.io/Free-Fire-Emote-Panel/">
+  <meta property="og:url" content="https://rexus16official.github.io/Free-Fire-Emote-Panel/">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
       scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: #ffffff;
       background:
-        radial-gradient(circle at 15% 20%, rgba(255, 132, 0, 0.22), transparent 28%),
-        radial-gradient(circle at 85% 30%, rgba(255, 193, 7, 0.12), transparent 25%),
-        linear-gradient(135deg, #050505 0%, #101010 45%, #17110a 100%);
+        radial-gradient(circle at 15% 20%, rgba(255, 98, 0, 0.13), transparent 28%),
+        radial-gradient(circle at 85% 70%, rgba(255, 180, 0, 0.08), transparent 30%),
+        linear-gradient(135deg, #050505, #0d0d0d 50%, #080808);
+      color: #fff;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* ===== BACKGROUND EFFECT ===== */
+    /* Background glow */
 
     body::before {
       content: "";
       position: fixed;
-      inset: 0;
+      width: 450px;
+      height: 450px;
+      background: rgba(255, 102, 0, 0.06);
+      filter: blur(100px);
+      border-radius: 50%;
+      top: 10%;
+      left: -150px;
       pointer-events: none;
-      z-index: -2;
-
-      background:
-        linear-gradient(
-          135deg,
-          transparent 0%,
-          rgba(255, 126, 0, 0.06) 45%,
-          transparent 46%,
-          transparent 65%,
-          rgba(255, 170, 0, 0.04) 66%,
-          transparent 67%
-        );
-
-      background-size: 520px 520px;
+      z-index: -1;
     }
 
     body::after {
       content: "";
       position: fixed;
-      inset: 0;
+      width: 400px;
+      height: 400px;
+      background: rgba(255, 174, 0, 0.05);
+      filter: blur(100px);
+      border-radius: 50%;
+      bottom: 5%;
+      right: -150px;
       pointer-events: none;
       z-index: -1;
-
-      background:
-        radial-gradient(circle at center, transparent 35%, rgba(0,0,0,0.45) 100%);
     }
 
-    /* ===== NAVBAR ===== */
+    /* NAVBAR */
 
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-
-      width: 100%;
+      height: 70px;
 
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
 
-      padding: 17px 7%;
+      padding: 0 7%;
 
       background: rgba(5, 5, 5, 0.88);
       backdrop-filter: blur(14px);
 
-      border-bottom: 1px solid rgba(255, 140, 0, 0.22);
+      border-bottom: 1px solid rgba(255, 115, 0, 0.15);
     }
 
     .logo {
       font-size: 28px;
       font-weight: 900;
       letter-spacing: 1px;
-      color: #ffffff;
 
-      text-shadow:
-        0 0 8px rgba(255, 140, 0, 0.7),
-        0 0 18px rgba(255, 100, 0, 0.25);
-    }
-
-    .logo span {
-      color: #ff9d00;
+      background: linear-gradient(90deg, #ff5b00, #ffb300);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 28px;
+      gap: 30px;
     }
 
     nav ul li a {
-      color: #ddd;
+      color: #ccc;
       text-decoration: none;
       font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 1px;
-
+      font-weight: bold;
       transition: 0.25s;
     }
 
     nav ul li a:hover {
-      color: #ff9d00;
-      text-shadow: 0 0 10px rgba(255, 157, 0, 0.5);
+      color: #ff8500;
     }
 
-    /* ===== HERO ===== */
+    /* HERO */
 
     .hero {
-      min-height: 570px;
+      min-height: 500px;
 
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-
+      justify-content: center;
       text-align: center;
 
-      padding: 80px 20px 70px;
+      padding: 80px 20px;
 
       position: relative;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-
-      width: 600px;
-      height: 300px;
-
-      background: radial-gradient(
-        ellipse,
-        rgba(255, 126, 0, 0.18),
-        transparent 70%
-      );
-
-      filter: blur(15px);
-      pointer-events: none;
+    .hero-content {
+      max-width: 850px;
     }
 
-    .badge {
-      position: relative;
+    .tag {
+      display: inline-block;
 
-      padding: 8px 17px;
-      margin-bottom: 20px;
+      padding: 8px 16px;
+      margin-bottom: 22px;
 
-      border: 1px solid rgba(255, 157, 0, 0.45);
+      border: 1px solid rgba(255, 128, 0, 0.4);
       border-radius: 30px;
 
-      background: rgba(255, 126, 0, 0.08);
+      background: rgba(255, 95, 0, 0.07);
 
-      color: #ffad32;
+      color: #ff9a00;
       font-size: 12px;
-      font-weight: 800;
+      font-weight: bold;
       letter-spacing: 2px;
-
-      box-shadow: 0 0 20px rgba(255, 126, 0, 0.08);
     }
 
     .hero h1 {
-      position: relative;
+      font-size: clamp(40px, 7vw, 78px);
+      line-height: 1;
 
-      font-size: clamp(38px, 7vw, 76px);
-      line-height: 1.05;
+      margin-bottom: 20px;
 
-      font-weight: 1000;
-      letter-spacing: 2px;
+      font-weight: 900;
 
-      text-transform: uppercase;
-
-      background: linear-gradient(
-        180deg,
-        #ffffff 0%,
-        #ffffff 48%,
-        #ffad28 100%
-      );
-
+      background: linear-gradient(90deg, #fff, #ff9d00, #ff5b00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
-      text-shadow: 0 0 30px rgba(255, 126, 0, 0.12);
     }
 
     .hero p {
-      position: relative;
-
-      max-width: 650px;
-
-      margin-top: 20px;
-
-      color: #bdbdbd;
-      font-size: 16px;
+      color: #aaa;
+      font-size: 17px;
       line-height: 1.7;
+      max-width: 650px;
+      margin: auto;
     }
 
-    /* ===== SEARCH ===== */
+    /* SEARCH */
+
+    .search-wrapper {
+      max-width: 650px;
+      margin: -25px auto 70px;
+      padding: 0 20px;
+    }
 
     .search-box {
-      position: relative;
-
-      width: min(600px, 90%);
-
-      margin-top: 35px;
-    }
-
-    .search-box input {
       width: 100%;
 
       padding: 17px 22px;
 
-      border: 1px solid rgba(255, 157, 0, 0.25);
-      border-radius: 12px;
+      border-radius: 14px;
+
+      border: 1px solid rgba(255, 128, 0, 0.25);
+
+      background: rgba(255, 255, 255, 0.04);
+
+      color: white;
 
       outline: none;
 
-      background: rgba(15, 15, 15, 0.9);
-
-      color: #fff;
-
       font-size: 15px;
 
-      box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.35),
-        inset 0 0 20px rgba(255, 126, 0, 0.02);
-
-      transition: 0.3s;
+      transition: 0.25s;
     }
 
-    .search-box input::placeholder {
+    .search-box:focus {
+      border-color: #ff7600;
+      box-shadow: 0 0 25px rgba(255, 102, 0, 0.12);
+    }
+
+    .search-box::placeholder {
       color: #777;
     }
 
-    .search-box input:focus {
-      border-color: #ff9d00;
+    /* SECTION */
 
-      box-shadow:
-        0 0 0 3px rgba(255, 157, 0, 0.08),
-        0 10px 40px rgba(0, 0, 0, 0.45);
-    }
-
-    /* ===== SECTION ===== */
-
-    .section {
-      padding: 80px 7%;
-      position: relative;
+    section {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 0;
     }
 
     .section-title {
@@ -288,160 +230,105 @@
     }
 
     .section-title h2 {
-      font-size: 34px;
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
     .section-title p {
-      color: #888;
+      color: #777;
       font-size: 14px;
     }
 
-    /* ===== CATEGORY GRID ===== */
+    /* CATEGORY GRID */
 
     .categories {
-      max-width: 1200px;
-      margin: auto;
-
       display: grid;
-
-      grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
-
-      gap: 22px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
     }
 
-    .category-card {
+    .category {
       position: relative;
 
-      padding: 30px 22px;
+      padding: 28px 18px;
 
-      min-height: 230px;
+      min-height: 190px;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
+      border-radius: 18px;
 
       background:
         linear-gradient(
           145deg,
-          rgba(30, 30, 30, 0.96),
-          rgba(12, 12, 12, 0.96)
+          rgba(255,255,255,0.06),
+          rgba(255,255,255,0.015)
         );
 
-      border: 1px solid rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255,255,255,0.08);
 
-      border-radius: 18px;
+      text-align: center;
+
+      transition: 0.3s;
 
       overflow: hidden;
-
-      transition:
-        transform 0.3s,
-        border-color 0.3s,
-        box-shadow 0.3s;
     }
 
-    .category-card::before {
+    .category::before {
       content: "";
 
       position: absolute;
 
-      top: -100px;
-      left: 50%;
+      width: 120px;
+      height: 120px;
 
-      width: 180px;
-      height: 180px;
+      background: rgba(255, 102, 0, 0.08);
 
-      transform: translateX(-50%);
+      filter: blur(30px);
 
-      background: rgba(255, 126, 0, 0.12);
+      top: -50px;
+      right: -40px;
 
-      filter: blur(45px);
-
-      transition: 0.3s;
+      border-radius: 50%;
     }
 
-    .category-card:hover {
+    .category:hover {
       transform: translateY(-8px);
 
-      border-color: rgba(255, 157, 0, 0.45);
+      border-color: rgba(255, 120, 0, 0.4);
 
       box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.45),
-        0 0 25px rgba(255, 126, 0, 0.08);
+        0 15px 40px rgba(0,0,0,0.4),
+        0 0 25px rgba(255,100,0,0.08);
     }
 
-    .category-card:hover::before {
-      background: rgba(255, 126, 0, 0.2);
+    .category-icon {
+      font-size: 42px;
+      margin-bottom: 16px;
     }
 
-    .icon {
-      position: relative;
-
-      width: 72px;
-      height: 72px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      margin-bottom: 18px;
-
-      border-radius: 18px;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255, 157, 0, 0.15),
-          rgba(255, 126, 0, 0.03)
-        );
-
-      border: 1px solid rgba(255, 157, 0, 0.18);
-
-      font-size: 34px;
-
-      box-shadow:
-        inset 0 0 25px rgba(255, 126, 0, 0.05);
-    }
-
-    .category-card h3 {
-      position: relative;
-
-      font-size: 19px;
+    .category h3 {
+      font-size: 17px;
       margin-bottom: 8px;
     }
 
-    .category-card p {
-      position: relative;
-
-      color: #888;
-      font-size: 13px;
-
-      margin-bottom: 20px;
+    .category p {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 18px;
     }
 
     .view-btn {
-      position: relative;
+      border: 0;
 
-      border: none;
-
-      padding: 10px 20px;
+      padding: 9px 15px;
 
       border-radius: 8px;
 
-      background: linear-gradient(
-        135deg,
-        #ffb000,
-        #ff7600
-      );
+      background: linear-gradient(90deg, #ff5b00, #ff9800);
 
-      color: #111;
+      color: white;
 
-      font-size: 12px;
-      font-weight: 900;
+      font-size: 11px;
+      font-weight: bold;
 
       cursor: pointer;
 
@@ -450,81 +337,181 @@
 
     .view-btn:hover {
       transform: scale(1.05);
-
-      box-shadow:
-        0 0 18px rgba(255, 145, 0, 0.35);
+      box-shadow: 0 0 18px rgba(255,100,0,0.25);
     }
 
-    /* ===== ABOUT ===== */
+    /* COLLECTION */
 
-    .about {
-      max-width: 900px;
-      margin: auto;
-
-      padding: 35px;
-
-      background: rgba(16, 16, 16, 0.8);
-
-      border: 1px solid rgba(255, 255, 255, 0.06);
-
-      border-radius: 18px;
-
-      text-align: center;
+    #collectionSection {
+      display: none;
     }
 
-    .about h2 {
-      margin-bottom: 15px;
+    .collection-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 30px;
+
+      gap: 20px;
     }
 
-    .about p {
-      color: #999;
-
-      font-size: 14px;
-      line-height: 1.8;
+    .collection-header h2 {
+      font-size: 28px;
     }
 
-    .warning {
-      margin-top: 20px;
+    .collection-header span {
+      color: #ff8500;
+    }
 
-      padding: 12px;
+    .back-btn {
+      border: 1px solid rgba(255, 120, 0, 0.35);
 
-      border-radius: 10px;
+      background: rgba(255, 100, 0, 0.07);
 
-      background: rgba(255, 157, 0, 0.06);
+      color: #ff9b00;
 
-      border: 1px solid rgba(255, 157, 0, 0.12);
+      padding: 9px 15px;
 
-      color: #bdbdbd;
+      border-radius: 8px;
+
+      cursor: pointer;
 
       font-size: 12px;
     }
 
-    /* ===== FOOTER ===== */
+    /* EMOTE GRID */
+
+    .emote-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .emote-card {
+      border: 1px solid rgba(255,255,255,0.08);
+
+      background: rgba(255,255,255,0.035);
+
+      border-radius: 16px;
+
+      overflow: hidden;
+
+      transition: 0.3s;
+
+      cursor: pointer;
+    }
+
+    .emote-card:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(255,120,0,0.4);
+
+      box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+
+    .emote-preview {
+      height: 170px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 60px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(255,110,0,0.14),
+          transparent 65%
+        );
+
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .emote-info {
+      padding: 17px;
+    }
+
+    .emote-info h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .emote-info p {
+      font-size: 11px;
+      color: #777;
+    }
+
+    .badge {
+      display: inline-block;
+
+      margin-top: 12px;
+
+      padding: 5px 8px;
+
+      border-radius: 5px;
+
+      background: rgba(255,100,0,0.1);
+
+      color: #ff9000;
+
+      font-size: 9px;
+
+      font-weight: bold;
+
+      letter-spacing: 0.5px;
+    }
+
+    /* ABOUT */
+
+    .about-box {
+      max-width: 850px;
+
+      margin: auto;
+
+      padding: 35px;
+
+      border-radius: 18px;
+
+      background: rgba(255,255,255,0.035);
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      text-align: center;
+    }
+
+    .about-box h2 {
+      margin-bottom: 18px;
+    }
+
+    .about-box p {
+      color: #999;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
 
     footer {
-      margin-top: 40px;
+      margin-top: 70px;
 
       padding: 30px 20px;
 
       text-align: center;
 
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-top: 1px solid rgba(255,255,255,0.07);
 
-      background: rgba(5, 5, 5, 0.7);
-    }
-
-    footer .footer-logo {
-      font-size: 22px;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    footer p {
       color: #666;
+
       font-size: 12px;
     }
 
-    /* ===== POPUP ===== */
+    footer strong {
+      color: #ff8500;
+    }
+
+    /* POPUP */
 
     .popup {
       position: fixed;
@@ -538,38 +525,33 @@
 
       padding: 20px;
 
-      background: rgba(0, 0, 0, 0.78);
+      background: rgba(0,0,0,0.75);
 
       backdrop-filter: blur(8px);
 
       z-index: 2000;
     }
 
-    .popup.active {
-      display: flex;
-    }
-
     .popup-box {
-      width: min(430px, 100%);
+      width: 100%;
+      max-width: 430px;
 
-      padding: 40px 30px;
+      padding: 35px;
 
-      text-align: center;
+      border-radius: 20px;
 
       background:
         linear-gradient(
           145deg,
-          #1b1b1b,
-          #0c0c0c
+          #171717,
+          #0b0b0b
         );
 
-      border: 1px solid rgba(255, 157, 0, 0.3);
+      border: 1px solid rgba(255,120,0,0.3);
 
-      border-radius: 18px;
+      text-align: center;
 
-      box-shadow:
-        0 25px 80px rgba(0, 0, 0, 0.7),
-        0 0 35px rgba(255, 126, 0, 0.08);
+      box-shadow: 0 25px 80px rgba(0,0,0,0.6);
 
       animation: popupIn 0.25s ease;
     }
@@ -586,56 +568,56 @@
       }
     }
 
-    .popup-box .popup-icon {
-      font-size: 45px;
+    .popup-icon {
+      font-size: 65px;
       margin-bottom: 15px;
     }
 
     .popup-box h2 {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .popup-box p {
       color: #999;
-      font-size: 14px;
       line-height: 1.6;
+      font-size: 13px;
     }
 
     .close-btn {
       margin-top: 25px;
 
-      padding: 10px 25px;
+      border: 0;
 
-      border: none;
+      padding: 10px 22px;
+
       border-radius: 8px;
 
-      background: #ff9d00;
+      background: #ff6800;
 
-      color: #111;
+      color: white;
 
-      font-weight: 900;
+      font-weight: bold;
 
       cursor: pointer;
     }
 
-    /* ===== NO RESULTS ===== */
+    /* MOBILE */
 
-    .no-results {
-      display: none;
+    @media (max-width: 1000px) {
 
-      text-align: center;
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-      color: #777;
-
-      padding: 30px;
+      .emote-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    /* ===== MOBILE ===== */
-
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
 
       nav {
-        padding: 15px 5%;
+        padding: 0 20px;
       }
 
       .logo {
@@ -651,52 +633,38 @@
       }
 
       .hero {
-        min-height: 520px;
-        padding-top: 65px;
-      }
-
-      .hero h1 {
-        font-size: 40px;
+        min-height: 430px;
+        padding: 60px 20px;
       }
 
       .hero p {
         font-size: 14px;
       }
 
-      .section {
-        padding: 65px 5%;
+      .search-wrapper {
+        margin-bottom: 30px;
       }
 
-      .section-title h2 {
-        font-size: 28px;
+      section {
+        width: 92%;
+        padding: 50px 0;
       }
 
       .categories {
         grid-template-columns: 1fr;
       }
 
-      .category-card {
-        min-height: 215px;
+      .emote-grid {
+        grid-template-columns: 1fr;
       }
-    }
 
-    @media (max-width: 430px) {
-
-      nav {
+      .collection-header {
         flex-direction: column;
-        gap: 12px;
+        align-items: flex-start;
       }
 
-      nav ul {
-        gap: 20px;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .badge {
-        font-size: 10px;
+      .about-box {
+        padding: 25px 20px;
       }
     }
   </style>
@@ -704,61 +672,70 @@
 
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
 
   <nav>
-    <div class="logo">
-      ꓣⲉⲭυⲋ<span>•</span>
-    </div>
+
+    <div class="logo">ꓣⲉⲭυⲋ</div>
 
     <ul>
       <li><a href="#home">HOME</a></li>
       <li><a href="#emotes">EMOTES</a></li>
       <li><a href="#about">ABOUT</a></li>
     </ul>
+
   </nav>
 
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
 
-  <section class="hero" id="home">
+  <header class="hero" id="home">
 
-    <div class="badge">
-      FAN-MADE FREE FIRE PROJECT
+    <div class="hero-content">
+
+      <div class="tag">
+        FAN-MADE FREE FIRE PROJECT
+      </div>
+
+      <h1>
+        FREE FIRE<br>
+        EMOTE PANEL
+      </h1>
+
+      <p>
+        Explore different fan-made Free Fire emote categories
+        in a clean, modern and gaming-style interface.
+      </p>
+
     </div>
 
-    <h1>
-      FREE FIRE<br>
-      EMOTE PANEL
-    </h1>
-
-    <p>
-      Explore your favorite Free Fire emote categories
-      in one simple, modern and gaming-style panel.
-    </p>
-
-    <div class="search-box">
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Search emote category..."
-        autocomplete="off"
-      >
-    </div>
-
-  </section>
+  </header>
 
 
-  <!-- ===== EMOTES ===== -->
+  <!-- SEARCH -->
 
-  <section class="section" id="emotes">
+  <div class="search-wrapper">
+
+    <input
+      type="text"
+      id="searchInput"
+      class="search-box"
+      placeholder="🔎 Search emotes..."
+    >
+
+  </div>
+
+
+  <!-- CATEGORIES -->
+
+  <section id="emotes">
 
     <div class="section-title">
 
       <h2>EMOTE CATEGORIES</h2>
 
       <p>
-        Choose a category to explore
+        Choose a category to explore the collection
       </p>
 
     </div>
@@ -766,236 +743,200 @@
 
     <div class="categories" id="categoryGrid">
 
+      <div class="category">
 
-      <!-- RARE -->
+        <div class="category-icon">💎</div>
 
-      <div
-        class="category-card"
-        data-name="rare emotes"
-      >
+        <h3>Rare Emotes</h3>
 
-        <div class="icon">
-          💎
-        </div>
-
-        <h3>
-          Rare Emotes
-        </h3>
-
-        <p>
-          Rare and classic emote collection
-        </p>
+        <p>Rare-style fan-made collection</p>
 
         <button
           class="view-btn"
-          onclick="openPopup('Rare Emotes')"
-        >
-          VIEW
+          onclick="openCategory('Rare Emotes')">
+          VIEW EMOTES
         </button>
 
       </div>
 
 
-      <!-- MAX GUN -->
+      <div class="category">
 
-      <div
-        class="category-card"
-        data-name="max gun emotes gun"
-      >
+        <div class="category-icon">🔥</div>
 
-        <div class="icon">
-          🔥
-        </div>
+        <h3>Max Gun Emotes</h3>
 
-        <h3>
-          Max Gun Emotes
-        </h3>
-
-        <p>
-          Gun-themed emote collection
-        </p>
+        <p>Gun-themed fan-made collection</p>
 
         <button
           class="view-btn"
-          onclick="openPopup('Max Gun Emotes')"
-        >
-          VIEW
+          onclick="openCategory('Max Gun Emotes')">
+          VIEW EMOTES
         </button>
 
       </div>
 
 
-      <!-- NEW -->
+      <div class="category">
 
-      <div
-        class="category-card"
-        data-name="new emotes latest"
-      >
+        <div class="category-icon">✨</div>
 
-        <div class="icon">
-          ✨
-        </div>
+        <h3>New Emotes</h3>
 
-        <h3>
-          New Emotes
-        </h3>
-
-        <p>
-          Latest emote category
-        </p>
+        <p>New-style emote collection</p>
 
         <button
           class="view-btn"
-          onclick="openPopup('New Emotes')"
-        >
-          VIEW
+          onclick="openCategory('New Emotes')">
+          VIEW EMOTES
         </button>
 
       </div>
 
 
-      <!-- SQUAD -->
+      <div class="category">
 
-      <div
-        class="category-card"
-        data-name="squad emotes team"
-      >
+        <div class="category-icon">👥</div>
 
-        <div class="icon">
-          👥
-        </div>
+        <h3>Squad Emotes</h3>
 
-        <h3>
-          Squad Emotes
-        </h3>
-
-        <p>
-          Emotes for squad moments
-        </p>
+        <p>Squad-themed collection</p>
 
         <button
           class="view-btn"
-          onclick="openPopup('Squad Emotes')"
-        >
-          VIEW
+          onclick="openCategory('Squad Emotes')">
+          VIEW EMOTES
         </button>
 
       </div>
 
 
-      <!-- DUO -->
+      <div class="category">
 
-      <div
-        class="category-card"
-        data-name="duo emotes friends"
-      >
+        <div class="category-icon">🤝</div>
 
-        <div class="icon">
-          🤝
-        </div>
+        <h3>Duo Emotes</h3>
 
-        <h3>
-          Duo Emotes
-        </h3>
-
-        <p>
-          Emotes made for duo moments
-        </p>
+        <p>Duo-themed collection</p>
 
         <button
           class="view-btn"
-          onclick="openPopup('Duo Emotes')"
-        >
-          VIEW
+          onclick="openCategory('Duo Emotes')">
+          VIEW EMOTES
         </button>
 
       </div>
 
+    </div>
+
+  </section>
+
+
+  <!-- COLLECTION -->
+
+  <section id="collectionSection">
+
+    <div class="collection-header">
+
+      <div>
+
+        <h2 id="collectionTitle">
+          Emotes
+        </h2>
+
+        <p style="color:#777; margin-top:7px;">
+          Fan-made preview collection
+        </p>
+
+      </div>
+
+      <button
+        class="back-btn"
+        onclick="closeCollection()">
+        ← BACK TO CATEGORIES
+      </button>
 
     </div>
 
 
     <div
-      class="no-results"
-      id="noResults"
-    >
-      No category found.
+      class="emote-grid"
+      id="emoteGrid">
     </div>
 
   </section>
 
 
-  <!-- ===== ABOUT ===== -->
+  <!-- ABOUT -->
 
-  <section
-    class="section"
-    id="about"
-  >
+  <section id="about">
 
-    <div class="about">
+    <div class="section-title">
 
-      <h2>
-        ABOUT ꓣⲉⲭυⲋ
-      </h2>
+      <h2>ABOUT ꓣⲉⲭυⲋ</h2>
+
+    </div>
+
+
+    <div class="about-box">
+
+      <h2>Fan-Made Gaming Project</h2>
 
       <p>
-        This is a fan-made Free Fire emote project created
-        for informational and entertainment purposes.
-        The website does not modify game files, provide
-        anti-ban protection, or interact with game accounts.
+        This website is an independent fan-made project created
+        for browsing and presenting Free Fire-inspired emote
+        categories in a modern interface.
+        It does not modify game files, game accounts or provide
+        anti-ban services.
+        Free Fire and related trademarks belong to their respective
+        owners.
       </p>
-
-      <div class="warning">
-        Free Fire is a trademark of Garena.
-        This website is not affiliated with or endorsed by Garena.
-      </div>
 
     </div>
 
   </section>
 
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
 
   <footer>
 
-    <div class="footer-logo">
-      ꓣⲉⲭυⲋ
-    </div>
-
     <p>
-      Fan-made website • Not affiliated with Garena
+      © 2026 <strong>ꓣⲉⲭυⲋ</strong>
+    </p>
+
+    <p style="margin-top:8px;">
+      Fan-made website. Not affiliated with Garena.
     </p>
 
   </footer>
 
 
-  <!-- ===== POPUP ===== -->
+  <!-- POPUP -->
 
   <div
     class="popup"
-    id="popup"
-  >
+    id="popup">
 
     <div class="popup-box">
 
-      <div class="popup-icon">
-        ⚡
+      <div
+        class="popup-icon"
+        id="popupIcon">
+        ✨
       </div>
 
       <h2 id="popupTitle">
-        COMING SOON
+        Emote
       </h2>
 
-      <p>
-        This category is currently being prepared.
-        More emotes will be added soon.
+      <p id="popupText">
+        Fan-made preview.
       </p>
 
       <button
         class="close-btn"
-        onclick="closePopup()"
-      >
+        onclick="closePopup()">
         CLOSE
       </button>
 
@@ -1004,59 +945,299 @@
   </div>
 
 
-  <!-- ===== JAVASCRIPT ===== -->
-
   <script>
 
-    /* SEARCH */
+    /* EMOTE DATA */
 
-    const searchInput =
-      document.getElementById("searchInput");
+    const emotes = {
 
-    const cards =
-      document.querySelectorAll(".category-card");
+      "Rare Emotes": [
 
-    const noResults =
-      document.getElementById("noResults");
+        {
+          name: "Diamond Style",
+          icon: "💎",
+          description: "Rare-style fan-made emote preview."
+        },
 
+        {
+          name: "Royal Move",
+          icon: "👑",
+          description: "Royal-themed fan-made emote preview."
+        },
 
-    searchInput.addEventListener(
-      "input",
-      function () {
+        {
+          name: "Lightning",
+          icon: "⚡",
+          description: "Energy-themed fan-made emote preview."
+        },
 
-        const search =
-          this.value.toLowerCase().trim();
+        {
+          name: "Star Moment",
+          icon: "🌟",
+          description: "Star-themed fan-made emote preview."
+        }
 
-        let visibleCards = 0;
-
-
-        cards.forEach(function (card) {
-
-          const name =
-            card.getAttribute("data-name");
-
-          if (name.includes(search)) {
-
-            card.style.display = "flex";
-
-            visibleCards++;
-
-          } else {
-
-            card.style.display = "none";
-
-          }
-
-        });
+      ],
 
 
-        if (visibleCards === 0) {
+      "Max Gun Emotes": [
 
-          noResults.style.display = "block";
+        {
+          name: "Fire Mode",
+          icon: "🔥",
+          description: "Fire-themed fan-made emote preview."
+        },
 
-        } else {
+        {
+          name: "Weapon Style",
+          icon: "🔫",
+          description: "Weapon-inspired fan-made preview."
+        },
 
-          noResults.style.display = "none";
+        {
+          name: "Impact",
+          icon: "💥",
+          description: "Impact-themed fan-made emote preview."
+        },
+
+        {
+          name: "Power Shot",
+          icon: "⚡",
+          description: "Power-themed fan-made emote preview."
+        }
+
+      ],
+
+
+      "New Emotes": [
+
+        {
+          name: "New Wave",
+          icon: "✨",
+          description: "New-style fan-made emote preview."
+        },
+
+        {
+          name: "Launch",
+          icon: "🚀",
+          description: "Launch-themed fan-made emote preview."
+        },
+
+        {
+          name: "Shine",
+          icon: "🌟",
+          description: "Shine-themed fan-made emote preview."
+        },
+
+        {
+          name: "Target",
+          icon: "🎯",
+          description: "Target-themed fan-made emote preview."
+        }
+
+      ],
+
+
+      "Squad Emotes": [
+
+        {
+          name: "Squad Up",
+          icon: "👥",
+          description: "Squad-themed fan-made emote preview."
+        },
+
+        {
+          name: "Team Power",
+          icon: "🤜",
+          description: "Team-themed fan-made emote preview."
+        },
+
+        {
+          name: "Victory",
+          icon: "🏆",
+          description: "Victory-themed fan-made emote preview."
+        },
+
+        {
+          name: "Squad Fire",
+          icon: "🔥",
+          description: "Squad fire-themed fan-made preview."
+        }
+
+      ],
+
+
+      "Duo Emotes": [
+
+        {
+          name: "Duo Bond",
+          icon: "🤝",
+          description: "Duo-themed fan-made emote preview."
+        },
+
+        {
+          name: "Double Power",
+          icon: "⚡",
+          description: "Double-power fan-made preview."
+        },
+
+        {
+          name: "Together",
+          icon: "❤️",
+          description: "Together-themed fan-made preview."
+        },
+
+        {
+          name: "Duo Victory",
+          icon: "🏆",
+          description: "Duo victory fan-made preview."
+        }
+
+      ]
+
+    };
+
+
+    /* OPEN CATEGORY */
+
+    function openCategory(category) {
+
+      const section =
+        document.getElementById("collectionSection");
+
+      const title =
+        document.getElementById("collectionTitle");
+
+      const grid =
+        document.getElementById("emoteGrid");
+
+      title.innerHTML =
+        category;
+
+      grid.innerHTML = "";
+
+      emotes[category].forEach((emote) => {
+
+        const card =
+          document.createElement("div");
+
+        card.className =
+          "emote-card";
+
+        card.innerHTML = `
+
+          <div class="emote-preview">
+            ${emote.icon}
+          </div>
+
+          <div class="emote-info">
+
+            <h3>
+              ${emote.name}
+            </h3>
+
+            <p>
+              ${emote.description}
+            </p>
+
+            <span class="badge">
+              FAN-MADE PREVIEW
+            </span>
+
+          </div>
+
+        `;
+
+        card.onclick = function() {
+
+          openPopup(
+            emote.name,
+            emote.icon,
+            emote.description
+          );
+
+        };
+
+        grid.appendChild(card);
+
+      });
+
+
+      section.style.display = "block";
+
+      section.scrollIntoView({
+        behavior: "smooth"
+      });
+
+    }
+
+
+    /* CLOSE COLLECTION */
+
+    function closeCollection() {
+
+      document.getElementById(
+        "collectionSection"
+      ).style.display = "none";
+
+      document.getElementById(
+        "emotes"
+      ).scrollIntoView({
+        behavior: "smooth"
+      });
+
+    }
+
+
+    /* POPUP */
+
+    function openPopup(
+      title,
+      icon,
+      description
+    ) {
+
+      document.getElementById(
+        "popupIcon"
+      ).textContent = icon;
+
+      document.getElementById(
+        "popupTitle"
+      ).textContent = title;
+
+      document.getElementById(
+        "popupText"
+      ).textContent = description;
+
+      document.getElementById(
+        "popup"
+      ).style.display = "flex";
+
+    }
+
+
+    function closePopup() {
+
+      document.getElementById(
+        "popup"
+      ).style.display = "none";
+
+    }
+
+
+    /* CLOSE POPUP WHEN CLICKING OUTSIDE */
+
+    document.getElementById(
+      "popup"
+    ).addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          event.target === this
+        ) {
+
+          closePopup();
 
         }
 
@@ -1064,64 +1245,46 @@
     );
 
 
-    /* POPUP */
+    /* SEARCH */
 
-    function openPopup(category) {
+    document.getElementById(
+      "searchInput"
+    ).addEventListener(
+      "input",
+      function() {
 
-      const popup =
-        document.getElementById("popup");
+        const search =
+          this.value
+          .toLowerCase()
+          .trim();
 
-      const popupTitle =
-        document.getElementById("popupTitle");
+        const cards =
+          document.querySelectorAll(
+            ".category"
+          );
 
+        cards.forEach(
+          function(card) {
 
-      popupTitle.innerText =
-        category.toUpperCase();
+            const text =
+              card.innerText.toLowerCase();
 
+            if (
+              text.includes(search)
+            ) {
 
-      popup.classList.add("active");
+              card.style.display =
+                "";
 
-    }
+            } else {
 
+              card.style.display =
+                "none";
 
-    function closePopup() {
-
-      document
-        .getElementById("popup")
-        .classList.remove("active");
-
-    }
-
-
-    /* CLOSE POPUP BY CLICKING OUTSIDE */
-
-    document
-      .getElementById("popup")
-      .addEventListener(
-        "click",
-        function (event) {
-
-          if (event.target === this) {
-
-            closePopup();
+            }
 
           }
-
-        }
-      );
-
-
-    /* ESC KEY */
-
-    document.addEventListener(
-      "keydown",
-      function (event) {
-
-        if (event.key === "Escape") {
-
-          closePopup();
-
-        }
+        );
 
       }
     );
