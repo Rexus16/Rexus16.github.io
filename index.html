@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
 
-  <!-- FAVICON -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050505'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='55' font-weight='bold' fill='%23ff1744'%3ER%3C/text%3E%3C/svg%3E">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>RexusFF - Free Fire Emote Panel</title>
+  <!-- FAVICON -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050505'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='55' font-weight='bold' fill='%23ff1744'%3ER%3C/text%3E%3C/svg%3E">
 
-  <meta name="description" content="RexusFF Free Fire Emote Panel">
-  <meta name="keywords" content="RexusFF, Rexus FF, Free Fire, Emote Panel">
-  <meta name="author" content="RexusFF">
+  <!-- TITLE -->
+  <title>ꓣⲉⲭυⲋ - Free Fire Emote Panel</title>
+
+  <!-- SEO -->
+  <meta name="description" content="ꓣⲉⲭυⲋ Free Fire Emote Panel - Fan-made gaming project">
+  <meta name="keywords" content="Rexus, Free Fire, Emote Panel, Free Fire Emotes">
+  <meta name="author" content="ꓣⲉⲭυⲋ">
   <meta name="robots" content="index, follow">
 
   <meta name="google-site-verification" content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk">
@@ -21,24 +23,22 @@
   <link rel="canonical" href="https://rexus16.github.io/">
 
   <!-- OPEN GRAPH -->
-  <meta property="og:title" content="RexusFF - Emote Panel">
-  <meta property="og:description" content="RexusFF Free Fire Emote Panel">
+  <meta property="og:title" content="ꓣⲉⲭυⲋ - Emote Panel">
+  <meta property="og:description" content="ꓣⲉⲭυⲋ Free Fire Emote Panel">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rexus16.github.io/">
-  <meta property="og:site_name" content="RexusFF">
+  <meta property="og:site_name" content="ꓣⲉⲭυⲋ">
 
-  <!-- SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "RexusFF",
-    "url": "https://rexus16.github.io/",
-    "description": "RexusFF Free Fire Emote Panel"
-  }
-  </script>
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+
+    /* =========================
+       GLOBAL
+    ========================= */
 
     * {
       margin: 0;
@@ -51,318 +51,444 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at 15% 15%, rgba(255, 0, 55, 0.12), transparent 25%),
-        radial-gradient(circle at 85% 25%, rgba(120, 0, 255, 0.10), transparent 25%),
-        radial-gradient(circle at 50% 90%, rgba(0, 220, 255, 0.08), transparent 28%),
-        linear-gradient(135deg, #030303, #090909 50%, #020202);
-
+      font-family: "Rajdhani", Arial, sans-serif;
+      background: #030305;
       color: #fff;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-
     /* =========================
-       RGB BACKGROUND
+       GAMING BACKGROUND
     ========================= */
 
     body::before {
       content: "";
       position: fixed;
-
-      width: 500px;
-      height: 500px;
-
-      top: 5%;
-      left: -180px;
-
-      background: rgba(255, 0, 55, 0.08);
-
-      filter: blur(110px);
-
-      border-radius: 50%;
-
+      inset: 0;
+      z-index: -5;
       pointer-events: none;
 
-      z-index: -1;
+      background:
+        linear-gradient(rgba(255, 0, 55, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 180, 255, 0.025) 1px, transparent 1px);
 
-      animation: rgbGlow 7s infinite alternate;
+      background-size: 55px 55px;
     }
 
     body::after {
       content: "";
-
       position: fixed;
-
-      width: 500px;
-      height: 500px;
-
-      right: -180px;
-      bottom: 5%;
-
-      background: rgba(100, 0, 255, 0.08);
-
-      filter: blur(110px);
-
-      border-radius: 50%;
-
+      inset: -20%;
+      z-index: -6;
       pointer-events: none;
 
-      z-index: -1;
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(255, 0, 55, 0.16),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 85% 25%,
+          rgba(120, 0, 255, 0.12),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 50% 90%,
+          rgba(0, 180, 255, 0.08),
+          transparent 30%
+        );
 
-      animation: rgbGlow2 8s infinite alternate;
+      filter: blur(30px);
+      animation: backgroundPulse 8s ease-in-out infinite alternate;
     }
 
-    @keyframes rgbGlow {
-
-      0% {
-        background: rgba(255, 0, 55, 0.08);
+    @keyframes backgroundPulse {
+      from {
+        transform: scale(1);
+        opacity: 0.75;
       }
 
-      50% {
-        background: rgba(255, 90, 0, 0.08);
+      to {
+        transform: scale(1.12);
+        opacity: 1;
+      }
+    }
+
+    /* =========================
+       RGB LINE
+    ========================= */
+
+    .rgb-line {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      z-index: 5000;
+
+      background: linear-gradient(
+        90deg,
+        #ff003c,
+        #ff7a00,
+        #ffee00,
+        #00ff9d,
+        #00c8ff,
+        #7b00ff,
+        #ff003c
+      );
+
+      background-size: 400% 100%;
+
+      animation: rgbMove 4s linear infinite;
+
+      box-shadow:
+        0 0 8px #ff003c,
+        0 0 18px rgba(255, 0, 80, 0.7);
+    }
+
+    @keyframes rgbMove {
+      0% {
+        background-position: 0% 50%;
       }
 
       100% {
-        background: rgba(150, 0, 255, 0.08);
+        background-position: 400% 50%;
       }
-
     }
 
-    @keyframes rgbGlow2 {
+    /* =========================
+       WELCOME SCREEN
+    ========================= */
 
-      0% {
-        background: rgba(0, 200, 255, 0.07);
-      }
+    .welcome-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
 
-      50% {
-        background: rgba(100, 0, 255, 0.08);
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      100% {
-        background: rgba(255, 0, 80, 0.08);
-      }
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(255, 0, 55, 0.12),
+          transparent 35%
+        ),
+        #020204;
 
+      animation: welcomeFadeOut 0.8s ease 3.4s forwards;
     }
 
+    .welcome-content {
+      text-align: center;
+      padding: 30px;
+      animation: welcomeZoom 1s ease;
+    }
+
+    .welcome-mini {
+      color: #ff1744;
+      font-family: "Orbitron", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px rgba(255, 23, 68, 0.8);
+    }
+
+    .welcome-title {
+      font-family: "Orbitron", sans-serif;
+      font-size: clamp(35px, 7vw, 80px);
+      font-weight: 900;
+      letter-spacing: 2px;
+
+      background: linear-gradient(
+        90deg,
+        #ffffff,
+        #ff1744,
+        #ff6d00,
+        #ffffff
+      );
+
+      background-size: 250% auto;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      animation: welcomeRGB 2s linear infinite;
+
+      text-shadow: 0 0 30px rgba(255, 0, 70, 0.25);
+    }
+
+    .welcome-sub {
+      margin-top: 18px;
+      color: #888;
+      font-size: 14px;
+      letter-spacing: 3px;
+    }
+
+    .loading-bar {
+      width: 230px;
+      height: 3px;
+      margin: 30px auto 0;
+
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .loading-bar span {
+      display: block;
+      width: 0%;
+      height: 100%;
+
+      background: linear-gradient(
+        90deg,
+        #ff003c,
+        #ff7a00,
+        #7b00ff
+      );
+
+      box-shadow: 0 0 15px #ff1744;
+
+      animation: loading 2.5s ease forwards;
+    }
+
+    @keyframes loading {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes welcomeZoom {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes welcomeRGB {
+      to {
+        background-position: 250% center;
+      }
+    }
+
+    @keyframes welcomeFadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
 
     /* =========================
        NAVBAR
     ========================= */
 
     nav {
-
       position: sticky;
-
-      top: 0;
-
+      top: 2px;
       z-index: 1000;
 
-      height: 70px;
+      height: 72px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
 
       padding: 0 7%;
 
-      background: rgba(3, 3, 3, 0.88);
+      background: rgba(3, 3, 5, 0.88);
 
-      backdrop-filter: blur(16px);
+      backdrop-filter: blur(18px);
 
-      border-bottom: 1px solid rgba(255, 0, 70, 0.25);
+      border-bottom: 1px solid rgba(255, 23, 68, 0.14);
 
       box-shadow:
-        0 0 25px rgba(255, 0, 70, 0.06);
-
+        0 8px 30px rgba(0,0,0,0.45);
     }
 
-
     .logo {
-
-      font-size: 28px;
-
+      font-family: "Orbitron", sans-serif;
+      font-size: 25px;
       font-weight: 900;
-
-      letter-spacing: 1px;
+      letter-spacing: 2px;
 
       background:
         linear-gradient(
           90deg,
           #ff1744,
-          #ff4d00,
-          #ffb300,
+          #ff6d00,
           #ff1744
         );
 
-      background-size: 250%;
+      background-size: 200% auto;
 
       -webkit-background-clip: text;
-
       -webkit-text-fill-color: transparent;
 
-      animation: logoRGB 4s linear infinite;
+      animation: logoRGB 3s linear infinite;
 
-      text-shadow:
-        0 0 25px rgba(255, 0, 70, 0.3);
-
+      filter:
+        drop-shadow(0 0 8px rgba(255, 0, 60, 0.4));
     }
 
     @keyframes logoRGB {
-
-      0% {
-        background-position: 0%;
+      to {
+        background-position: 200% center;
       }
-
-      100% {
-        background-position: 250%;
-      }
-
     }
-
 
     nav ul {
-
       list-style: none;
-
       display: flex;
-
-      gap: 30px;
-
+      gap: 28px;
     }
 
-
     nav ul li a {
-
-      color: #aaa;
-
+      color: #999;
       text-decoration: none;
 
-      font-size: 14px;
+      font-family: "Orbitron", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
 
-      font-weight: bold;
+      letter-spacing: 1.5px;
 
       transition: 0.25s;
 
       position: relative;
-
     }
 
-
     nav ul li a::after {
-
       content: "";
 
       position: absolute;
-
       left: 0;
-
-      bottom: -7px;
+      bottom: -8px;
 
       width: 0;
-
       height: 2px;
 
-      background:
-        linear-gradient(
-          90deg,
-          #ff1744,
-          #ff7a00,
-          #7b00ff
-        );
+      background: #ff1744;
 
-      transition: 0.25s;
+      box-shadow: 0 0 10px #ff1744;
 
+      transition: 0.3s;
     }
-
 
     nav ul li a:hover {
-
       color: #fff;
-
-      text-shadow:
-        0 0 12px rgba(255, 0, 70, 0.8);
-
+      text-shadow: 0 0 10px rgba(255,23,68,0.8);
     }
-
 
     nav ul li a:hover::after {
-
       width: 100%;
-
     }
-
 
     /* =========================
        HERO
     ========================= */
 
     .hero {
-
-      min-height: 500px;
+      min-height: 540px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       text-align: center;
 
-      padding: 80px 20px;
+      padding: 100px 20px 80px;
 
       position: relative;
-
     }
 
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 520px;
+      height: 520px;
+
+      border: 1px solid rgba(255, 23, 68, 0.08);
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 80px rgba(255, 23, 68, 0.05),
+        inset 0 0 80px rgba(120, 0, 255, 0.04);
+
+      animation: heroCircle 12s linear infinite;
+
+      pointer-events: none;
+    }
+
+    @keyframes heroCircle {
+      from {
+        transform: rotate(0deg) scale(1);
+      }
+
+      to {
+        transform: rotate(360deg) scale(1.08);
+      }
+    }
 
     .hero-content {
-
-      max-width: 850px;
-
+      max-width: 900px;
+      position: relative;
+      z-index: 2;
     }
 
-
     .tag {
-
       display: inline-block;
 
-      padding: 8px 16px;
+      padding: 9px 18px;
+      margin-bottom: 24px;
 
-      margin-bottom: 22px;
-
-      border: 1px solid rgba(255, 0, 70, 0.45);
+      border: 1px solid rgba(255, 23, 68, 0.35);
 
       border-radius: 30px;
 
-      background:
-        rgba(255, 0, 60, 0.06);
+      background: rgba(255, 23, 68, 0.05);
 
-      color: #ff5c7a;
+      color: #ff526f;
 
-      font-size: 12px;
+      font-family: "Orbitron", sans-serif;
 
-      font-weight: bold;
+      font-size: 10px;
+      font-weight: 700;
 
-      letter-spacing: 2px;
+      letter-spacing: 3px;
 
       box-shadow:
-        0 0 25px rgba(255, 0, 60, 0.08);
+        0 0 18px rgba(255,23,68,0.08);
 
+      animation: tagPulse 2s ease-in-out infinite;
     }
 
+    @keyframes tagPulse {
+      50% {
+        box-shadow:
+          0 0 30px rgba(255,23,68,0.18);
+      }
+    }
 
     .hero h1 {
+      font-family: "Orbitron", sans-serif;
 
-      font-size: clamp(40px, 7vw, 78px);
+      font-size: clamp(45px, 8vw, 95px);
 
       line-height: 1;
 
-      margin-bottom: 20px;
+      margin-bottom: 25px;
 
       font-weight: 900;
 
@@ -372,288 +498,244 @@
           #ffffff,
           #ff1744,
           #ff6d00,
-          #8a2be2,
-          #00d9ff,
           #ffffff
         );
 
-      background-size: 300%;
+      background-size: 250% auto;
 
       -webkit-background-clip: text;
-
       -webkit-text-fill-color: transparent;
 
-      animation: heroRGB 6s linear infinite;
+      animation: heroTextRGB 4s linear infinite;
 
       filter:
-        drop-shadow(0 0 18px rgba(255, 0, 70, 0.25));
-
+        drop-shadow(0 0 20px rgba(255, 23, 68, 0.2));
     }
 
-
-    @keyframes heroRGB {
-
-      0% {
-        background-position: 0%;
+    @keyframes heroTextRGB {
+      to {
+        background-position: 250% center;
       }
-
-      100% {
-        background-position: 300%;
-      }
-
     }
-
 
     .hero p {
-
-      color: #999;
+      color: #888;
 
       font-size: 17px;
-
-      line-height: 1.7;
+      line-height: 1.8;
 
       max-width: 650px;
-
       margin: auto;
-
     }
 
-
     /* =========================
-       PANEL SEARCH
+       SEARCH AREA
     ========================= */
 
     .search-wrapper {
-
+      width: 90%;
       max-width: 900px;
 
-      margin: -25px auto 70px;
-
-      padding: 0 20px;
-
-    }
-
-
-    .search-panel {
-
-      padding: 20px;
-
-      border-radius: 18px;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.055),
-          rgba(255,255,255,0.015)
-        );
-
-      border: 1px solid rgba(255,255,255,0.08);
+      margin: -20px auto 65px;
 
       position: relative;
-
-      overflow: hidden;
-
-      box-shadow:
-        0 15px 50px rgba(0,0,0,0.45);
-
+      z-index: 5;
     }
 
+    .search-main {
+      position: relative;
+    }
 
-    /* RGB LINE */
-
-    .search-panel::before {
-
+    .search-main::before {
       content: "";
 
       position: absolute;
+      inset: -2px;
 
-      top: 0;
+      border-radius: 16px;
 
-      left: 0;
+      background:
+        linear-gradient(
+          90deg,
+          #ff003c,
+          #ff6d00,
+          #7b00ff,
+          #00c8ff,
+          #ff003c
+        );
 
+      background-size: 300% 100%;
+
+      animation: borderRGB 5s linear infinite;
+
+      z-index: -1;
+
+      opacity: 0.75;
+    }
+
+    @keyframes borderRGB {
+      0% {
+        background-position: 0% center;
+      }
+
+      100% {
+        background-position: 300% center;
+      }
+    }
+
+    .search-box {
       width: 100%;
 
-      height: 2px;
+      padding: 20px 24px;
+
+      border-radius: 14px;
+
+      border: 0;
+
+      background: #08080b;
+
+      color: #fff;
+
+      outline: none;
+
+      font-family: "Rajdhani", sans-serif;
+
+      font-size: 16px;
+
+      font-weight: 600;
+
+      letter-spacing: 0.5px;
+
+      transition: 0.25s;
+    }
+
+    .search-box:focus {
+      box-shadow:
+        0 0 25px rgba(255, 23, 68, 0.18);
+    }
+
+    .search-box::placeholder {
+      color: #666;
+    }
+
+    /* PLAYER / TEAM */
+
+    .panel-searches {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 15px;
+
+      margin-top: 18px;
+    }
+
+    .small-search {
+      position: relative;
+    }
+
+    .small-search::before {
+      content: "";
+
+      position: absolute;
+      inset: -1px;
+
+      border-radius: 11px;
 
       background:
         linear-gradient(
           90deg,
           #ff1744,
-          #ff7300,
           #7b00ff,
-          #00d9ff,
+          #00c8ff,
           #ff1744
         );
 
-      background-size: 300%;
+      background-size: 300% 100%;
 
-      animation: rgbLine 5s linear infinite;
+      animation: borderRGB 6s linear infinite;
 
+      z-index: -1;
     }
 
-
-    @keyframes rgbLine {
-
-      0% {
-        background-position: 0%;
-      }
-
-      100% {
-        background-position: 300%;
-      }
-
-    }
-
-
-    .search-title {
-
-      color: #aaa;
-
-      font-size: 12px;
-
-      font-weight: bold;
-
-      letter-spacing: 1px;
-
-      margin-bottom: 14px;
-
-    }
-
-
-    .search-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        1.5fr
-        1fr
-        1fr;
-
-      gap: 12px;
-
-    }
-
-
-    .search-box {
-
+    .small-search input {
       width: 100%;
 
-      padding: 15px 17px;
+      padding: 14px 17px;
 
-      border-radius: 11px;
+      border: 0;
 
-      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
 
-      background:
-        rgba(0,0,0,0.5);
+      background: #09090c;
 
       color: white;
 
       outline: none;
 
+      font-family: "Rajdhani", sans-serif;
+
       font-size: 14px;
 
-      transition: 0.3s;
-
+      font-weight: 600;
     }
 
-
-    .search-box:focus {
-
-      border-color: #ff1744;
-
-      box-shadow:
-        0 0 18px rgba(255, 0, 70, 0.18);
-
-    }
-
-
-    .search-box::placeholder {
-
+    .small-search input::placeholder {
       color: #666;
-
     }
-
 
     /* =========================
        SECTION
     ========================= */
 
     section {
-
       width: 90%;
-
       max-width: 1200px;
 
       margin: auto;
 
       padding: 70px 0;
-
     }
-
 
     .section-title {
-
       text-align: center;
-
       margin-bottom: 45px;
-
     }
-
 
     .section-title h2 {
+      font-family: "Orbitron", sans-serif;
 
-      font-size: 32px;
+      font-size: 28px;
 
-      margin-bottom: 10px;
+      margin-bottom: 12px;
 
-      background:
-        linear-gradient(
-          90deg,
-          #fff,
-          #ff1744,
-          #ff9800
-        );
-
-      -webkit-background-clip: text;
-
-      -webkit-text-fill-color: transparent;
-
+      letter-spacing: 1px;
     }
-
 
     .section-title p {
-
-      color: #777;
-
+      color: #666;
       font-size: 14px;
-
     }
-
 
     /* =========================
        CATEGORY GRID
     ========================= */
 
     .categories {
-
       display: grid;
 
       grid-template-columns:
         repeat(5, 1fr);
 
       gap: 18px;
-
     }
 
-
     .category {
-
       position: relative;
 
-      padding: 28px 18px;
+      padding: 30px 18px;
 
-      min-height: 190px;
+      min-height: 205px;
 
       border-radius: 18px;
 
@@ -661,28 +743,27 @@
         linear-gradient(
           145deg,
           rgba(255,255,255,0.055),
-          rgba(255,255,255,0.01)
+          rgba(255,255,255,0.012)
         );
 
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.07);
 
       text-align: center;
 
-      transition: 0.3s;
+      transition: 0.35s;
 
       overflow: hidden;
 
+      box-shadow:
+        0 15px 45px rgba(0,0,0,0.25);
     }
 
-
-    /* RGB CARD BORDER */
+    /* RGB CARD EDGE */
 
     .category::after {
-
       content: "";
 
       position: absolute;
-
       inset: 0;
 
       border-radius: 18px;
@@ -691,17 +772,11 @@
 
       background:
         linear-gradient(
-          120deg,
-          transparent,
-          rgba(255,0,70,0.5),
-          transparent,
-          rgba(0,220,255,0.35),
-          transparent
+          135deg,
+          transparent 35%,
+          rgba(255,23,68,0.7),
+          transparent 65%
         );
-
-      background-size: 300%;
-
-      animation: cardRGB 7s linear infinite;
 
       -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
@@ -711,127 +786,123 @@
 
       mask-composite: exclude;
 
+      opacity: 0.25;
+
       pointer-events: none;
-
     }
 
+    .category::before {
+      content: "";
 
-    @keyframes cardRGB {
+      position: absolute;
 
-      0% {
-        background-position: 0%;
-      }
+      width: 150px;
+      height: 150px;
 
-      100% {
-        background-position: 300%;
-      }
-
-    }
-
-
-    .category:hover {
-
-      transform: translateY(-8px);
-
-      border-color:
-        rgba(255, 0, 70, 0.45);
-
-      box-shadow:
-        0 15px 40px rgba(0,0,0,0.5),
-        0 0 25px rgba(255,0,70,0.12);
-
-    }
-
-
-    .category-icon {
-
-      font-size: 42px;
-
-      margin-bottom: 16px;
-
-      filter:
-        drop-shadow(
-          0 0 12px
-          rgba(255, 0, 70, 0.25)
+      background:
+        radial-gradient(
+          circle,
+          rgba(255, 23, 68, 0.14),
+          transparent 65%
         );
 
+      filter: blur(20px);
+
+      top: -65px;
+      right: -50px;
+
+      border-radius: 50%;
+
+      transition: 0.4s;
     }
 
+    .category:hover {
+      transform: translateY(-9px);
+
+      border-color: rgba(255,23,68,0.35);
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.5),
+        0 0 30px rgba(255,23,68,0.09);
+    }
+
+    .category:hover::before {
+      transform: scale(1.5);
+    }
+
+    .category-icon {
+      font-size: 42px;
+      margin-bottom: 17px;
+
+      filter:
+        drop-shadow(0 0 8px rgba(255,255,255,0.12));
+    }
 
     .category h3 {
+      font-family: "Orbitron", sans-serif;
 
-      font-size: 17px;
+      font-size: 14px;
 
-      margin-bottom: 8px;
-
+      margin-bottom: 9px;
     }
-
 
     .category p {
-
       font-size: 12px;
 
-      color: #777;
+      color: #666;
 
-      margin-bottom: 18px;
-
+      margin-bottom: 19px;
     }
 
-
     .view-btn {
-
       border: 0;
 
-      padding: 9px 15px;
+      padding: 10px 17px;
 
-      border-radius: 8px;
+      border-radius: 7px;
 
       background:
         linear-gradient(
           90deg,
+          #d60035,
           #ff1744,
-          #ff5c00
+          #ff6d00
         );
 
       color: white;
 
-      font-size: 11px;
+      font-family: "Orbitron", sans-serif;
 
-      font-weight: bold;
+      font-size: 9px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
 
       cursor: pointer;
 
       transition: 0.25s;
 
       box-shadow:
-        0 0 15px rgba(255,0,60,0.15);
-
+        0 0 15px rgba(255,23,68,0.16);
     }
-
 
     .view-btn:hover {
-
-      transform: scale(1.05);
+      transform: scale(1.06);
 
       box-shadow:
-        0 0 25px rgba(255,0,70,0.35);
-
+        0 0 25px rgba(255,23,68,0.35);
     }
-
 
     /* =========================
        COLLECTION
     ========================= */
 
     #collectionSection {
-
       display: none;
-
     }
 
-
     .collection-header {
-
       display: flex;
 
       justify-content: space-between;
@@ -841,66 +912,52 @@
       margin-bottom: 30px;
 
       gap: 20px;
-
     }
-
 
     .collection-header h2 {
-
-      font-size: 28px;
-
+      font-family: "Orbitron", sans-serif;
+      font-size: 25px;
     }
-
 
     .collection-header span {
-
       color: #ff1744;
-
     }
 
-
     .back-btn {
+      border: 1px solid rgba(255,23,68,0.35);
 
-      border: 1px solid rgba(255,0,70,0.35);
+      background: rgba(255,23,68,0.06);
 
-      background:
-        rgba(255,0,70,0.07);
+      color: #ff5270;
 
-      color: #ff5878;
-
-      padding: 9px 15px;
+      padding: 10px 16px;
 
       border-radius: 8px;
 
       cursor: pointer;
 
-      font-size: 12px;
+      font-family: "Orbitron", sans-serif;
 
+      font-size: 9px;
     }
-
 
     /* =========================
        EMOTE GRID
     ========================= */
 
     .emote-grid {
-
       display: grid;
 
       grid-template-columns:
         repeat(4, 1fr);
 
       gap: 18px;
-
     }
 
-
     .emote-card {
+      border: 1px solid rgba(255,255,255,0.07);
 
-      border: 1px solid rgba(255,255,255,0.08);
-
-      background:
-        rgba(255,255,255,0.035);
+      background: rgba(255,255,255,0.025);
 
       border-radius: 16px;
 
@@ -909,25 +966,19 @@
       transition: 0.3s;
 
       cursor: pointer;
-
     }
-
 
     .emote-card:hover {
-
       transform: translateY(-6px);
 
-      border-color:
-        rgba(255,0,70,0.4);
+      border-color: rgba(255,23,68,0.4);
 
       box-shadow:
-        0 15px 35px rgba(0,0,0,0.35);
-
+        0 15px 35px rgba(0,0,0,0.4),
+        0 0 25px rgba(255,23,68,0.08);
     }
 
-
     .emote-preview {
-
       height: 170px;
 
       display: flex;
@@ -941,43 +992,29 @@
       background:
         radial-gradient(
           circle,
-          rgba(255,0,70,0.13),
+          rgba(255,23,68,0.12),
           transparent 65%
         );
 
       border-bottom:
         1px solid rgba(255,255,255,0.06);
-
     }
-
 
     .emote-info {
-
       padding: 17px;
-
     }
-
 
     .emote-info h3 {
-
       font-size: 15px;
-
       margin-bottom: 8px;
-
     }
-
 
     .emote-info p {
-
       font-size: 11px;
-
-      color: #777;
-
+      color: #666;
     }
 
-
     .badge {
-
       display: inline-block;
 
       margin-top: 12px;
@@ -986,101 +1023,92 @@
 
       border-radius: 5px;
 
-      background:
-        rgba(255,0,70,0.1);
+      background: rgba(255,23,68,0.08);
 
-      color: #ff5878;
+      color: #ff5270;
 
       font-size: 9px;
 
       font-weight: bold;
 
       letter-spacing: 0.5px;
-
     }
-
 
     /* =========================
        ABOUT
     ========================= */
 
     .about-box {
-
       max-width: 850px;
 
       margin: auto;
 
-      padding: 35px;
+      padding: 40px;
 
       border-radius: 18px;
 
       background:
-        rgba(255,255,255,0.035);
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.045),
+          rgba(255,255,255,0.015)
+        );
 
-      border:
-        1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
 
       text-align: center;
 
       box-shadow:
-        0 15px 50px rgba(0,0,0,0.35);
-
+        0 20px 60px rgba(0,0,0,0.35);
     }
-
 
     .about-box h2 {
-
+      font-family: "Orbitron", sans-serif;
       margin-bottom: 18px;
-
     }
-
 
     .about-box p {
+      color: #888;
 
-      color: #999;
-
-      line-height: 1.8;
+      line-height: 1.9;
 
       font-size: 14px;
-
     }
-
 
     /* =========================
        FOOTER
     ========================= */
 
     footer {
-
       margin-top: 70px;
 
-      padding: 30px 20px;
+      padding: 35px 20px;
 
       text-align: center;
 
       border-top:
-        1px solid rgba(255,255,255,0.07);
+        1px solid rgba(255,255,255,0.06);
 
-      color: #666;
+      color: #555;
 
       font-size: 12px;
 
+      background:
+        rgba(0,0,0,0.25);
     }
-
 
     footer strong {
-
       color: #ff1744;
 
+      text-shadow:
+        0 0 10px rgba(255,23,68,0.4);
     }
 
-
     /* =========================
-       POPUP
+       COMING SOON POPUP
     ========================= */
 
     .popup {
-
       position: fixed;
 
       inset: 0;
@@ -1088,145 +1116,121 @@
       display: none;
 
       align-items: center;
-
       justify-content: center;
 
       padding: 20px;
 
       background:
-        rgba(0,0,0,0.78);
+        rgba(0,0,0,0.82);
 
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
 
-      z-index: 2000;
-
+      z-index: 3000;
     }
 
-
     .popup-box {
-
       width: 100%;
+      max-width: 440px;
 
-      max-width: 430px;
-
-      padding: 35px;
+      padding: 40px 30px;
 
       border-radius: 20px;
 
       background:
         linear-gradient(
           145deg,
-          #171717,
-          #080808
+          #15151a,
+          #07070a
         );
 
-      border:
-        1px solid rgba(255,0,70,0.35);
+      border: 1px solid rgba(255,23,68,0.35);
 
       text-align: center;
 
       box-shadow:
         0 25px 80px rgba(0,0,0,0.7),
-        0 0 35px rgba(255,0,70,0.1);
+        0 0 45px rgba(255,23,68,0.1);
 
-      animation:
-        popupIn 0.25s ease;
-
+      animation: popupIn 0.25s ease;
     }
 
-
     @keyframes popupIn {
-
       from {
-
         opacity: 0;
-
-        transform:
-          scale(0.9);
-
+        transform: scale(0.9);
       }
 
       to {
-
         opacity: 1;
-
-        transform:
-          scale(1);
-
+        transform: scale(1);
       }
-
     }
-
 
     .popup-icon {
-
       font-size: 65px;
-
       margin-bottom: 15px;
 
+      filter:
+        drop-shadow(0 0 15px rgba(255,23,68,0.4));
     }
 
-
     .popup-box h2 {
-
       margin-bottom: 12px;
+
+      font-family: "Orbitron", sans-serif;
 
       color: #ff1744;
 
       text-shadow:
-        0 0 15px rgba(255,0,70,0.35);
-
+        0 0 15px rgba(255,23,68,0.35);
     }
-
 
     .popup-box p {
+      color: #888;
 
-      color: #999;
+      line-height: 1.7;
 
-      line-height: 1.6;
-
-      font-size: 13px;
-
+      font-size: 14px;
     }
 
-
     .close-btn {
-
       margin-top: 25px;
 
       border: 0;
 
-      padding: 10px 22px;
+      padding: 11px 24px;
 
       border-radius: 8px;
 
       background:
         linear-gradient(
           90deg,
+          #d60035,
           #ff1744,
-          #ff6200
+          #ff6d00
         );
 
       color: white;
 
-      font-weight: bold;
+      font-family: "Orbitron", sans-serif;
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
 
       cursor: pointer;
 
       transition: 0.25s;
-
     }
 
-
     .close-btn:hover {
-
       transform: scale(1.05);
 
       box-shadow:
-        0 0 22px rgba(255,0,70,0.35);
-
+        0 0 20px rgba(255,23,68,0.35);
     }
-
 
     /* =========================
        MOBILE
@@ -1235,152 +1239,81 @@
     @media (max-width: 1000px) {
 
       .categories {
-
-        grid-template-columns:
-          repeat(2, 1fr);
-
+        grid-template-columns: repeat(2, 1fr);
       }
-
 
       .emote-grid {
-
-        grid-template-columns:
-          repeat(2, 1fr);
-
-      }
-
-
-      .search-grid {
-
-        grid-template-columns:
-          1fr 1fr;
-
-      }
-
-
-      .search-box:first-child {
-
-        grid-column:
-          1 / -1;
-
+        grid-template-columns: repeat(2, 1fr);
       }
 
     }
 
-
     @media (max-width: 600px) {
 
       nav {
-
-        padding:
-          0 20px;
-
+        padding: 0 18px;
       }
-
 
       .logo {
-
-        font-size: 23px;
-
+        font-size: 19px;
       }
-
 
       nav ul {
-
-        gap: 14px;
-
+        gap: 12px;
       }
-
 
       nav ul li a {
-
-        font-size: 11px;
-
+        font-size: 8px;
       }
-
 
       .hero {
-
-        min-height: 430px;
-
-        padding:
-          60px 20px;
-
+        min-height: 450px;
+        padding: 70px 20px;
       }
-
 
       .hero p {
-
         font-size: 14px;
-
       }
 
+      .hero::before {
+        width: 330px;
+        height: 330px;
+      }
 
       .search-wrapper {
-
+        width: 92%;
         margin-bottom: 30px;
-
       }
 
-
-      .search-grid {
-
-        grid-template-columns:
-          1fr;
-
+      .panel-searches {
+        grid-template-columns: 1fr;
+        gap: 12px;
       }
-
-
-      .search-box:first-child {
-
-        grid-column:
-          auto;
-
-      }
-
 
       section {
-
         width: 92%;
-
-        padding:
-          50px 0;
-
+        padding: 50px 0;
       }
-
 
       .categories {
-
-        grid-template-columns:
-          1fr;
-
+        grid-template-columns: 1fr;
       }
-
 
       .emote-grid {
-
-        grid-template-columns:
-          1fr;
-
+        grid-template-columns: 1fr;
       }
-
 
       .collection-header {
-
-        flex-direction:
-          column;
-
-        align-items:
-          flex-start;
-
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-
       .about-box {
+        padding: 28px 20px;
+      }
 
-        padding:
-          25px 20px;
-
+      .welcome-title {
+        font-size: 38px;
       }
 
     }
@@ -1389,8 +1322,39 @@
 
 </head>
 
-
 <body>
+
+  <!-- RGB TOP LINE -->
+  <div class="rgb-line"></div>
+
+
+  <!-- =========================
+       WELCOME SCREEN
+  ========================= -->
+
+  <div class="welcome-screen" id="welcomeScreen">
+
+    <div class="welcome-content">
+
+      <div class="welcome-mini">
+        INITIALIZING GAMING PANEL
+      </div>
+
+      <div class="welcome-title">
+        WELCOME TO ꓣⲉⲭυⲋ
+      </div>
+
+      <div class="welcome-sub">
+        FREE FIRE EMOTE PANEL
+      </div>
+
+      <div class="loading-bar">
+        <span></span>
+      </div>
+
+    </div>
+
+  </div>
 
 
   <!-- =========================
@@ -1403,25 +1367,18 @@
       ꓣⲉⲭυⲋ
     </div>
 
-
     <ul>
 
       <li>
-        <a href="#home">
-          HOME
-        </a>
+        <a href="#home">HOME</a>
       </li>
 
       <li>
-        <a href="#emotes">
-          EMOTES
-        </a>
+        <a href="#emotes">EMOTES</a>
       </li>
 
       <li>
-        <a href="#about">
-          ABOUT
-        </a>
+        <a href="#about">ABOUT</a>
       </li>
 
     </ul>
@@ -1433,9 +1390,7 @@
        HERO
   ========================= -->
 
-  <header
-    class="hero"
-    id="home">
+  <header class="hero" id="home">
 
     <div class="hero-content">
 
@@ -1443,15 +1398,14 @@
         FAN-MADE FREE FIRE PROJECT
       </div>
 
-
       <h1>
         Emote Panel
       </h1>
 
-
       <p>
-        Explore different fan-made Free Fire emote categories
-        in a clean, modern and gaming-style interface.
+        Explore fan-made Free Fire emote categories
+        through a powerful dark gaming interface
+        built for the ꓣⲉⲭυⲋ community.
       </p>
 
     </div>
@@ -1465,42 +1419,41 @@
 
   <div class="search-wrapper">
 
-    <div class="search-panel">
+    <!-- EMOTE SEARCH -->
 
-      <div class="search-title">
-        PANEL SEARCH
+    <div class="search-main">
+
+      <input
+        type="text"
+        id="searchInput"
+        class="search-box"
+        placeholder="🔎  Search Emotes..."
+      >
+
+    </div>
+
+
+    <!-- PLAYER UID + TEAMCODE -->
+
+    <div class="panel-searches">
+
+      <div class="small-search">
+
+        <input
+          type="text"
+          id="playerUID"
+          placeholder="👤  Player UID"
+        >
+
       </div>
 
 
-      <div class="search-grid">
-
-        <!-- EMOTE SEARCH -->
+      <div class="small-search">
 
         <input
           type="text"
-          id="searchInput"
-          class="search-box"
-          placeholder="🔎 Search Emote..."
-        >
-
-
-        <!-- TEAMCODE -->
-
-        <input
-          type="text"
-          id="teamCodeInput"
-          class="search-box"
-          placeholder="🎮 Teamcode"
-        >
-
-
-        <!-- PLAYER UID -->
-
-        <input
-          type="text"
-          id="playerUIDInput"
-          class="search-box"
-          placeholder="👤 Player UID"
+          id="teamCode"
+          placeholder="🎮  Teamcode"
         >
 
       </div>
@@ -1522,9 +1475,8 @@
         EMOTE CATEGORIES
       </h2>
 
-
       <p>
-        Choose a category to explore the collection
+        Choose a category to access the collection
       </p>
 
     </div>
@@ -1543,16 +1495,13 @@
           💎
         </div>
 
-
         <h3>
           Rare Emotes
         </h3>
 
-
         <p>
           Rare-style fan-made collection
         </p>
-
 
         <button
           class="view-btn"
@@ -1573,16 +1522,13 @@
           🔥
         </div>
 
-
         <h3>
           Max Gun Emotes
         </h3>
 
-
         <p>
           Gun-themed fan-made collection
         </p>
-
 
         <button
           class="view-btn"
@@ -1603,16 +1549,13 @@
           ✨
         </div>
 
-
         <h3>
           New Emotes
         </h3>
 
-
         <p>
           New-style emote collection
         </p>
-
 
         <button
           class="view-btn"
@@ -1633,16 +1576,13 @@
           👥
         </div>
 
-
         <h3>
           Squad Emotes
         </h3>
 
-
         <p>
           Squad-themed collection
         </p>
-
 
         <button
           class="view-btn"
@@ -1663,16 +1603,13 @@
           🤝
         </div>
 
-
         <h3>
           Duo Emotes
         </h3>
 
-
         <p>
           Duo-themed collection
         </p>
-
 
         <button
           class="view-btn"
@@ -1684,7 +1621,6 @@
 
       </div>
 
-
     </div>
 
   </section>
@@ -1694,33 +1630,21 @@
        COLLECTION
   ========================= -->
 
-  <section
-    id="collectionSection">
+  <section id="collectionSection">
 
-
-    <div
-      class="collection-header">
-
+    <div class="collection-header">
 
       <div>
 
-        <h2
-          id="collectionTitle">
-
+        <h2 id="collectionTitle">
           Emotes
-
         </h2>
 
-
-        <p
-          style="color:#777; margin-top:7px;">
-
+        <p style="color:#666; margin-top:7px;">
           Fan-made preview collection
-
         </p>
 
       </div>
-
 
       <button
         class="back-btn"
@@ -1736,7 +1660,6 @@
     <div
       class="emote-grid"
       id="emoteGrid">
-
     </div>
 
   </section>
@@ -1763,19 +1686,14 @@
         Fan-Made Gaming Project
       </h2>
 
-
       <p>
-
-        This website is an independent fan-made project
-        created for browsing and presenting Free Fire-inspired
-        emote categories in a modern interface.
-
+        This website is an independent fan-made project created
+        for browsing and presenting Free Fire-inspired emote
+        categories in a modern gaming interface.
         It does not modify game files, game accounts or provide
         anti-ban services.
-
-        Free Fire and related trademarks belong to their
-        respective owners.
-
+        Free Fire and related trademarks belong to their respective
+        owners.
       </p>
 
     </div>
@@ -1790,36 +1708,25 @@
   <footer>
 
     <p>
-
-      © 2026
-      <strong>
-        ꓣⲉⲭυⲋ
-      </strong>
-
+      © 2026 <strong>ꓣⲉⲭυⲋ</strong>
     </p>
 
-
     <p style="margin-top:8px;">
-
-      Fan-made website.
-      Not affiliated with Garena.
-
+      Fan-made website. Not affiliated with Garena.
     </p>
 
   </footer>
 
 
   <!-- =========================
-       POPUP
+       COMING SOON POPUP
   ========================= -->
 
   <div
     class="popup"
     id="popup">
 
-
     <div class="popup-box">
-
 
       <div
         class="popup-icon"
@@ -1829,22 +1736,13 @@
 
       </div>
 
-
-      <h2
-        id="popupTitle">
-
+      <h2 id="popupTitle">
         COMING SOON
-
       </h2>
 
-
-      <p
-        id="popupText">
-
+      <p id="popupText">
         We are working on this category.
-
       </p>
-
 
       <button
         class="close-btn"
@@ -1853,7 +1751,6 @@
         CLOSE
 
       </button>
-
 
     </div>
 
@@ -1866,7 +1763,6 @@
 
   <script>
 
-
     /* =========================
        CATEGORY POPUP
     ========================= */
@@ -1877,23 +1773,18 @@
         "popupIcon"
       ).textContent = "🚧";
 
-
       document.getElementById(
         "popupTitle"
-      ).textContent =
-        "COMING SOON";
-
+      ).textContent = "COMING SOON";
 
       document.getElementById(
         "popupText"
       ).textContent =
         "We are working on " + category;
 
-
       document.getElementById(
         "popup"
-      ).style.display =
-        "flex";
+      ).style.display = "flex";
 
     }
 
@@ -1906,9 +1797,7 @@
 
       document.getElementById(
         "collectionSection"
-      ).style.display =
-        "none";
-
+      ).style.display = "none";
 
       document.getElementById(
         "emotes"
@@ -1927,14 +1816,13 @@
 
       document.getElementById(
         "popup"
-      ).style.display =
-        "none";
+      ).style.display = "none";
 
     }
 
 
     /* =========================
-       OUTSIDE CLICK
+       OUTSIDE POPUP CLICK
     ========================= */
 
     document.getElementById(
@@ -1970,32 +1858,26 @@
           .toLowerCase()
           .trim();
 
-
         const cards =
           document.querySelectorAll(
             ".category"
           );
 
-
         cards.forEach(
           function(card) {
 
             const text =
-              card.innerText
-              .toLowerCase();
-
+              card.innerText.toLowerCase();
 
             if (
               text.includes(search)
             ) {
 
-              card.style.display =
-                "";
+              card.style.display = "";
 
             } else {
 
-              card.style.display =
-                "none";
+              card.style.display = "none";
 
             }
 
@@ -2007,18 +1889,27 @@
 
 
     /* =========================
-       TEAMCODE
+       WELCOME SCREEN
     ========================= */
 
-    document.getElementById(
-      "teamCodeInput"
-    ).addEventListener(
-      "input",
+    window.addEventListener(
+      "load",
       function() {
 
-        this.value =
-          this.value
-          .replace(/\s/g, "");
+        setTimeout(
+          function() {
+
+            const welcome =
+              document.getElementById(
+                "welcomeScreen"
+              );
+
+            welcome.style.pointerEvents =
+              "none";
+
+          },
+          4200
+        );
 
       }
     );
@@ -2026,24 +1917,40 @@
 
     /* =========================
        PLAYER UID
+       DEMO INPUT
     ========================= */
 
     document.getElementById(
-      "playerUIDInput"
+      "playerUID"
     ).addEventListener(
-      "input",
+      "focus",
       function() {
 
-        this.value =
-          this.value
-          .replace(/\D/g, "");
+        this.style.boxShadow =
+          "0 0 25px rgba(255,23,68,0.15)";
 
       }
     );
 
 
-  </script>
+    /* =========================
+       TEAMCODE
+       DEMO INPUT
+    ========================= */
 
+    document.getElementById(
+      "teamCode"
+    ).addEventListener(
+      "focus",
+      function() {
+
+        this.style.boxShadow =
+          "0 0 25px rgba(123,0,255,0.15)";
+
+      }
+    );
+
+  </script>
 
 </body>
 </html>
