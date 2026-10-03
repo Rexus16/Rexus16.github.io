@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -579,6 +580,7 @@
 
     .popup-box h2 {
       margin-bottom: 12px;
+      color: #ff8500;
     }
 
     .popup-box p {
@@ -603,6 +605,13 @@
       font-weight: bold;
 
       cursor: pointer;
+
+      transition: 0.25s;
+    }
+
+    .close-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(255,100,0,0.3);
     }
 
     /* MOBILE */
@@ -941,15 +950,15 @@
       <div
         class="popup-icon"
         id="popupIcon">
-        ✨
+        🚧
       </div>
 
       <h2 id="popupTitle">
-        Emote
+        COMING SOON
       </h2>
 
       <p id="popupText">
-        Fan-made preview.
+        We are working on this category.
       </p>
 
       <button
@@ -965,228 +974,19 @@
 
   <script>
 
-    /* EMOTE DATA */
-
-    const emotes = {
-
-      "Rare Emotes": [
-
-        {
-          name: "Diamond Style",
-          icon: "💎",
-          description: "Rare-style fan-made emote preview."
-        },
-
-        {
-          name: "Royal Move",
-          icon: "👑",
-          description: "Royal-themed fan-made emote preview."
-        },
-
-        {
-          name: "Lightning",
-          icon: "⚡",
-          description: "Energy-themed fan-made emote preview."
-        },
-
-        {
-          name: "Star Moment",
-          icon: "🌟",
-          description: "Star-themed fan-made emote preview."
-        }
-
-      ],
-
-
-      "Max Gun Emotes": [
-
-        {
-          name: "Fire Mode",
-          icon: "🔥",
-          description: "Fire-themed fan-made emote preview."
-        },
-
-        {
-          name: "Weapon Style",
-          icon: "🔫",
-          description: "Weapon-inspired fan-made preview."
-        },
-
-        {
-          name: "Impact",
-          icon: "💥",
-          description: "Impact-themed fan-made emote preview."
-        },
-
-        {
-          name: "Power Shot",
-          icon: "⚡",
-          description: "Power-themed fan-made emote preview."
-        }
-
-      ],
-
-
-      "New Emotes": [
-
-        {
-          name: "New Wave",
-          icon: "✨",
-          description: "New-style fan-made emote preview."
-        },
-
-        {
-          name: "Launch",
-          icon: "🚀",
-          description: "Launch-themed fan-made emote preview."
-        },
-
-        {
-          name: "Shine",
-          icon: "🌟",
-          description: "Shine-themed fan-made emote preview."
-        },
-
-        {
-          name: "Target",
-          icon: "🎯",
-          description: "Target-themed fan-made emote preview."
-        }
-
-      ],
-
-
-      "Squad Emotes": [
-
-        {
-          name: "Squad Up",
-          icon: "👥",
-          description: "Squad-themed fan-made emote preview."
-        },
-
-        {
-          name: "Team Power",
-          icon: "🤜",
-          description: "Team-themed fan-made emote preview."
-        },
-
-        {
-          name: "Victory",
-          icon: "🏆",
-          description: "Victory-themed fan-made emote preview."
-        },
-
-        {
-          name: "Squad Fire",
-          icon: "🔥",
-          description: "Squad fire-themed fan-made preview."
-        }
-
-      ],
-
-
-      "Duo Emotes": [
-
-        {
-          name: "Duo Bond",
-          icon: "🤝",
-          description: "Duo-themed fan-made emote preview."
-        },
-
-        {
-          name: "Double Power",
-          icon: "⚡",
-          description: "Double-power fan-made preview."
-        },
-
-        {
-          name: "Together",
-          icon: "❤️",
-          description: "Together-themed fan-made preview."
-        },
-
-        {
-          name: "Duo Victory",
-          icon: "🏆",
-          description: "Duo victory fan-made preview."
-        }
-
-      ]
-
-    };
-
-
-    /* OPEN CATEGORY */
+    /* OPEN CATEGORY - COMING SOON POPUP */
 
     function openCategory(category) {
 
-      const section =
-        document.getElementById("collectionSection");
+      document.getElementById("popupIcon").textContent = "🚧";
 
-      const title =
-        document.getElementById("collectionTitle");
+      document.getElementById("popupTitle").textContent =
+        "COMING SOON";
 
-      const grid =
-        document.getElementById("emoteGrid");
+      document.getElementById("popupText").textContent =
+        "We are working on " + category;
 
-      title.textContent =
-        category;
-
-      grid.innerHTML = "";
-
-      emotes[category].forEach((emote) => {
-
-        const card =
-          document.createElement("div");
-
-        card.className =
-          "emote-card";
-
-        card.innerHTML = `
-
-          <div class="emote-preview">
-            ${emote.icon}
-          </div>
-
-          <div class="emote-info">
-
-            <h3>
-              ${emote.name}
-            </h3>
-
-            <p>
-              ${emote.description}
-            </p>
-
-            <span class="badge">
-              FAN-MADE PREVIEW
-            </span>
-
-          </div>
-
-        `;
-
-        card.onclick = function() {
-
-          openPopup(
-            emote.name,
-            emote.icon,
-            emote.description
-          );
-
-        };
-
-        grid.appendChild(card);
-
-      });
-
-
-      section.style.display =
-        "block";
-
-      section.scrollIntoView({
-        behavior: "smooth"
-      });
+      document.getElementById("popup").style.display = "flex";
 
     }
 
@@ -1197,8 +997,7 @@
 
       document.getElementById(
         "collectionSection"
-      ).style.display =
-        "none";
+      ).style.display = "none";
 
       document.getElementById(
         "emotes"
@@ -1209,43 +1008,13 @@
     }
 
 
-    /* POPUP */
-
-    function openPopup(
-      title,
-      icon,
-      description
-    ) {
-
-      document.getElementById(
-        "popupIcon"
-      ).textContent =
-        icon;
-
-      document.getElementById(
-        "popupTitle"
-      ).textContent =
-        title;
-
-      document.getElementById(
-        "popupText"
-      ).textContent =
-        description;
-
-      document.getElementById(
-        "popup"
-      ).style.display =
-        "flex";
-
-    }
-
+    /* CLOSE POPUP */
 
     function closePopup() {
 
       document.getElementById(
         "popup"
-      ).style.display =
-        "none";
+      ).style.display = "none";
 
     }
 
@@ -1318,3 +1087,4 @@
 
 </body>
 </html>
+```
