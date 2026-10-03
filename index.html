@@ -5,44 +5,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FAVICON -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050505'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='55' font-weight='bold' fill='%23ff1744'%3ER%3C/text%3E%3C/svg%3E">
+  <!-- =========================
+       FAVICON
+  ========================== -->
 
-  <!-- TITLE -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050505'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='55' font-weight='bold' fill='%23ff1744'%3ER%3C/text%3E%3C/svg%3E"
+  >
+
+
+  <!-- =========================
+       TITLE
+  ========================== -->
+
   <title>ꓣⲉⲭυⲋ - Free Fire Emote Panel</title>
 
-  <!-- SEO -->
-  <meta name="description" content="ꓣⲉⲭυⲋ Free Fire Emote Panel - A fan-made gaming project created for the Free Fire community.">
-  <meta name="keywords" content="Rexus, Free Fire, Free Fire Emotes, Emote Panel, Gaming">
-  <meta name="author" content="ꓣⲉⲭυⲋ">
-  <meta name="robots" content="index, follow">
 
-  <meta name="google-site-verification" content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk">
+  <!-- =========================
+       SEO
+  ========================== -->
 
-  <!-- CANONICAL -->
-  <link rel="canonical" href="https://rexus16.github.io/">
+  <meta
+    name="description"
+    content="ꓣⲉⲭυⲋ Free Fire Emote Panel - A fan-made gaming project for the Free Fire community."
+  >
 
-  <!-- OPEN GRAPH -->
-  <meta property="og:title" content="ꓣⲉⲭυⲋ - Free Fire Emote Panel">
-  <meta property="og:description" content="ꓣⲉⲭυⲋ - A fan-made gaming project for the Free Fire community.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rexus16.github.io/">
-  <meta property="og:site_name" content="ꓣⲉⲭυⲋ">
+  <meta
+    name="keywords"
+    content="Rexus, Free Fire, Emote Panel, Free Fire Emotes, Gaming"
+  >
 
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="author"
+    content="ꓣⲉⲭυⲋ"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="google-site-verification"
+    content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk"
+  >
+
+
+  <!-- =========================
+       CANONICAL
+  ========================== -->
+
+  <link
+    rel="canonical"
+    href="https://rexus16.github.io/"
+  >
+
+
+  <!-- =========================
+       OPEN GRAPH
+  ========================== -->
+
+  <meta
+    property="og:title"
+    content="ꓣⲉⲭυⲋ - Free Fire Emote Panel"
+  >
+
+  <meta
+    property="og:description"
+    content="ꓣⲉⲭυⲋ - A fan-made gaming project created for the Free Fire community."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://rexus16.github.io/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="ꓣⲉⲭυⲋ"
+  >
+
+
+  <!-- =========================
+       GOOGLE FONTS
+  ========================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
+
   <style>
 
-    /* =========================================================
+    /* =====================================================
        GLOBAL
-    ========================================================= */
+    ===================================================== */
 
     * {
       margin: 0;
@@ -56,26 +131,29 @@
 
     body {
       font-family: "Rajdhani", Arial, sans-serif;
-      background: #030305;
+      background: #020204;
       color: #fff;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    ::selection {
-      background: #ff1744;
-      color: white;
+    button,
+    input {
+      font-family: inherit;
     }
 
-    /* =========================================================
+
+    /* =====================================================
        GAMING BACKGROUND
-    ========================================================= */
+    ===================================================== */
 
     body::before {
       content: "";
+
       position: fixed;
       inset: 0;
-      z-index: -5;
+
+      z-index: -10;
       pointer-events: none;
 
       background:
@@ -90,30 +168,27 @@
         );
 
       background-size: 55px 55px;
-
-      mask-image: linear-gradient(
-        to bottom,
-        black,
-        rgba(0,0,0,0.25)
-      );
     }
+
 
     body::after {
       content: "";
+
       position: fixed;
       inset: -20%;
-      z-index: -6;
+
+      z-index: -11;
       pointer-events: none;
 
       background:
         radial-gradient(
           circle at 15% 20%,
-          rgba(255, 0, 55, 0.16),
+          rgba(255, 0, 55, 0.17),
           transparent 25%
         ),
         radial-gradient(
           circle at 85% 25%,
-          rgba(120, 0, 255, 0.12),
+          rgba(120, 0, 255, 0.13),
           transparent 25%
         ),
         radial-gradient(
@@ -128,11 +203,12 @@
         backgroundPulse 8s ease-in-out infinite alternate;
     }
 
+
     @keyframes backgroundPulse {
 
       from {
         transform: scale(1);
-        opacity: 0.75;
+        opacity: 0.7;
       }
 
       to {
@@ -142,20 +218,22 @@
 
     }
 
-    /* =========================================================
+
+    /* =====================================================
        RGB TOP LINE
-    ========================================================= */
+    ===================================================== */
 
     .rgb-line {
+
       position: fixed;
 
       top: 0;
       left: 0;
 
       width: 100%;
-      height: 2px;
+      height: 3px;
 
-      z-index: 15000;
+      z-index: 20000;
 
       background:
         linear-gradient(
@@ -176,8 +254,9 @@
 
       box-shadow:
         0 0 8px #ff003c,
-        0 0 18px rgba(255,0,80,0.7);
+        0 0 20px rgba(255, 0, 80, 0.8);
     }
+
 
     @keyframes rgbMove {
 
@@ -191,61 +270,64 @@
 
     }
 
-    /* =========================================================
+
+    /* =====================================================
        GAMING LAUNCHER
-    ========================================================= */
+    ===================================================== */
 
     .launcher-screen {
-      position: fixed;
 
+      position: fixed;
       inset: 0;
 
-      z-index: 12000;
+      z-index: 10000;
 
       display: flex;
-
       align-items: center;
       justify-content: center;
 
-      background: #010103;
+      background:
+        #010103;
 
       overflow: hidden;
 
       animation:
-        launcherFadeOut 0.9s ease 4.8s forwards;
+        launcherFadeOut 0.9s ease 5.2s forwards;
     }
 
-    .launcher-bg {
-      position: absolute;
 
+    .launcher-bg {
+
+      position: absolute;
       inset: -30%;
 
       background:
         radial-gradient(
           circle at center,
-          rgba(255,23,68,0.15),
+          rgba(255, 23, 68, 0.17),
           transparent 25%
         ),
         radial-gradient(
           circle at 20% 50%,
-          rgba(123,0,255,0.09),
+          rgba(123, 0, 255, 0.09),
           transparent 25%
         ),
         radial-gradient(
           circle at 80% 50%,
-          rgba(0,200,255,0.08),
+          rgba(0, 200, 255, 0.08),
           transparent 25%
         );
 
       animation:
-        launcherPulse 4s ease-in-out infinite alternate;
+        launcherPulse 5s ease-in-out infinite alternate;
     }
 
+
     .launcher-bg::before {
+
       content: "";
 
       position: absolute;
-
       inset: 0;
 
       background:
@@ -269,7 +351,9 @@
       transform-origin: center bottom;
     }
 
+
     .launcher-content {
+
       position: relative;
 
       width: min(90%, 650px);
@@ -277,18 +361,20 @@
       text-align: center;
 
       animation:
-        launcherZoom 1.2s ease;
+        launcherZoom 1.1s ease;
     }
 
+
     .launcher-logo {
+
       font-family: "Orbitron", sans-serif;
 
       font-size:
-        clamp(55px, 12vw, 120px);
+        clamp(55px, 12vw, 125px);
 
       font-weight: 900;
 
-      letter-spacing: 4px;
+      letter-spacing: 5px;
 
       background:
         linear-gradient(
@@ -297,10 +383,11 @@
           #ff6d00,
           #ffffff,
           #7b00ff,
+          #00c8ff,
           #ff003c
         );
 
-      background-size: 300% auto;
+      background-size: 400% auto;
 
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -310,15 +397,17 @@
 
       filter:
         drop-shadow(
-          0 0 15px rgba(255,23,68,0.5)
+          0 0 18px rgba(255,23,68,0.6)
         )
         drop-shadow(
-          0 0 35px rgba(123,0,255,0.2)
+          0 0 40px rgba(123,0,255,0.25)
         );
     }
 
+
     .launcher-line {
-      margin-top: 12px;
+
+      margin-top: 10px;
 
       font-family: "Orbitron", sans-serif;
 
@@ -332,7 +421,9 @@
         launcherTextPulse 1.5s ease-in-out infinite;
     }
 
+
     .launcher-status {
+
       margin-top: 55px;
 
       font-family: "Orbitron", sans-serif;
@@ -344,10 +435,12 @@
       color: #ff526f;
 
       text-shadow:
-        0 0 12px rgba(255,23,68,0.7);
+        0 0 12px rgba(255,23,68,0.8);
     }
 
+
     .launcher-loader {
+
       width: min(430px, 80vw);
 
       height: 4px;
@@ -365,7 +458,9 @@
         0 0 20px rgba(255,23,68,0.08);
     }
 
+
     .launcher-progress {
+
       width: 0%;
       height: 100%;
 
@@ -383,29 +478,28 @@
       background-size: 300% 100%;
 
       animation:
-        launcherLoading 4.2s
-        cubic-bezier(.2,.8,.2,1)
-        forwards,
-
-        launcherProgressRGB 1.5s
-        linear infinite;
+        launcherLoading 4.6s cubic-bezier(.2,.8,.2,1) forwards,
+        launcherProgressRGB 1.5s linear infinite;
 
       box-shadow:
         0 0 15px #ff1744,
         0 0 30px rgba(255,23,68,0.5);
     }
 
+
     .launcher-percent {
+
       margin-top: 13px;
 
       font-family: "Orbitron", sans-serif;
 
       font-size: 11px;
 
-      color: #555;
+      color: #666;
 
       letter-spacing: 2px;
     }
+
 
     @keyframes launcherLoading {
 
@@ -414,19 +508,23 @@
       }
 
       15% {
-        width: 18%;
+        width: 15%;
       }
 
-      40% {
-        width: 47%;
+      35% {
+        width: 37%;
       }
 
-      65% {
-        width: 72%;
+      55% {
+        width: 61%;
       }
 
-      85% {
-        width: 91%;
+      75% {
+        width: 79%;
+      }
+
+      90% {
+        width: 94%;
       }
 
       100% {
@@ -434,6 +532,7 @@
       }
 
     }
+
 
     @keyframes launcherProgressRGB {
 
@@ -443,27 +542,30 @@
 
     }
 
+
     @keyframes launcherRGB {
 
       to {
-        background-position: 300% center;
+        background-position: 400% center;
       }
 
     }
+
 
     @keyframes launcherPulse {
 
       from {
         transform: scale(1);
-        opacity: 0.7;
+        opacity: 0.65;
       }
 
       to {
-        transform: scale(1.12);
+        transform: scale(1.13);
         opacity: 1;
       }
 
     }
+
 
     @keyframes launcherZoom {
 
@@ -479,6 +581,7 @@
 
     }
 
+
     @keyframes launcherTextPulse {
 
       50% {
@@ -486,6 +589,7 @@
       }
 
     }
+
 
     @keyframes launcherFadeOut {
 
@@ -497,19 +601,19 @@
 
     }
 
-    /* =========================================================
+
+    /* =====================================================
        WELCOME SCREEN
-    ========================================================= */
+    ===================================================== */
 
     .welcome-screen {
-      position: fixed;
 
+      position: fixed;
       inset: 0;
 
-      z-index: 11000;
+      z-index: 9999;
 
       display: flex;
-
       align-items: center;
       justify-content: center;
 
@@ -522,24 +626,27 @@
         #020204;
 
       opacity: 0;
-
       visibility: hidden;
 
       animation:
-        welcomeShow 0.5s ease 4.8s forwards,
-        welcomeFadeOut 0.8s ease 7.2s forwards;
+        welcomeShow 0.6s ease 5.1s forwards,
+        welcomeFadeOut 0.9s ease 8.1s forwards;
     }
 
+
     .welcome-content {
+
       text-align: center;
 
       padding: 30px;
 
       animation:
-        welcomeZoom 1s ease 4.8s both;
+        welcomeZoom 1s ease 5.1s both;
     }
 
+
     .welcome-mini {
+
       color: #ff1744;
 
       font-family: "Orbitron", sans-serif;
@@ -556,7 +663,9 @@
         0 0 15px rgba(255,23,68,0.8);
     }
 
+
     .welcome-title {
+
       font-family: "Orbitron", sans-serif;
 
       font-size:
@@ -584,7 +693,9 @@
         welcomeRGB 2s linear infinite;
     }
 
+
     .welcome-sub {
+
       margin-top: 18px;
 
       color: #888;
@@ -594,7 +705,9 @@
       letter-spacing: 3px;
     }
 
+
     .loading-bar {
+
       width: 230px;
 
       height: 3px;
@@ -609,11 +722,12 @@
       border-radius: 20px;
     }
 
+
     .loading-bar span {
+
       display: block;
 
       width: 0%;
-
       height: 100%;
 
       background:
@@ -628,8 +742,9 @@
         0 0 15px #ff1744;
 
       animation:
-        loading 2.2s ease 4.9s forwards;
+        welcomeLoading 2.5s ease 5.3s forwards;
     }
+
 
     @keyframes welcomeShow {
 
@@ -639,6 +754,7 @@
       }
 
     }
+
 
     @keyframes welcomeZoom {
 
@@ -654,6 +770,7 @@
 
     }
 
+
     @keyframes welcomeRGB {
 
       to {
@@ -662,13 +779,15 @@
 
     }
 
-    @keyframes loading {
+
+    @keyframes welcomeLoading {
 
       to {
         width: 100%;
       }
 
     }
+
 
     @keyframes welcomeFadeOut {
 
@@ -680,14 +799,16 @@
 
     }
 
-    /* =========================================================
+
+    /* =====================================================
        NAVBAR
-    ========================================================= */
+    ===================================================== */
 
     nav {
+
       position: sticky;
 
-      top: 2px;
+      top: 3px;
 
       z-index: 1000;
 
@@ -704,7 +825,8 @@
       background:
         rgba(3,3,5,0.88);
 
-      backdrop-filter: blur(18px);
+      backdrop-filter:
+        blur(18px);
 
       border-bottom:
         1px solid rgba(255,23,68,0.14);
@@ -713,7 +835,9 @@
         0 8px 30px rgba(0,0,0,0.45);
     }
 
+
     .logo {
+
       font-family: "Orbitron", sans-serif;
 
       font-size: 25px;
@@ -744,6 +868,7 @@
         );
     }
 
+
     @keyframes logoRGB {
 
       to {
@@ -752,7 +877,9 @@
 
     }
 
+
     nav ul {
+
       list-style: none;
 
       display: flex;
@@ -760,7 +887,9 @@
       gap: 28px;
     }
 
+
     nav ul li a {
+
       color: #999;
 
       text-decoration: none;
@@ -778,17 +907,17 @@
       position: relative;
     }
 
+
     nav ul li a::after {
+
       content: "";
 
       position: absolute;
 
       left: 0;
-
       bottom: -8px;
 
       width: 0;
-
       height: 2px;
 
       background: #ff1744;
@@ -799,22 +928,28 @@
       transition: 0.3s;
     }
 
+
     nav ul li a:hover {
-      color: white;
+
+      color: #fff;
 
       text-shadow:
         0 0 10px rgba(255,23,68,0.8);
     }
 
+
     nav ul li a:hover::after {
+
       width: 100%;
     }
 
-    /* =========================================================
+
+    /* =====================================================
        HERO
-    ========================================================= */
+    ===================================================== */
 
     .hero {
+
       min-height: 540px;
 
       display: flex;
@@ -830,7 +965,9 @@
       position: relative;
     }
 
+
     .hero::before {
+
       content: "";
 
       position: absolute;
@@ -853,6 +990,7 @@
       pointer-events: none;
     }
 
+
     @keyframes heroCircle {
 
       from {
@@ -869,7 +1007,9 @@
 
     }
 
+
     .hero-content {
+
       max-width: 900px;
 
       position: relative;
@@ -877,7 +1017,9 @@
       z-index: 2;
     }
 
+
     .tag {
+
       display: inline-block;
 
       padding: 9px 18px;
@@ -909,6 +1051,7 @@
         tagPulse 2s ease-in-out infinite;
     }
 
+
     @keyframes tagPulse {
 
       50% {
@@ -918,7 +1061,9 @@
 
     }
 
+
     .hero h1 {
+
       font-family: "Orbitron", sans-serif;
 
       font-size:
@@ -953,6 +1098,7 @@
         );
     }
 
+
     @keyframes heroTextRGB {
 
       to {
@@ -961,7 +1107,9 @@
 
     }
 
+
     .hero p {
+
       color: #888;
 
       font-size: 17px;
@@ -973,27 +1121,34 @@
       margin: auto;
     }
 
-    /* =========================================================
+
+    /* =====================================================
        SEARCH AREA
-    ========================================================= */
+    ===================================================== */
 
     .search-wrapper {
+
       width: 90%;
 
-      max-width: 900px;
+      max-width: 950px;
 
-      margin: -20px auto 65px;
+      margin:
+        -20px auto 65px;
 
       position: relative;
 
       z-index: 5;
     }
 
+
     .search-main {
+
       position: relative;
     }
 
+
     .search-main::before {
+
       content: "";
 
       position: absolute;
@@ -1019,8 +1174,9 @@
 
       z-index: -1;
 
-      opacity: 0.75;
+      opacity: 0.8;
     }
+
 
     @keyframes borderRGB {
 
@@ -1034,24 +1190,27 @@
 
     }
 
+
     .search-box {
+
       width: 100%;
 
-      padding: 20px 24px;
+      padding: 21px 25px;
 
       border-radius: 14px;
 
       border: 0;
 
-      background: #08080b;
+      background:
+        #08080b;
 
-      color: white;
+      color: #fff;
 
       outline: none;
 
       font-family: "Rajdhani", sans-serif;
 
-      font-size: 16px;
+      font-size: 17px;
 
       font-weight: 600;
 
@@ -1060,20 +1219,26 @@
       transition: 0.25s;
     }
 
+
     .search-box:focus {
+
       box-shadow:
-        0 0 25px rgba(255,23,68,0.18);
+        0 0 30px rgba(255,23,68,0.18);
     }
 
+
     .search-box::placeholder {
+
       color: #666;
     }
 
-    /* =========================================================
+
+    /* =====================================================
        PLAYER UID + TEAMCODE
-    ========================================================= */
+    ===================================================== */
 
     .panel-searches {
+
       display: grid;
 
       grid-template-columns:
@@ -1084,11 +1249,15 @@
       margin-top: 18px;
     }
 
+
     .small-search {
+
       position: relative;
     }
 
+
     .small-search::before {
+
       content: "";
 
       position: absolute;
@@ -1114,16 +1283,19 @@
       z-index: -1;
     }
 
+
     .small-search input {
+
       width: 100%;
 
-      padding: 14px 17px;
+      padding: 15px 18px;
 
       border: 0;
 
       border-radius: 10px;
 
-      background: #09090c;
+      background:
+        #09090c;
 
       color: white;
 
@@ -1138,22 +1310,28 @@
       transition: 0.25s;
     }
 
+
     .small-search input:focus {
+
       transform: translateY(-2px);
 
       box-shadow:
-        0 0 25px rgba(255,23,68,0.15);
+        0 8px 25px rgba(255,23,68,0.15);
     }
 
+
     .small-search input::placeholder {
+
       color: #666;
     }
 
-    /* =========================================================
+
+    /* =====================================================
        SECTION
-    ========================================================= */
+    ===================================================== */
 
     section {
+
       width: 90%;
 
       max-width: 1200px;
@@ -1163,13 +1341,17 @@
       padding: 70px 0;
     }
 
+
     .section-title {
+
       text-align: center;
 
       margin-bottom: 45px;
     }
 
+
     .section-title h2 {
+
       font-family: "Orbitron", sans-serif;
 
       font-size: 28px;
@@ -1179,17 +1361,21 @@
       letter-spacing: 1px;
     }
 
+
     .section-title p {
+
       color: #666;
 
       font-size: 14px;
     }
 
-    /* =========================================================
+
+    /* =====================================================
        CATEGORY GRID
-    ========================================================= */
+    ===================================================== */
 
     .categories {
+
       display: grid;
 
       grid-template-columns:
@@ -1198,7 +1384,9 @@
       gap: 18px;
     }
 
+
     .category {
+
       position: relative;
 
       padding: 30px 18px;
@@ -1221,8 +1409,8 @@
 
       transition:
         transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
 
       overflow: hidden;
 
@@ -1230,7 +1418,9 @@
         0 15px 45px rgba(0,0,0,0.25);
     }
 
+
     .category::after {
+
       content: "";
 
       position: absolute;
@@ -1262,7 +1452,9 @@
       pointer-events: none;
     }
 
+
     .category::before {
+
       content: "";
 
       position: absolute;
@@ -1287,10 +1479,11 @@
       transition: 0.4s;
     }
 
+
     .category:hover {
+
       transform:
-        translateY(-9px)
-        scale(1.015);
+        translateY(-9px);
 
       border-color:
         rgba(255,23,68,0.35);
@@ -1300,11 +1493,16 @@
         0 0 30px rgba(255,23,68,0.09);
     }
 
+
     .category:hover::before {
-      transform: scale(1.5);
+
+      transform:
+        scale(1.5);
     }
 
+
     .category-icon {
+
       font-size: 42px;
 
       margin-bottom: 17px;
@@ -1315,16 +1513,20 @@
         );
 
       transition:
-        transform 0.35s ease;
+        transform 0.3s ease;
     }
+
 
     .category:hover .category-icon {
+
       transform:
-        translateY(-4px)
-        scale(1.12);
+        scale(1.12)
+        rotate(-3deg);
     }
 
+
     .category h3 {
+
       font-family: "Orbitron", sans-serif;
 
       font-size: 14px;
@@ -1332,7 +1534,9 @@
       margin-bottom: 9px;
     }
 
+
     .category p {
+
       font-size: 12px;
 
       color: #666;
@@ -1340,7 +1544,9 @@
       margin-bottom: 19px;
     }
 
+
     .view-btn {
+
       border: 0;
 
       padding: 10px 17px;
@@ -1373,22 +1579,29 @@
         0 0 15px rgba(255,23,68,0.16);
     }
 
+
     .view-btn:hover {
-      transform: scale(1.06);
+
+      transform:
+        scale(1.06);
 
       box-shadow:
         0 0 25px rgba(255,23,68,0.35);
     }
 
-    /* =========================================================
+
+    /* =====================================================
        COLLECTION
-    ========================================================= */
+    ===================================================== */
 
     #collectionSection {
+
       display: none;
     }
 
+
     .collection-header {
+
       display: flex;
 
       justify-content: space-between;
@@ -1400,17 +1613,23 @@
       gap: 20px;
     }
 
+
     .collection-header h2 {
+
       font-family: "Orbitron", sans-serif;
 
       font-size: 25px;
     }
 
+
     .collection-header span {
+
       color: #ff1744;
     }
 
+
     .back-btn {
+
       border:
         1px solid rgba(255,23,68,0.35);
 
@@ -1430,11 +1649,13 @@
       font-size: 9px;
     }
 
-    /* =========================================================
+
+    /* =====================================================
        EMOTE GRID
-    ========================================================= */
+    ===================================================== */
 
     .emote-grid {
+
       display: grid;
 
       grid-template-columns:
@@ -1443,7 +1664,9 @@
       gap: 18px;
     }
 
+
     .emote-card {
+
       border:
         1px solid rgba(255,255,255,0.07);
 
@@ -1459,7 +1682,9 @@
       cursor: pointer;
     }
 
+
     .emote-card:hover {
+
       transform:
         translateY(-6px);
 
@@ -1471,7 +1696,9 @@
         0 0 25px rgba(255,23,68,0.08);
     }
 
+
     .emote-preview {
+
       height: 170px;
 
       display: flex;
@@ -1493,23 +1720,31 @@
         1px solid rgba(255,255,255,0.06);
     }
 
+
     .emote-info {
+
       padding: 17px;
     }
 
+
     .emote-info h3 {
+
       font-size: 15px;
 
       margin-bottom: 8px;
     }
 
+
     .emote-info p {
+
       font-size: 11px;
 
       color: #666;
     }
 
+
     .badge {
+
       display: inline-block;
 
       margin-top: 12px;
@@ -1530,24 +1765,26 @@
       letter-spacing: 0.5px;
     }
 
-    /* =========================================================
-       ABOUT / CREATOR PROFILE
-    ========================================================= */
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
 
     .about-box {
+
       max-width: 900px;
 
       margin: auto;
 
-      padding: 42px;
+      padding: 45px;
 
-      border-radius: 22px;
+      border-radius: 20px;
 
       background:
         linear-gradient(
           145deg,
-          rgba(255,255,255,0.05),
-          rgba(255,255,255,0.012)
+          rgba(255,255,255,0.045),
+          rgba(255,255,255,0.015)
         );
 
       border:
@@ -1563,298 +1800,216 @@
       overflow: hidden;
     }
 
+
     .about-box::before {
+
       content: "";
 
       position: absolute;
 
-      top: -100px;
-      left: 50%;
+      width: 250px;
+      height: 250px;
 
-      width: 300px;
-      height: 200px;
-
-      transform: translateX(-50%);
+      top: -120px;
+      right: -100px;
 
       background:
         radial-gradient(
           circle,
-          rgba(255,23,68,0.14),
-          transparent 70%
+          rgba(255,23,68,0.15),
+          transparent 65%
         );
 
-      filter: blur(20px);
+      filter:
+        blur(20px);
 
       pointer-events: none;
     }
 
+
     .about-box h2 {
-      font-family: "Orbitron", sans-serif;
-
-      margin-bottom: 12px;
-
-      position: relative;
-    }
-
-    .about-tag {
-      display: inline-block;
-
-      padding: 7px 13px;
-
-      margin-bottom: 22px;
-
-      border:
-        1px solid rgba(255,23,68,0.25);
-
-      border-radius: 20px;
-
-      color: #ff5270;
-
-      background:
-        rgba(255,23,68,0.05);
 
       font-family: "Orbitron", sans-serif;
 
-      font-size: 9px;
-
-      letter-spacing: 2px;
+      margin-bottom: 18px;
     }
 
-    .about-description {
+
+    .about-box p {
+
       color: #888;
 
       line-height: 1.9;
 
       font-size: 14px;
-
-      max-width: 720px;
-
-      margin:
-        0 auto 30px;
     }
 
-    /* =========================================================
-       CREATOR PROFILE CARD
-    ========================================================= */
 
-    .creator-profile {
-      display: grid;
+    /* =====================================================
+       CREATOR PROFILE
+    ===================================================== */
 
-      grid-template-columns:
-        120px 1fr;
+    .creator-card {
 
-      gap: 25px;
-
-      align-items: center;
-
-      max-width: 700px;
+      max-width: 900px;
 
       margin: 30px auto 0;
 
-      padding: 24px;
+      padding: 30px;
 
-      border-radius: 16px;
+      border-radius: 18px;
 
       background:
-        rgba(0,0,0,0.28);
+        linear-gradient(
+          145deg,
+          rgba(255,23,68,0.045),
+          rgba(123,0,255,0.035)
+        );
 
       border:
         1px solid rgba(255,23,68,0.16);
 
-      text-align: left;
+      box-shadow:
+        0 15px 50px rgba(0,0,0,0.3);
+
+      display: grid;
+
+      grid-template-columns:
+        130px 1fr;
+
+      gap: 25px;
+
+      align-items: center;
 
       position: relative;
 
       overflow: hidden;
     }
 
-    .creator-profile::before {
-      content: "";
-
-      position: absolute;
-
-      left: -100%;
-
-      top: 0;
-
-      width: 60%;
-
-      height: 100%;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          rgba(255,255,255,0.04),
-          transparent
-        );
-
-      transform: skewX(-20deg);
-
-      animation:
-        profileScan 4s ease-in-out infinite;
-    }
-
-    @keyframes profileScan {
-
-      0%,
-      55% {
-        left: -100%;
-      }
-
-      80%,
-      100% {
-        left: 150%;
-      }
-
-    }
 
     .creator-avatar {
-      width: 100px;
-      height: 100px;
+
+      width: 110px;
+      height: 110px;
 
       margin: auto;
+
+      border-radius: 50%;
 
       display: flex;
 
       align-items: center;
       justify-content: center;
 
-      border-radius: 22px;
-
-      background:
-        linear-gradient(
-          145deg,
-          #16070b,
-          #08080b
-        );
-
-      border:
-        1px solid rgba(255,23,68,0.35);
-
-      box-shadow:
-        0 0 25px rgba(255,23,68,0.13);
-
       font-family: "Orbitron", sans-serif;
 
-      font-size: 32px;
+      font-size: 34px;
 
       font-weight: 900;
 
-      color: #ff1744;
+      color: white;
 
-      text-shadow:
-        0 0 20px rgba(255,23,68,0.65);
-
-      position: relative;
-    }
-
-    .creator-avatar::after {
-      content: "";
-
-      position: absolute;
-
-      inset: -5px;
-
-      border-radius: 26px;
+      background:
+        radial-gradient(
+          circle,
+          #1a1a20,
+          #050507
+        );
 
       border:
-        1px solid rgba(123,0,255,0.35);
+        2px solid #ff1744;
+
+      box-shadow:
+        0 0 15px rgba(255,23,68,0.5),
+        inset 0 0 25px rgba(123,0,255,0.15);
 
       animation:
-        avatarRotate 5s linear infinite;
+        avatarPulse 2.5s ease-in-out infinite;
     }
 
-    @keyframes avatarRotate {
 
-      from {
-        transform: rotate(0deg);
-      }
+    @keyframes avatarPulse {
 
-      to {
-        transform: rotate(360deg);
+      50% {
+
+        box-shadow:
+          0 0 28px rgba(255,23,68,0.65),
+          inset 0 0 30px rgba(123,0,255,0.25);
+
       }
 
     }
+
 
     .creator-info h3 {
+
       font-family: "Orbitron", sans-serif;
 
-      font-size: 19px;
+      font-size: 20px;
 
-      margin-bottom: 7px;
+      margin-bottom: 8px;
     }
 
-    .creator-role {
-      color: #ff526f;
+
+    .creator-info .creator-role {
+
+      color: #ff5270;
+
+      font-size: 11px;
 
       font-family: "Orbitron", sans-serif;
-
-      font-size: 9px;
 
       letter-spacing: 2px;
 
-      margin-bottom: 17px;
+      margin-bottom: 18px;
     }
 
+
     .creator-details {
+
       display: grid;
 
       grid-template-columns:
-        1fr 1fr;
+        repeat(2, 1fr);
 
       gap: 10px;
     }
 
-    .creator-detail {
-      padding: 10px 12px;
 
-      border-radius: 8px;
+    .creator-detail {
+
+      padding: 11px 13px;
 
       background:
         rgba(255,255,255,0.025);
 
       border:
         1px solid rgba(255,255,255,0.05);
+
+      border-radius: 8px;
+
+      color: #aaa;
+
+      font-size: 12px;
     }
 
-    .creator-detail span {
-      display: block;
-
-      color: #555;
-
-      font-size: 9px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-
-      margin-bottom: 4px;
-    }
 
     .creator-detail strong {
-      color: #ddd;
 
-      font-size: 12px;
+      color: #fff;
 
-      word-break: break-word;
+      display: block;
+
+      margin-top: 3px;
     }
 
-    .creator-note {
-      margin-top: 25px;
 
-      color: #555;
-
-      font-size: 12px;
-
-      line-height: 1.7;
-    }
-
-    /* =========================================================
+    /* =====================================================
        FOOTER
-    ========================================================= */
+    ===================================================== */
 
     footer {
+
       margin-top: 70px;
 
       padding: 35px 20px;
@@ -1872,18 +2027,22 @@
         rgba(0,0,0,0.25);
     }
 
+
     footer strong {
+
       color: #ff1744;
 
       text-shadow:
         0 0 10px rgba(255,23,68,0.4);
     }
 
-    /* =========================================================
-       POPUP
-    ========================================================= */
+
+    /* =====================================================
+       COMING SOON POPUP
+    ===================================================== */
 
     .popup {
+
       position: fixed;
 
       inset: 0;
@@ -1898,12 +2057,15 @@
       background:
         rgba(0,0,0,0.82);
 
-      backdrop-filter: blur(12px);
+      backdrop-filter:
+        blur(12px);
 
-      z-index: 5000;
+      z-index: 3000;
     }
 
+
     .popup-box {
+
       width: 100%;
 
       max-width: 440px;
@@ -1932,21 +2094,32 @@
         popupIn 0.25s ease;
     }
 
+
     @keyframes popupIn {
 
       from {
+
         opacity: 0;
-        transform: scale(0.9);
+
+        transform:
+          scale(0.9);
+
       }
 
       to {
+
         opacity: 1;
-        transform: scale(1);
+
+        transform:
+          scale(1);
+
       }
 
     }
 
+
     .popup-icon {
+
       font-size: 65px;
 
       margin-bottom: 15px;
@@ -1957,7 +2130,9 @@
         );
     }
 
+
     .popup-box h2 {
+
       margin-bottom: 12px;
 
       font-family: "Orbitron", sans-serif;
@@ -1968,7 +2143,9 @@
         0 0 15px rgba(255,23,68,0.35);
     }
 
+
     .popup-box p {
+
       color: #888;
 
       line-height: 1.7;
@@ -1976,7 +2153,9 @@
       font-size: 14px;
     }
 
+
     .close-btn {
+
       margin-top: 25px;
 
       border: 0;
@@ -2008,187 +2187,242 @@
       transition: 0.25s;
     }
 
+
     .close-btn:hover {
-      transform: scale(1.05);
+
+      transform:
+        scale(1.05);
 
       box-shadow:
         0 0 20px rgba(255,23,68,0.35);
     }
 
-    /* =========================================================
+
+    /* =====================================================
        MOBILE
-    ========================================================= */
+    ===================================================== */
 
     @media (max-width: 1000px) {
 
       .categories {
+
         grid-template-columns:
           repeat(2, 1fr);
       }
 
+
       .emote-grid {
+
         grid-template-columns:
           repeat(2, 1fr);
       }
 
     }
 
+
     @media (max-width: 600px) {
 
       nav {
+
         padding: 0 18px;
 
-        height: 64px;
+        height: 65px;
       }
 
+
       .logo {
+
         font-size: 19px;
       }
 
+
       nav ul {
+
         gap: 12px;
       }
 
+
       nav ul li a {
+
         font-size: 8px;
       }
 
+
       .hero {
+
         min-height: 450px;
 
         padding:
           70px 20px;
       }
 
+
       .hero p {
+
         font-size: 14px;
       }
 
+
       .hero::before {
+
         width: 330px;
         height: 330px;
       }
 
-      /*
-        MOBILE:
-        Search
-        ↓
-        Player UID
-        ↓
-        Teamcode
-      */
 
       .search-wrapper {
+
         width: 92%;
 
         margin-bottom: 30px;
       }
 
+
+      /* MOBILE:
+         SEARCH
+         UID
+         TEAMCODE
+      */
+
       .panel-searches {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
 
         gap: 12px;
-
-        margin-top: 14px;
       }
 
-      .search-box {
-        padding:
-          17px 18px;
-
-        font-size: 15px;
-      }
 
       section {
+
         width: 92%;
 
         padding: 50px 0;
       }
 
+
       .categories {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
+
 
       .emote-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
 
+
       .collection-header {
+
         flex-direction: column;
 
         align-items: flex-start;
       }
 
+
       .about-box {
+
         padding:
-          30px 18px;
+          30px 20px;
       }
 
-      .creator-profile {
-        grid-template-columns: 1fr;
+
+      .creator-card {
+
+        grid-template-columns:
+          1fr;
 
         text-align: center;
 
-        padding: 22px 15px;
+        padding: 25px 18px;
       }
+
 
       .creator-details {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
 
-      .creator-avatar {
-        width: 90px;
-        height: 90px;
-
-        font-size: 28px;
-      }
 
       .welcome-title {
+
         font-size: 38px;
       }
 
+
       .welcome-mini {
-        font-size: 8px;
+
+        font-size: 9px;
 
         letter-spacing: 3px;
       }
 
-      .welcome-sub {
-        font-size: 11px;
+
+      .launcher-logo {
+
+        font-size: 55px;
 
         letter-spacing: 2px;
       }
 
+
       .launcher-line {
+
         font-size: 8px;
 
         letter-spacing: 4px;
       }
 
+
       .launcher-status {
-        margin-top: 40px;
 
         font-size: 8px;
+
+        letter-spacing: 2px;
+
+        margin-top: 40px;
+      }
+
+
+      .launcher-loader {
+
+        width: 75vw;
       }
 
     }
 
-    /* =========================================================
-       REDUCED MOTION
-    ========================================================= */
 
-    @media (prefers-reduced-motion: reduce) {
+    /* =====================================================
+       VERY SMALL PHONES
+    ===================================================== */
 
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
+    @media (max-width: 380px) {
 
-        animation-iteration-count: 1 !important;
+      nav ul {
 
-        scroll-behavior: auto !important;
+        gap: 8px;
+      }
 
-        transition-duration: 0.01ms !important;
+
+      nav ul li a {
+
+        font-size: 7px;
+      }
+
+
+      .launcher-logo {
+
+        font-size: 45px;
+      }
+
+
+      .welcome-title {
+
+        font-size: 31px;
       }
 
     }
@@ -2200,16 +2434,17 @@
 
 <body>
 
-  <!-- =========================================================
-       RGB LINE
-  ========================================================= -->
+
+  <!-- =====================================================
+       RGB TOP LINE
+  ===================================================== -->
 
   <div class="rgb-line"></div>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        GAMING LAUNCHER
-  ========================================================= -->
+  ===================================================== -->
 
   <div
     class="launcher-screen"
@@ -2256,9 +2491,9 @@
   </div>
 
 
-  <!-- =========================================================
-       WELCOME SCREEN
-  ========================================================= -->
+  <!-- =====================================================
+       WELCOME INTRO
+  ===================================================== -->
 
   <div
     class="welcome-screen"
@@ -2288,9 +2523,9 @@
   </div>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        NAVBAR
-  ========================================================= -->
+  ===================================================== -->
 
   <nav>
 
@@ -2323,9 +2558,9 @@
   </nav>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        HERO
-  ========================================================= -->
+  ===================================================== -->
 
   <header
     class="hero"
@@ -2345,7 +2580,7 @@
       <p>
         Explore fan-made Free Fire emote categories
         through a powerful dark gaming interface
-        created for the ꓣⲉⲭυⲋ community.
+        built for the ꓣⲉⲭυⲋ community.
       </p>
 
     </div>
@@ -2353,11 +2588,12 @@
   </header>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        SEARCH PANEL
-  ========================================================= -->
+  ===================================================== -->
 
   <div class="search-wrapper">
+
 
     <!-- EMOTE SEARCH -->
 
@@ -2378,6 +2614,9 @@
 
     <div class="panel-searches">
 
+
+      <!-- PLAYER UID -->
+
       <div class="small-search">
 
         <input
@@ -2385,11 +2624,12 @@
           id="playerUID"
           placeholder="👤  Player UID"
           inputmode="numeric"
-          autocomplete="off"
         >
 
       </div>
 
+
+      <!-- TEAMCODE -->
 
       <div class="small-search">
 
@@ -2397,7 +2637,6 @@
           type="text"
           id="teamCode"
           placeholder="🎮  Teamcode"
-          autocomplete="off"
         >
 
       </div>
@@ -2407,9 +2646,9 @@
   </div>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        EMOTE CATEGORIES
-  ========================================================= -->
+  ===================================================== -->
 
   <section id="emotes">
 
@@ -2420,7 +2659,7 @@
       </h2>
 
       <p>
-        Choose a category to access the collection
+        Choose a category to explore the collection
       </p>
 
     </div>
@@ -2430,6 +2669,7 @@
       class="categories"
       id="categoryGrid"
     >
+
 
       <!-- RARE -->
 
@@ -2565,13 +2805,11 @@
   </section>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        COLLECTION
-  ========================================================= -->
+  ===================================================== -->
 
-  <section
-    id="collectionSection"
-  >
+  <section id="collectionSection">
 
     <div class="collection-header">
 
@@ -2610,9 +2848,9 @@
   </section>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        ABOUT
-  ========================================================= -->
+  ===================================================== -->
 
   <section id="about">
 
@@ -2623,178 +2861,166 @@
       </h2>
 
       <p>
-        Built for the Free Fire community
+        A fan-made gaming project for the Free Fire community
       </p>
 
     </div>
 
 
+    <!-- ABOUT BOX -->
+
     <div class="about-box">
 
-      <div class="about-tag">
-        FOR THE FREE FIRE COMMUNITY
-      </div>
-
       <h2>
-        Fan-Made Gaming Project
+        🎮 Fan-Made Gaming Project
       </h2>
 
-      <p class="about-description">
+      <p>
 
-        ꓣⲉⲭυⲋ is an independent fan-made gaming
-        project created for the Free Fire community.
-        The website is designed to provide a modern,
-        stylish and fun place to explore emote categories
-        and gaming content.
+        ꓣⲉⲭυⲋ is an independent fan-made gaming website
+        created for the Free Fire community and made purely
+        for fun, creativity and entertainment.
 
         <br><br>
 
-        This website is currently
-        <strong style="color:#ff526f;">
-          under development
-        </strong>
-        and some features are not available yet.
-
-        As development continues, the emote system
-        will be improved so that supported emotes can
-        be properly explored and used through the
-        completed platform.
+        The website is currently under development and
+        some features are incomplete.
 
         <br><br>
 
-        This project is created for
-        <strong style="color:#ddd;">
-          fun and community entertainment.
-        </strong>
+        Once development is complete, the planned emote
+        features will allow visitors to properly explore
+        and use the available emote content through the
+        website.
 
-        It does not modify game files, provide cheats,
-        bypass security systems, or provide anti-ban
-        services.
+        <br><br>
 
-        Free Fire and its related trademarks belong
-        to their respective owners.
+        This project does not modify game files, game accounts,
+        provide anti-ban services, or claim any official
+        connection with Garena.
+
+        <br><br>
+
+        Free Fire and related trademarks belong to their
+        respective owners.
 
       </p>
 
+    </div>
 
-      <!-- CREATOR PROFILE -->
 
-      <div class="creator-profile">
+    <!-- =================================================
+         CREATOR PROFILE
+    ================================================= -->
 
-        <div class="creator-avatar">
-          RX
+    <div class="creator-card">
+
+
+      <!-- AVATAR -->
+
+      <div class="creator-avatar">
+        R
+      </div>
+
+
+      <!-- CREATOR INFORMATION -->
+
+      <div class="creator-info">
+
+        <h3>
+          ꓣⲉⲭυⲋ
+        </h3>
+
+        <div class="creator-role">
+          CREATOR • GAMING PROJECT
         </div>
 
 
-        <div class="creator-info">
+        <div class="creator-details">
 
-          <h3>
-            ꓣⲉⲭυⲋ
-          </h3>
 
-          <div class="creator-role">
-            CREATOR • GAMING PROJECT
+          <div class="creator-detail">
+
+            🎮 Community
+
+            <strong>
+              For the Free Fire Community
+            </strong>
+
           </div>
 
 
-          <div class="creator-details">
+          <div class="creator-detail">
 
-            <div class="creator-detail">
+            🆔 Player UID
 
-              <span>
-                Creator
-              </span>
+            <strong>
+              18366453719
+            </strong>
 
-              <strong>
-                ꓣⲉⲭυⲋ
-              </strong>
-
-            </div>
+          </div>
 
 
-            <div class="creator-detail">
+          <div class="creator-detail">
 
-              <span>
-                Game
-              </span>
+            🌐 Project Type
 
-              <strong>
-                Free Fire
-              </strong>
+            <strong>
+              Fan-Made Gaming Website
+            </strong>
 
-            </div>
+          </div>
 
 
-            <div class="creator-detail">
+          <div class="creator-detail">
 
-              <span>
-                Player UID
-              </span>
+            🚧 Development
 
-              <strong>
-                18366453719
-              </strong>
-
-            </div>
-
-
-            <div class="creator-detail">
-
-              <span>
-                Community
-              </span>
-
-              <strong>
-                Free Fire Community
-              </strong>
-
-            </div>
+            <strong>
+              Currently Incomplete
+            </strong>
 
           </div>
 
         </div>
 
       </div>
-
-
-      <p class="creator-note">
-
-        ⚡ This project is independently created
-        for fun and community use.
-
-      </p>
 
     </div>
 
   </section>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        FOOTER
-  ========================================================= -->
+  ===================================================== -->
 
   <footer>
 
     <p>
+
       © 2026
+
       <strong>
         ꓣⲉⲭυⲋ
       </strong>
+
     </p>
 
-    <p style="margin-top:8px;">
-
-      Fan-made website.
-      Not affiliated with Garena.
-
+    <p
+      style="
+        margin-top:8px;
+      "
+    >
+      Fan-made website. Not affiliated with Garena.
     </p>
 
   </footer>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        COMING SOON POPUP
-  ========================================================= -->
+  ===================================================== -->
 
   <div
     class="popup"
@@ -2803,6 +3029,7 @@
 
     <div class="popup-box">
 
+
       <div
         class="popup-icon"
         id="popupIcon"
@@ -2810,13 +3037,20 @@
         🚧
       </div>
 
-      <h2 id="popupTitle">
+
+      <h2
+        id="popupTitle"
+      >
         COMING SOON
       </h2>
 
-      <p id="popupText">
+
+      <p
+        id="popupText"
+      >
         We are working on this category.
       </p>
+
 
       <button
         class="close-btn"
@@ -2830,15 +3064,16 @@
   </div>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        JAVASCRIPT
-  ========================================================= -->
+  ===================================================== -->
 
   <script>
 
-    /* =========================================================
+
+    /* =====================================================
        CATEGORY POPUP
-    ========================================================= */
+    ===================================================== */
 
     function openCategory(category) {
 
@@ -2846,17 +3081,20 @@
         "popupIcon"
       ).textContent = "🚧";
 
+
       document.getElementById(
         "popupTitle"
       ).textContent =
         "COMING SOON";
 
+
       document.getElementById(
         "popupText"
       ).textContent =
-        "We are currently working on the " +
+        "We are currently working on " +
         category +
-        " collection.";
+        ". This feature will be available when the website is complete.";
+
 
       document.getElementById(
         "popup"
@@ -2865,9 +3103,9 @@
     }
 
 
-    /* =========================================================
+    /* =====================================================
        CLOSE POPUP
-    ========================================================= */
+    ===================================================== */
 
     function closePopup() {
 
@@ -2878,9 +3116,9 @@
     }
 
 
-    /* =========================================================
+    /* =====================================================
        OUTSIDE POPUP CLICK
-    ========================================================= */
+    ===================================================== */
 
     document.getElementById(
       "popup"
@@ -2900,29 +3138,30 @@
     );
 
 
-    /* =========================================================
-       ESCAPE KEY
-    ========================================================= */
+    /* =====================================================
+       CLOSE COLLECTION
+    ===================================================== */
 
-    document.addEventListener(
-      "keydown",
-      function(event) {
+    function closeCollection() {
 
-        if (
-          event.key === "Escape"
-        ) {
-
-          closePopup();
-
-        }
-
-      }
-    );
+      document.getElementById(
+        "collectionSection"
+      ).style.display =
+        "none";
 
 
-    /* =========================================================
+      document.getElementById(
+        "emotes"
+      ).scrollIntoView({
+        behavior: "smooth"
+      });
+
+    }
+
+
+    /* =====================================================
        EMOTE SEARCH
-    ========================================================= */
+    ===================================================== */
 
     document.getElementById(
       "searchInput"
@@ -2932,26 +3171,30 @@
 
         const search =
           this.value
-          .toLowerCase()
-          .trim();
+            .toLowerCase()
+            .trim();
+
 
         const cards =
           document.querySelectorAll(
             ".category"
           );
 
+
         cards.forEach(
           function(card) {
 
             const text =
               card.innerText
-              .toLowerCase();
+                .toLowerCase();
+
 
             if (
               text.includes(search)
             ) {
 
-              card.style.display = "";
+              card.style.display =
+                "";
 
             } else {
 
@@ -2967,28 +3210,32 @@
     );
 
 
-    /* =========================================================
-       LAUNCHER
-    ========================================================= */
+    /* =====================================================
+       REXUS GAMING LAUNCHER
+    ===================================================== */
 
     window.addEventListener(
       "load",
       function() {
+
 
         const percent =
           document.getElementById(
             "launcherPercent"
           );
 
+
         const status =
           document.getElementById(
             "launcherStatus"
           );
 
+
         const launcher =
           document.getElementById(
             "launcherScreen"
           );
+
 
         const messages = [
 
@@ -3004,20 +3251,24 @@
 
         ];
 
+
         let progress = 0;
+
 
         const interval =
           setInterval(
             function() {
 
+
               progress++;
+
 
               percent.textContent =
                 progress + "%";
 
 
               if (
-                progress < 25
+                progress < 20
               ) {
 
                 status.textContent =
@@ -3026,7 +3277,7 @@
               }
 
               else if (
-                progress < 50
+                progress < 45
               ) {
 
                 status.textContent =
@@ -3035,7 +3286,7 @@
               }
 
               else if (
-                progress < 75
+                progress < 70
               ) {
 
                 status.textContent =
@@ -3044,7 +3295,7 @@
               }
 
               else if (
-                progress < 95
+                progress < 92
               ) {
 
                 status.textContent =
@@ -3071,9 +3322,14 @@
               }
 
             },
-            42
+            46
           );
 
+
+        /*
+          Keep launcher above everything
+          until its animation is finished.
+        */
 
         setTimeout(
           function() {
@@ -3082,16 +3338,17 @@
               "none";
 
           },
-          5700
+          6100
         );
 
       }
     );
 
 
-    /* =========================================================
-       PLAYER UID INPUT
-    ========================================================= */
+    /* =====================================================
+       PLAYER UID
+       DISPLAY ONLY
+    ===================================================== */
 
     document.getElementById(
       "playerUID"
@@ -3106,9 +3363,10 @@
     );
 
 
-    /* =========================================================
-       TEAMCODE INPUT
-    ========================================================= */
+    /* =====================================================
+       TEAMCODE
+       DISPLAY ONLY
+    ===================================================== */
 
     document.getElementById(
       "teamCode"
@@ -3122,25 +3380,6 @@
       }
     );
 
-
-    /* =========================================================
-       LIMIT UID TO NUMBERS
-    ========================================================= */
-
-    document.getElementById(
-      "playerUID"
-    ).addEventListener(
-      "input",
-      function() {
-
-        this.value =
-          this.value.replace(
-            /[^0-9]/g,
-            ""
-          );
-
-      }
-    );
 
   </script>
 
