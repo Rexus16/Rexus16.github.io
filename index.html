@@ -1,20 +1,17 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
   <!-- FAVICON -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23090909'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='55' fill='%23ff8500'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050505'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='55' font-weight='bold' fill='%23ff1744'%3ER%3C/text%3E%3C/svg%3E">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- PAGE TITLE -->
   <title>RexusFF - Free Fire Emote Panel</title>
 
-  <!-- SEO META -->
-  <meta name="description" content="RexusFF + Free Fire">
-  <meta name="keywords" content="RexusFF, Rexus FF">
+  <meta name="description" content="RexusFF Free Fire Emote Panel">
+  <meta name="keywords" content="RexusFF, Rexus FF, Free Fire, Emote Panel">
   <meta name="author" content="RexusFF">
   <meta name="robots" content="index, follow">
 
@@ -24,20 +21,20 @@
   <link rel="canonical" href="https://rexus16.github.io/">
 
   <!-- OPEN GRAPH -->
-  <meta property="og:title" content="RexusFF">
-  <meta property="og:description" content="RexusFF + Free Fire">
+  <meta property="og:title" content="RexusFF - Emote Panel">
+  <meta property="og:description" content="RexusFF Free Fire Emote Panel">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rexus16.github.io/">
   <meta property="og:site_name" content="RexusFF">
 
-  <!-- SCHEMA.ORG WEBSITE -->
+  <!-- SCHEMA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "RexusFF",
     "url": "https://rexus16.github.io/",
-    "description": "RexusFF + Free Fire"
+    "description": "RexusFF Free Fire Emote Panel"
   }
   </script>
 
@@ -56,219 +53,602 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 15% 20%, rgba(255, 98, 0, 0.13), transparent 28%),
-        radial-gradient(circle at 85% 70%, rgba(255, 180, 0, 0.08), transparent 30%),
-        linear-gradient(135deg, #050505, #0d0d0d 50%, #080808);
+        radial-gradient(circle at 15% 15%, rgba(255, 0, 55, 0.12), transparent 25%),
+        radial-gradient(circle at 85% 25%, rgba(120, 0, 255, 0.10), transparent 25%),
+        radial-gradient(circle at 50% 90%, rgba(0, 220, 255, 0.08), transparent 28%),
+        linear-gradient(135deg, #030303, #090909 50%, #020202);
+
       color: #fff;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* BACKGROUND GLOW */
+
+    /* =========================
+       RGB BACKGROUND
+    ========================= */
 
     body::before {
       content: "";
       position: fixed;
-      width: 450px;
-      height: 450px;
-      background: rgba(255, 102, 0, 0.06);
-      filter: blur(100px);
+
+      width: 500px;
+      height: 500px;
+
+      top: 5%;
+      left: -180px;
+
+      background: rgba(255, 0, 55, 0.08);
+
+      filter: blur(110px);
+
       border-radius: 50%;
-      top: 10%;
-      left: -150px;
+
       pointer-events: none;
+
       z-index: -1;
+
+      animation: rgbGlow 7s infinite alternate;
     }
 
     body::after {
       content: "";
+
       position: fixed;
-      width: 400px;
-      height: 400px;
-      background: rgba(255, 174, 0, 0.05);
-      filter: blur(100px);
-      border-radius: 50%;
+
+      width: 500px;
+      height: 500px;
+
+      right: -180px;
       bottom: 5%;
-      right: -150px;
+
+      background: rgba(100, 0, 255, 0.08);
+
+      filter: blur(110px);
+
+      border-radius: 50%;
+
       pointer-events: none;
+
       z-index: -1;
+
+      animation: rgbGlow2 8s infinite alternate;
     }
 
-    /* NAVBAR */
+    @keyframes rgbGlow {
+
+      0% {
+        background: rgba(255, 0, 55, 0.08);
+      }
+
+      50% {
+        background: rgba(255, 90, 0, 0.08);
+      }
+
+      100% {
+        background: rgba(150, 0, 255, 0.08);
+      }
+
+    }
+
+    @keyframes rgbGlow2 {
+
+      0% {
+        background: rgba(0, 200, 255, 0.07);
+      }
+
+      50% {
+        background: rgba(100, 0, 255, 0.08);
+      }
+
+      100% {
+        background: rgba(255, 0, 80, 0.08);
+      }
+
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
 
     nav {
+
       position: sticky;
+
       top: 0;
+
       z-index: 1000;
+
       height: 70px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
       padding: 0 7%;
 
-      background: rgba(5, 5, 5, 0.88);
-      backdrop-filter: blur(14px);
+      background: rgba(3, 3, 3, 0.88);
 
-      border-bottom: 1px solid rgba(255, 115, 0, 0.15);
+      backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid rgba(255, 0, 70, 0.25);
+
+      box-shadow:
+        0 0 25px rgba(255, 0, 70, 0.06);
+
     }
+
 
     .logo {
+
       font-size: 28px;
+
       font-weight: 900;
+
       letter-spacing: 1px;
 
-      background: linear-gradient(90deg, #ff5b00, #ffb300);
+      background:
+        linear-gradient(
+          90deg,
+          #ff1744,
+          #ff4d00,
+          #ffb300,
+          #ff1744
+        );
+
+      background-size: 250%;
+
       -webkit-background-clip: text;
+
       -webkit-text-fill-color: transparent;
+
+      animation: logoRGB 4s linear infinite;
+
+      text-shadow:
+        0 0 25px rgba(255, 0, 70, 0.3);
+
     }
+
+    @keyframes logoRGB {
+
+      0% {
+        background-position: 0%;
+      }
+
+      100% {
+        background-position: 250%;
+      }
+
+    }
+
 
     nav ul {
+
       list-style: none;
+
       display: flex;
+
       gap: 30px;
+
     }
+
 
     nav ul li a {
-      color: #ccc;
+
+      color: #aaa;
+
       text-decoration: none;
+
       font-size: 14px;
+
       font-weight: bold;
+
       transition: 0.25s;
+
+      position: relative;
+
     }
+
+
+    nav ul li a::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -7px;
+
+      width: 0;
+
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #ff1744,
+          #ff7a00,
+          #7b00ff
+        );
+
+      transition: 0.25s;
+
+    }
+
 
     nav ul li a:hover {
-      color: #ff8500;
+
+      color: #fff;
+
+      text-shadow:
+        0 0 12px rgba(255, 0, 70, 0.8);
+
     }
 
-    /* HERO */
+
+    nav ul li a:hover::after {
+
+      width: 100%;
+
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
+
       min-height: 500px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       text-align: center;
 
       padding: 80px 20px;
 
       position: relative;
+
     }
+
 
     .hero-content {
+
       max-width: 850px;
+
     }
 
+
     .tag {
+
       display: inline-block;
 
       padding: 8px 16px;
+
       margin-bottom: 22px;
 
-      border: 1px solid rgba(255, 128, 0, 0.4);
+      border: 1px solid rgba(255, 0, 70, 0.45);
+
       border-radius: 30px;
 
-      background: rgba(255, 95, 0, 0.07);
+      background:
+        rgba(255, 0, 60, 0.06);
 
-      color: #ff9a00;
+      color: #ff5c7a;
+
       font-size: 12px;
+
       font-weight: bold;
+
       letter-spacing: 2px;
+
+      box-shadow:
+        0 0 25px rgba(255, 0, 60, 0.08);
+
     }
 
+
     .hero h1 {
+
       font-size: clamp(40px, 7vw, 78px);
+
       line-height: 1;
 
       margin-bottom: 20px;
 
       font-weight: 900;
 
-      background: linear-gradient(90deg, #fff, #ff9d00, #ff5b00);
+      background:
+        linear-gradient(
+          90deg,
+          #ffffff,
+          #ff1744,
+          #ff6d00,
+          #8a2be2,
+          #00d9ff,
+          #ffffff
+        );
+
+      background-size: 300%;
+
       -webkit-background-clip: text;
+
       -webkit-text-fill-color: transparent;
+
+      animation: heroRGB 6s linear infinite;
+
+      filter:
+        drop-shadow(0 0 18px rgba(255, 0, 70, 0.25));
+
     }
+
+
+    @keyframes heroRGB {
+
+      0% {
+        background-position: 0%;
+      }
+
+      100% {
+        background-position: 300%;
+      }
+
+    }
+
 
     .hero p {
-      color: #aaa;
+
+      color: #999;
+
       font-size: 17px;
+
       line-height: 1.7;
+
       max-width: 650px;
+
       margin: auto;
+
     }
 
-    /* SEARCH */
+
+    /* =========================
+       PANEL SEARCH
+    ========================= */
 
     .search-wrapper {
-      max-width: 650px;
+
+      max-width: 900px;
+
       margin: -25px auto 70px;
+
       padding: 0 20px;
+
     }
 
-    .search-box {
+
+    .search-panel {
+
+      padding: 20px;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.015)
+        );
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      position: relative;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 15px 50px rgba(0,0,0,0.45);
+
+    }
+
+
+    /* RGB LINE */
+
+    .search-panel::before {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
       width: 100%;
 
-      padding: 17px 22px;
+      height: 2px;
 
-      border-radius: 14px;
+      background:
+        linear-gradient(
+          90deg,
+          #ff1744,
+          #ff7300,
+          #7b00ff,
+          #00d9ff,
+          #ff1744
+        );
 
-      border: 1px solid rgba(255, 128, 0, 0.25);
+      background-size: 300%;
 
-      background: rgba(255, 255, 255, 0.04);
+      animation: rgbLine 5s linear infinite;
+
+    }
+
+
+    @keyframes rgbLine {
+
+      0% {
+        background-position: 0%;
+      }
+
+      100% {
+        background-position: 300%;
+      }
+
+    }
+
+
+    .search-title {
+
+      color: #aaa;
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 14px;
+
+    }
+
+
+    .search-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.5fr
+        1fr
+        1fr;
+
+      gap: 12px;
+
+    }
+
+
+    .search-box {
+
+      width: 100%;
+
+      padding: 15px 17px;
+
+      border-radius: 11px;
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      background:
+        rgba(0,0,0,0.5);
 
       color: white;
 
       outline: none;
 
-      font-size: 15px;
+      font-size: 14px;
 
-      transition: 0.25s;
+      transition: 0.3s;
+
     }
+
 
     .search-box:focus {
-      border-color: #ff7600;
-      box-shadow: 0 0 25px rgba(255, 102, 0, 0.12);
+
+      border-color: #ff1744;
+
+      box-shadow:
+        0 0 18px rgba(255, 0, 70, 0.18);
+
     }
+
 
     .search-box::placeholder {
-      color: #777;
+
+      color: #666;
+
     }
 
-    /* SECTION */
+
+    /* =========================
+       SECTION
+    ========================= */
 
     section {
+
       width: 90%;
+
       max-width: 1200px;
+
       margin: auto;
+
       padding: 70px 0;
+
     }
+
 
     .section-title {
+
       text-align: center;
+
       margin-bottom: 45px;
+
     }
+
 
     .section-title h2 {
+
       font-size: 32px;
+
       margin-bottom: 10px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #fff,
+          #ff1744,
+          #ff9800
+        );
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
     }
+
 
     .section-title p {
+
       color: #777;
+
       font-size: 14px;
+
     }
 
-    /* CATEGORY GRID */
+
+    /* =========================
+       CATEGORY GRID
+    ========================= */
 
     .categories {
+
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
       gap: 18px;
+
     }
 
+
     .category {
+
       position: relative;
 
       padding: 28px 18px;
@@ -280,8 +660,8 @@
       background:
         linear-gradient(
           145deg,
-          rgba(255,255,255,0.06),
-          rgba(255,255,255,0.015)
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.01)
         );
 
       border: 1px solid rgba(255,255,255,0.08);
@@ -291,106 +671,202 @@
       transition: 0.3s;
 
       overflow: hidden;
+
     }
 
-    .category::before {
+
+    /* RGB CARD BORDER */
+
+    .category::after {
+
       content: "";
 
       position: absolute;
 
-      width: 120px;
-      height: 120px;
+      inset: 0;
 
-      background: rgba(255, 102, 0, 0.08);
+      border-radius: 18px;
 
-      filter: blur(30px);
+      padding: 1px;
 
-      top: -50px;
-      right: -40px;
+      background:
+        linear-gradient(
+          120deg,
+          transparent,
+          rgba(255,0,70,0.5),
+          transparent,
+          rgba(0,220,255,0.35),
+          transparent
+        );
 
-      border-radius: 50%;
+      background-size: 300%;
+
+      animation: cardRGB 7s linear infinite;
+
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+      -webkit-mask-composite: xor;
+
+      mask-composite: exclude;
+
+      pointer-events: none;
+
     }
+
+
+    @keyframes cardRGB {
+
+      0% {
+        background-position: 0%;
+      }
+
+      100% {
+        background-position: 300%;
+      }
+
+    }
+
 
     .category:hover {
+
       transform: translateY(-8px);
 
-      border-color: rgba(255, 120, 0, 0.4);
+      border-color:
+        rgba(255, 0, 70, 0.45);
 
       box-shadow:
-        0 15px 40px rgba(0,0,0,0.4),
-        0 0 25px rgba(255,100,0,0.08);
+        0 15px 40px rgba(0,0,0,0.5),
+        0 0 25px rgba(255,0,70,0.12);
+
     }
+
 
     .category-icon {
+
       font-size: 42px;
+
       margin-bottom: 16px;
+
+      filter:
+        drop-shadow(
+          0 0 12px
+          rgba(255, 0, 70, 0.25)
+        );
+
     }
+
 
     .category h3 {
+
       font-size: 17px;
+
       margin-bottom: 8px;
+
     }
+
 
     .category p {
+
       font-size: 12px;
+
       color: #777;
+
       margin-bottom: 18px;
+
     }
 
+
     .view-btn {
+
       border: 0;
 
       padding: 9px 15px;
 
       border-radius: 8px;
 
-      background: linear-gradient(90deg, #ff5b00, #ff9800);
+      background:
+        linear-gradient(
+          90deg,
+          #ff1744,
+          #ff5c00
+        );
 
       color: white;
 
       font-size: 11px;
+
       font-weight: bold;
 
       cursor: pointer;
 
       transition: 0.25s;
+
+      box-shadow:
+        0 0 15px rgba(255,0,60,0.15);
+
     }
+
 
     .view-btn:hover {
+
       transform: scale(1.05);
-      box-shadow: 0 0 18px rgba(255,100,0,0.25);
+
+      box-shadow:
+        0 0 25px rgba(255,0,70,0.35);
+
     }
 
-    /* COLLECTION */
+
+    /* =========================
+       COLLECTION
+    ========================= */
 
     #collectionSection {
+
       display: none;
+
     }
 
+
     .collection-header {
+
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
 
       margin-bottom: 30px;
 
       gap: 20px;
+
     }
+
 
     .collection-header h2 {
+
       font-size: 28px;
+
     }
+
 
     .collection-header span {
-      color: #ff8500;
+
+      color: #ff1744;
+
     }
 
+
     .back-btn {
-      border: 1px solid rgba(255, 120, 0, 0.35);
 
-      background: rgba(255, 100, 0, 0.07);
+      border: 1px solid rgba(255,0,70,0.35);
 
-      color: #ff9b00;
+      background:
+        rgba(255,0,70,0.07);
+
+      color: #ff5878;
 
       padding: 9px 15px;
 
@@ -399,20 +875,32 @@
       cursor: pointer;
 
       font-size: 12px;
+
     }
 
-    /* EMOTE GRID */
+
+    /* =========================
+       EMOTE GRID
+    ========================= */
 
     .emote-grid {
+
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
       gap: 18px;
+
     }
 
+
     .emote-card {
+
       border: 1px solid rgba(255,255,255,0.08);
 
-      background: rgba(255,255,255,0.035);
+      background:
+        rgba(255,255,255,0.035);
 
       border-radius: 16px;
 
@@ -421,21 +909,31 @@
       transition: 0.3s;
 
       cursor: pointer;
+
     }
+
 
     .emote-card:hover {
+
       transform: translateY(-6px);
 
-      border-color: rgba(255,120,0,0.4);
+      border-color:
+        rgba(255,0,70,0.4);
 
-      box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+      box-shadow:
+        0 15px 35px rgba(0,0,0,0.35);
+
     }
 
+
     .emote-preview {
+
       height: 170px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
       font-size: 60px;
@@ -443,28 +941,43 @@
       background:
         radial-gradient(
           circle,
-          rgba(255,110,0,0.14),
+          rgba(255,0,70,0.13),
           transparent 65%
         );
 
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom:
+        1px solid rgba(255,255,255,0.06);
+
     }
+
 
     .emote-info {
+
       padding: 17px;
+
     }
+
 
     .emote-info h3 {
+
       font-size: 15px;
+
       margin-bottom: 8px;
+
     }
+
 
     .emote-info p {
+
       font-size: 11px;
+
       color: #777;
+
     }
 
+
     .badge {
+
       display: inline-block;
 
       margin-top: 12px;
@@ -473,20 +986,26 @@
 
       border-radius: 5px;
 
-      background: rgba(255,100,0,0.1);
+      background:
+        rgba(255,0,70,0.1);
 
-      color: #ff9000;
+      color: #ff5878;
 
       font-size: 9px;
 
       font-weight: bold;
 
       letter-spacing: 0.5px;
+
     }
 
-    /* ABOUT */
+
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about-box {
+
       max-width: 850px;
 
       margin: auto;
@@ -495,46 +1014,73 @@
 
       border-radius: 18px;
 
-      background: rgba(255,255,255,0.035);
+      background:
+        rgba(255,255,255,0.035);
 
-      border: 1px solid rgba(255,255,255,0.08);
+      border:
+        1px solid rgba(255,255,255,0.08);
 
       text-align: center;
+
+      box-shadow:
+        0 15px 50px rgba(0,0,0,0.35);
+
     }
+
 
     .about-box h2 {
+
       margin-bottom: 18px;
+
     }
+
 
     .about-box p {
+
       color: #999;
+
       line-height: 1.8;
+
       font-size: 14px;
+
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
+
       margin-top: 70px;
 
       padding: 30px 20px;
 
       text-align: center;
 
-      border-top: 1px solid rgba(255,255,255,0.07);
+      border-top:
+        1px solid rgba(255,255,255,0.07);
 
       color: #666;
 
       font-size: 12px;
+
     }
+
 
     footer strong {
-      color: #ff8500;
+
+      color: #ff1744;
+
     }
 
-    /* POPUP */
+
+    /* =========================
+       POPUP
+    ========================= */
 
     .popup {
+
       position: fixed;
 
       inset: 0;
@@ -542,19 +1088,25 @@
       display: none;
 
       align-items: center;
+
       justify-content: center;
 
       padding: 20px;
 
-      background: rgba(0,0,0,0.75);
+      background:
+        rgba(0,0,0,0.78);
 
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
 
       z-index: 2000;
+
     }
 
+
     .popup-box {
+
       width: 100%;
+
       max-width: 430px;
 
       padding: 35px;
@@ -565,47 +1117,81 @@
         linear-gradient(
           145deg,
           #171717,
-          #0b0b0b
+          #080808
         );
 
-      border: 1px solid rgba(255,120,0,0.3);
+      border:
+        1px solid rgba(255,0,70,0.35);
 
       text-align: center;
 
-      box-shadow: 0 25px 80px rgba(0,0,0,0.6);
+      box-shadow:
+        0 25px 80px rgba(0,0,0,0.7),
+        0 0 35px rgba(255,0,70,0.1);
 
-      animation: popupIn 0.25s ease;
+      animation:
+        popupIn 0.25s ease;
+
     }
 
+
     @keyframes popupIn {
+
       from {
+
         opacity: 0;
-        transform: scale(0.9);
+
+        transform:
+          scale(0.9);
+
       }
 
       to {
+
         opacity: 1;
-        transform: scale(1);
+
+        transform:
+          scale(1);
+
       }
+
     }
+
 
     .popup-icon {
+
       font-size: 65px;
+
       margin-bottom: 15px;
+
     }
+
 
     .popup-box h2 {
+
       margin-bottom: 12px;
-      color: #ff8500;
+
+      color: #ff1744;
+
+      text-shadow:
+        0 0 15px rgba(255,0,70,0.35);
+
     }
+
 
     .popup-box p {
+
       color: #999;
+
       line-height: 1.6;
+
       font-size: 13px;
+
     }
 
+
     .close-btn {
+
       margin-top: 25px;
 
       border: 0;
@@ -614,7 +1200,12 @@
 
       border-radius: 8px;
 
-      background: #ff6800;
+      background:
+        linear-gradient(
+          90deg,
+          #ff1744,
+          #ff6200
+        );
 
       color: white;
 
@@ -623,78 +1214,173 @@
       cursor: pointer;
 
       transition: 0.25s;
+
     }
+
 
     .close-btn:hover {
+
       transform: scale(1.05);
-      box-shadow: 0 0 18px rgba(255,100,0,0.3);
+
+      box-shadow:
+        0 0 22px rgba(255,0,70,0.35);
+
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 1000px) {
 
       .categories {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
       }
 
+
       .emote-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+
+      .search-grid {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+
+      .search-box:first-child {
+
+        grid-column:
+          1 / -1;
+
       }
 
     }
 
+
     @media (max-width: 600px) {
 
       nav {
-        padding: 0 20px;
+
+        padding:
+          0 20px;
+
       }
+
 
       .logo {
+
         font-size: 23px;
+
       }
+
 
       nav ul {
+
         gap: 14px;
+
       }
+
 
       nav ul li a {
+
         font-size: 11px;
+
       }
+
 
       .hero {
+
         min-height: 430px;
-        padding: 60px 20px;
+
+        padding:
+          60px 20px;
+
       }
+
 
       .hero p {
+
         font-size: 14px;
+
       }
+
 
       .search-wrapper {
+
         margin-bottom: 30px;
+
       }
+
+
+      .search-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .search-box:first-child {
+
+        grid-column:
+          auto;
+
+      }
+
 
       section {
+
         width: 92%;
-        padding: 50px 0;
+
+        padding:
+          50px 0;
+
       }
+
 
       .categories {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
+
 
       .emote-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
+
 
       .collection-header {
-        flex-direction: column;
-        align-items: flex-start;
+
+        flex-direction:
+          column;
+
+        align-items:
+          flex-start;
+
       }
 
+
       .about-box {
-        padding: 25px 20px;
+
+        padding:
+          25px 20px;
+
       }
 
     }
@@ -703,26 +1389,39 @@
 
 </head>
 
+
 <body>
 
-  <!-- NAVBAR -->
+
+  <!-- =========================
+       NAVBAR
+  ========================= -->
 
   <nav>
 
-    <div class="logo">RexusFF</div>
+    <div class="logo">
+      ꓣⲉⲭυⲋ
+    </div>
+
 
     <ul>
 
       <li>
-        <a href="#home">HOME</a>
+        <a href="#home">
+          HOME
+        </a>
       </li>
 
       <li>
-        <a href="#emotes">EMOTES</a>
+        <a href="#emotes">
+          EMOTES
+        </a>
       </li>
 
       <li>
-        <a href="#about">ABOUT</a>
+        <a href="#about">
+          ABOUT
+        </a>
       </li>
 
     </ul>
@@ -730,9 +1429,13 @@
   </nav>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
-  <header class="hero" id="home">
+  <header
+    class="hero"
+    id="home">
 
     <div class="hero-content">
 
@@ -740,9 +1443,11 @@
         FAN-MADE FREE FIRE PROJECT
       </div>
 
+
       <h1>
-        ꓣⲉⲭυⲋ
+        Emote Panel
       </h1>
+
 
       <p>
         Explore different fan-made Free Fire emote categories
@@ -754,27 +1459,69 @@
   </header>
 
 
-  <!-- SEARCH -->
+  <!-- =========================
+       SEARCH PANEL
+  ========================= -->
 
   <div class="search-wrapper">
 
-    <input
-      type="text"
-      id="searchInput"
-      class="search-box"
-      placeholder="🔎 Search emotes..."
-    >
+    <div class="search-panel">
+
+      <div class="search-title">
+        PANEL SEARCH
+      </div>
+
+
+      <div class="search-grid">
+
+        <!-- EMOTE SEARCH -->
+
+        <input
+          type="text"
+          id="searchInput"
+          class="search-box"
+          placeholder="🔎 Search Emote..."
+        >
+
+
+        <!-- TEAMCODE -->
+
+        <input
+          type="text"
+          id="teamCodeInput"
+          class="search-box"
+          placeholder="🎮 Teamcode"
+        >
+
+
+        <!-- PLAYER UID -->
+
+        <input
+          type="text"
+          id="playerUIDInput"
+          class="search-box"
+          placeholder="👤 Player UID"
+        >
+
+      </div>
+
+    </div>
 
   </div>
 
 
-  <!-- CATEGORIES -->
+  <!-- =========================
+       CATEGORIES
+  ========================= -->
 
   <section id="emotes">
 
     <div class="section-title">
 
-      <h2>EMOTE CATEGORIES</h2>
+      <h2>
+        EMOTE CATEGORIES
+      </h2>
+
 
       <p>
         Choose a category to explore the collection
@@ -783,119 +1530,204 @@
     </div>
 
 
-    <div class="categories" id="categoryGrid">
+    <div
+      class="categories"
+      id="categoryGrid">
+
+
+      <!-- RARE -->
 
       <div class="category">
 
-        <div class="category-icon">💎</div>
+        <div class="category-icon">
+          💎
+        </div>
 
-        <h3>Rare Emotes</h3>
 
-        <p>Rare-style fan-made collection</p>
+        <h3>
+          Rare Emotes
+        </h3>
+
+
+        <p>
+          Rare-style fan-made collection
+        </p>
+
 
         <button
           class="view-btn"
           onclick="openCategory('Rare Emotes')">
+
           VIEW EMOTES
+
         </button>
 
       </div>
 
 
+      <!-- MAX GUN -->
+
       <div class="category">
 
-        <div class="category-icon">🔥</div>
+        <div class="category-icon">
+          🔥
+        </div>
 
-        <h3>Max Gun Emotes</h3>
 
-        <p>Gun-themed fan-made collection</p>
+        <h3>
+          Max Gun Emotes
+        </h3>
+
+
+        <p>
+          Gun-themed fan-made collection
+        </p>
+
 
         <button
           class="view-btn"
           onclick="openCategory('Max Gun Emotes')">
+
           VIEW EMOTES
+
         </button>
 
       </div>
 
 
+      <!-- NEW -->
+
       <div class="category">
 
-        <div class="category-icon">✨</div>
+        <div class="category-icon">
+          ✨
+        </div>
 
-        <h3>New Emotes</h3>
 
-        <p>New-style emote collection</p>
+        <h3>
+          New Emotes
+        </h3>
+
+
+        <p>
+          New-style emote collection
+        </p>
+
 
         <button
           class="view-btn"
           onclick="openCategory('New Emotes')">
+
           VIEW EMOTES
+
         </button>
 
       </div>
 
 
+      <!-- SQUAD -->
+
       <div class="category">
 
-        <div class="category-icon">👥</div>
+        <div class="category-icon">
+          👥
+        </div>
 
-        <h3>Squad Emotes</h3>
 
-        <p>Squad-themed collection</p>
+        <h3>
+          Squad Emotes
+        </h3>
+
+
+        <p>
+          Squad-themed collection
+        </p>
+
 
         <button
           class="view-btn"
           onclick="openCategory('Squad Emotes')">
+
           VIEW EMOTES
+
         </button>
 
       </div>
 
 
+      <!-- DUO -->
+
       <div class="category">
 
-        <div class="category-icon">🤝</div>
+        <div class="category-icon">
+          🤝
+        </div>
 
-        <h3>Duo Emotes</h3>
 
-        <p>Duo-themed collection</p>
+        <h3>
+          Duo Emotes
+        </h3>
+
+
+        <p>
+          Duo-themed collection
+        </p>
+
 
         <button
           class="view-btn"
           onclick="openCategory('Duo Emotes')">
+
           VIEW EMOTES
+
         </button>
 
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- COLLECTION -->
+  <!-- =========================
+       COLLECTION
+  ========================= -->
 
-  <section id="collectionSection">
+  <section
+    id="collectionSection">
 
-    <div class="collection-header">
+
+    <div
+      class="collection-header">
+
 
       <div>
 
-        <h2 id="collectionTitle">
+        <h2
+          id="collectionTitle">
+
           Emotes
+
         </h2>
 
-        <p style="color:#777; margin-top:7px;">
+
+        <p
+          style="color:#777; margin-top:7px;">
+
           Fan-made preview collection
+
         </p>
 
       </div>
 
+
       <button
         class="back-btn"
         onclick="closeCollection()">
+
         ← BACK TO CATEGORIES
+
       </button>
 
     </div>
@@ -904,34 +1736,46 @@
     <div
       class="emote-grid"
       id="emoteGrid">
+
     </div>
 
   </section>
 
 
-  <!-- ABOUT -->
+  <!-- =========================
+       ABOUT
+  ========================= -->
 
   <section id="about">
 
     <div class="section-title">
 
-      <h2>ABOUT ꓣⲉⲭυⲋ</h2>
+      <h2>
+        ABOUT ꓣⲉⲭυⲋ
+      </h2>
 
     </div>
 
 
     <div class="about-box">
 
-      <h2>Fan-Made Gaming Project</h2>
+      <h2>
+        Fan-Made Gaming Project
+      </h2>
+
 
       <p>
-        This website is an independent fan-made project created
-        for browsing and presenting Free Fire-inspired emote
-        categories in a modern interface.
+
+        This website is an independent fan-made project
+        created for browsing and presenting Free Fire-inspired
+        emote categories in a modern interface.
+
         It does not modify game files, game accounts or provide
         anti-ban services.
-        Free Fire and related trademarks belong to their respective
-        owners.
+
+        Free Fire and related trademarks belong to their
+        respective owners.
+
       </p>
 
     </div>
@@ -939,80 +1783,132 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
     <p>
-      © 2026 <strong>ꓣⲉⲭυⲋ</strong>
+
+      © 2026
+      <strong>
+        ꓣⲉⲭυⲋ
+      </strong>
+
     </p>
 
+
     <p style="margin-top:8px;">
-      Fan-made website. Not affiliated with Garena.
+
+      Fan-made website.
+      Not affiliated with Garena.
+
     </p>
 
   </footer>
 
 
-  <!-- POPUP -->
+  <!-- =========================
+       POPUP
+  ========================= -->
 
   <div
     class="popup"
     id="popup">
 
+
     <div class="popup-box">
+
 
       <div
         class="popup-icon"
         id="popupIcon">
+
         🚧
+
       </div>
 
-      <h2 id="popupTitle">
+
+      <h2
+        id="popupTitle">
+
         COMING SOON
+
       </h2>
 
-      <p id="popupText">
+
+      <p
+        id="popupText">
+
         We are working on this category.
+
       </p>
+
 
       <button
         class="close-btn"
         onclick="closePopup()">
+
         CLOSE
+
       </button>
+
 
     </div>
 
   </div>
 
 
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
   <script>
 
-    /* OPEN CATEGORY - COMING SOON POPUP */
+
+    /* =========================
+       CATEGORY POPUP
+    ========================= */
 
     function openCategory(category) {
 
-      document.getElementById("popupIcon").textContent = "🚧";
+      document.getElementById(
+        "popupIcon"
+      ).textContent = "🚧";
 
-      document.getElementById("popupTitle").textContent =
+
+      document.getElementById(
+        "popupTitle"
+      ).textContent =
         "COMING SOON";
 
-      document.getElementById("popupText").textContent =
+
+      document.getElementById(
+        "popupText"
+      ).textContent =
         "We are working on " + category;
 
-      document.getElementById("popup").style.display = "flex";
+
+      document.getElementById(
+        "popup"
+      ).style.display =
+        "flex";
 
     }
 
 
-    /* CLOSE COLLECTION */
+    /* =========================
+       CLOSE COLLECTION
+    ========================= */
 
     function closeCollection() {
 
       document.getElementById(
         "collectionSection"
-      ).style.display = "none";
+      ).style.display =
+        "none";
+
 
       document.getElementById(
         "emotes"
@@ -1023,18 +1919,23 @@
     }
 
 
-    /* CLOSE POPUP */
+    /* =========================
+       CLOSE POPUP
+    ========================= */
 
     function closePopup() {
 
       document.getElementById(
         "popup"
-      ).style.display = "none";
+      ).style.display =
+        "none";
 
     }
 
 
-    /* CLOSE POPUP WHEN CLICKING OUTSIDE */
+    /* =========================
+       OUTSIDE CLICK
+    ========================= */
 
     document.getElementById(
       "popup"
@@ -1054,7 +1955,9 @@
     );
 
 
-    /* SEARCH */
+    /* =========================
+       EMOTE SEARCH
+    ========================= */
 
     document.getElementById(
       "searchInput"
@@ -1067,16 +1970,20 @@
           .toLowerCase()
           .trim();
 
+
         const cards =
           document.querySelectorAll(
             ".category"
           );
 
+
         cards.forEach(
           function(card) {
 
             const text =
-              card.innerText.toLowerCase();
+              card.innerText
+              .toLowerCase();
+
 
             if (
               text.includes(search)
@@ -1098,8 +2005,45 @@
       }
     );
 
+
+    /* =========================
+       TEAMCODE
+    ========================= */
+
+    document.getElementById(
+      "teamCodeInput"
+    ).addEventListener(
+      "input",
+      function() {
+
+        this.value =
+          this.value
+          .replace(/\s/g, "");
+
+      }
+    );
+
+
+    /* =========================
+       PLAYER UID
+    ========================= */
+
+    document.getElementById(
+      "playerUIDInput"
+    ).addEventListener(
+      "input",
+      function() {
+
+        this.value =
+          this.value
+          .replace(/\D/g, "");
+
+      }
+    );
+
+
   </script>
+
 
 </body>
 </html>
-```
