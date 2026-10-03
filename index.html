@@ -1,54 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FAVICON -->
-  <link rel="icon"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050505'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='55' font-weight='bold' fill='%23ff1744'%3ER%3C/text%3E%3C/svg%3E">
+  <!-- =========================
+       FAVICON
+  ========================== -->
 
-  <!-- TITLE -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050505'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='55' font-weight='bold' fill='%23ff1744'%3ER%3C/text%3E%3C/svg%3E">
+
+
+  <!-- =========================
+       TITLE
+  ========================== -->
+
   <title>ꓣⲉⲭυⲋ - Free Fire Emote Panel</title>
 
-  <!-- SEO -->
-  <meta name="description"
-    content="ꓣⲉⲭυⲋ Free Fire Emote Panel - A fan-made gaming project for fun.">
-  <meta name="keywords"
-    content="Rexus, Free Fire, Emote Panel, Free Fire Emotes, Gaming">
-  <meta name="author" content="ꓣⲉⲭυⲋ">
-  <meta name="robots" content="index, follow">
 
-  <meta name="google-site-verification"
-    content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk">
+  <!-- =========================
+       SEO
+  ========================== -->
 
-  <!-- CANONICAL -->
-  <link rel="canonical" href="https://rexus16.github.io/">
+  <meta
+    name="description"
+    content="ꓣⲉⲭυⲋ Free Fire Emote Panel - Fan-made gaming project for the Free Fire community."
+  >
 
-  <!-- OPEN GRAPH -->
-  <meta property="og:title" content="ꓣⲉⲭυⲋ - Emote Panel">
-  <meta property="og:description"
-    content="ꓣⲉⲭυⲋ Free Fire Emote Panel - Fan-made gaming project">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rexus16.github.io/">
-  <meta property="og:site_name" content="ꓣⲉⲭυⲋ">
+  <meta
+    name="keywords"
+    content="Rexus, Free Fire, Emote Panel, Free Fire Emotes, Gaming"
+  >
 
-  <!-- GOOGLE FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="author"
+    content="ꓣⲉⲭυⲋ"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="google-site-verification"
+    content="CRA58NVDtZmmVgmZwSg08u7Q23ksumLzEWCM6YSBebk"
+  >
+
+
+  <!-- =========================
+       CANONICAL
+  ========================== -->
+
+  <link
+    rel="canonical"
+    href="https://rexus16.github.io/"
+  >
+
+
+  <!-- =========================
+       OPEN GRAPH
+  ========================== -->
+
+  <meta
+    property="og:title"
+    content="ꓣⲉⲭυⲋ - Free Fire Emote Panel"
+  >
+
+  <meta
+    property="og:description"
+    content="ꓣⲉⲭυⲋ fan-made gaming project for the Free Fire community."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://rexus16.github.io/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="ꓣⲉⲭυⲋ"
+  >
+
+
+  <!-- =========================
+       GOOGLE FONTS
+  ========================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"
+  >
 
 
   <style>
 
-    /* =====================================================
+    /* =========================================================
        GLOBAL
-    ===================================================== */
+    ========================================================= */
 
     * {
       margin: 0;
@@ -69,9 +134,9 @@
     }
 
 
-    /* =====================================================
+    /* =========================================================
        GAMING BACKGROUND
-    ===================================================== */
+    ========================================================= */
 
     body::before {
       content: "";
@@ -80,6 +145,7 @@
       inset: 0;
 
       z-index: -5;
+
       pointer-events: none;
 
       background:
@@ -94,8 +160,9 @@
         );
 
       background-size: 55px 55px;
-    }
 
+      animation: gridMove 18s linear infinite;
+    }
 
     body::after {
       content: "";
@@ -104,22 +171,20 @@
       inset: -20%;
 
       z-index: -6;
+
       pointer-events: none;
 
       background:
-
         radial-gradient(
           circle at 15% 20%,
           rgba(255, 0, 55, 0.16),
           transparent 25%
         ),
-
         radial-gradient(
           circle at 85% 25%,
           rgba(120, 0, 255, 0.12),
           transparent 25%
         ),
-
         radial-gradient(
           circle at 50% 90%,
           rgba(0, 180, 255, 0.08),
@@ -132,12 +197,23 @@
         backgroundPulse 8s ease-in-out infinite alternate;
     }
 
+    @keyframes gridMove {
+
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: 55px 55px;
+      }
+
+    }
 
     @keyframes backgroundPulse {
 
       from {
         transform: scale(1);
-        opacity: 0.75;
+        opacity: 0.7;
       }
 
       to {
@@ -148,9 +224,9 @@
     }
 
 
-    /* =====================================================
+    /* =========================================================
        RGB TOP LINE
-    ===================================================== */
+    ========================================================= */
 
     .rgb-line {
 
@@ -178,14 +254,12 @@
 
       background-size: 400% 100%;
 
-      animation:
-        rgbMove 4s linear infinite;
+      animation: rgbMove 4s linear infinite;
 
       box-shadow:
         0 0 8px #ff003c,
         0 0 18px rgba(255, 0, 80, 0.7);
     }
-
 
     @keyframes rgbMove {
 
@@ -200,18 +274,20 @@
     }
 
 
-    /* =====================================================
+    /* =========================================================
        REXUS GAMING LAUNCHER
-    ===================================================== */
+    ========================================================= */
 
     .launcher-screen {
 
       position: fixed;
+
       inset: 0;
 
       z-index: 10000;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -220,7 +296,7 @@
       overflow: hidden;
 
       animation:
-        launcherFadeOut 0.9s ease 5.0s forwards;
+        launcherFadeOut 0.9s ease 5.2s forwards;
     }
 
 
@@ -231,19 +307,16 @@
       inset: -30%;
 
       background:
-
         radial-gradient(
           circle at center,
           rgba(255, 23, 68, 0.16),
           transparent 25%
         ),
-
         radial-gradient(
           circle at 20% 50%,
-          rgba(123, 0, 255, 0.08),
+          rgba(123, 0, 255, 0.09),
           transparent 25%
         ),
-
         radial-gradient(
           circle at 80% 50%,
           rgba(0, 200, 255, 0.08),
@@ -260,15 +333,14 @@
       content: "";
 
       position: absolute;
+
       inset: 0;
 
       background:
-
         linear-gradient(
           rgba(255,255,255,0.025) 1px,
           transparent 1px
         ),
-
         linear-gradient(
           90deg,
           rgba(255,255,255,0.025) 1px,
@@ -312,17 +384,17 @@
       letter-spacing: 4px;
 
       background:
-
         linear-gradient(
           90deg,
           #ff003c,
           #ff6d00,
           #ffffff,
           #7b00ff,
+          #00c8ff,
           #ff003c
         );
 
-      background-size: 300% auto;
+      background-size: 400% auto;
 
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -332,11 +404,12 @@
 
       filter:
         drop-shadow(
-          0 0 15px rgba(255,23,68,0.5)
+          0 0 15px
+          rgba(255,23,68,0.55)
         )
-
         drop-shadow(
-          0 0 35px rgba(123,0,255,0.2)
+          0 0 35px
+          rgba(123,0,255,0.25)
         );
     }
 
@@ -371,13 +444,15 @@
       color: #ff526f;
 
       text-shadow:
-        0 0 12px rgba(255,23,68,0.7);
+        0 0 12px
+        rgba(255,23,68,0.7);
     }
 
 
     .launcher-loader {
 
-      width: min(430px, 80vw);
+      width:
+        min(430px, 80vw);
 
       height: 4px;
 
@@ -391,19 +466,20 @@
       overflow: hidden;
 
       box-shadow:
-        0 0 20px rgba(255,23,68,0.08);
+        0 0 20px
+        rgba(255,23,68,0.08);
     }
 
 
     .launcher-progress {
 
       width: 0%;
+
       height: 100%;
 
       border-radius: 20px;
 
       background:
-
         linear-gradient(
           90deg,
           #ff003c,
@@ -415,9 +491,7 @@
       background-size: 300% 100%;
 
       animation:
-
-        launcherLoading
-        4.6s
+        launcherLoading 4.6s
         cubic-bezier(.2,.8,.2,1)
         forwards,
 
@@ -427,9 +501,9 @@
         infinite;
 
       box-shadow:
-
         0 0 15px #ff1744,
-        0 0 30px rgba(255,23,68,0.5);
+        0 0 30px
+        rgba(255,23,68,0.5);
     }
 
 
@@ -454,19 +528,23 @@
       }
 
       15% {
-        width: 18%;
+        width: 15%;
       }
 
-      40% {
-        width: 47%;
+      30% {
+        width: 33%;
       }
 
-      65% {
-        width: 72%;
+      50% {
+        width: 55%;
+      }
+
+      70% {
+        width: 73%;
       }
 
       85% {
-        width: 91%;
+        width: 89%;
       }
 
       100% {
@@ -488,7 +566,7 @@
     @keyframes launcherRGB {
 
       to {
-        background-position: 300% center;
+        background-position: 400% center;
       }
 
     }
@@ -527,7 +605,7 @@
     @keyframes launcherTextPulse {
 
       50% {
-        opacity: 0.45;
+        opacity: 0.4;
       }
 
     }
@@ -544,13 +622,14 @@
     }
 
 
-    /* =====================================================
-       WELCOME SCREEN
-    ===================================================== */
+    /* =========================================================
+       SECOND WELCOME INTRO
+    ========================================================= */
 
     .welcome-screen {
 
       position: fixed;
+
       inset: 0;
 
       z-index: 9999;
@@ -561,30 +640,28 @@
       justify-content: center;
 
       background:
-
         radial-gradient(
           circle at center,
           rgba(255, 0, 55, 0.14),
           transparent 35%
         ),
-
         #020204;
 
       opacity: 0;
+
       visibility: hidden;
 
       animation:
-
         welcomeShow
         0.5s
         ease
-        5.0s
+        5.1s
         forwards,
 
         welcomeFadeOut
-        0.8s
+        0.9s
         ease
-        7.8s
+        8s
         forwards;
     }
 
@@ -599,7 +676,7 @@
         welcomeZoom
         1s
         ease
-        5.0s
+        5.1s
         both;
     }
 
@@ -619,7 +696,8 @@
       margin-bottom: 20px;
 
       text-shadow:
-        0 0 15px rgba(255,23,68,0.8);
+        0 0 15px
+        rgba(255,23,68,0.8);
     }
 
 
@@ -635,25 +713,22 @@
       letter-spacing: 2px;
 
       background:
-
         linear-gradient(
           90deg,
           #ffffff,
           #ff1744,
           #ff6d00,
+          #7b00ff,
           #ffffff
         );
 
-      background-size: 250% auto;
+      background-size: 300% auto;
 
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
       animation:
-        welcomeRGB
-        2s
-        linear
-        infinite;
+        welcomeRGB 2s linear infinite;
     }
 
 
@@ -691,16 +766,19 @@
       display: block;
 
       width: 0%;
+
       height: 100%;
 
       background:
-
         linear-gradient(
           90deg,
           #ff003c,
           #ff7a00,
-          #7b00ff
+          #7b00ff,
+          #00c8ff
         );
+
+      background-size: 300% 100%;
 
       box-shadow:
         0 0 15px #ff1744;
@@ -709,7 +787,7 @@
         loading
         2.5s
         ease
-        5.1s
+        5.2s
         forwards;
     }
 
@@ -719,6 +797,7 @@
       to {
 
         opacity: 1;
+
         visibility: visible;
 
       }
@@ -731,14 +810,18 @@
       from {
 
         opacity: 0;
-        transform: scale(0.8);
+
+        transform:
+          scale(0.75);
 
       }
 
       to {
 
         opacity: 1;
-        transform: scale(1);
+
+        transform:
+          scale(1);
 
       }
 
@@ -750,7 +833,7 @@
       to {
 
         background-position:
-          250% center;
+          300% center;
 
       }
 
@@ -773,7 +856,9 @@
       to {
 
         opacity: 0;
+
         visibility: hidden;
+
         pointer-events: none;
 
       }
@@ -781,9 +866,9 @@
     }
 
 
-    /* =====================================================
+    /* =========================================================
        NAVBAR
-    ===================================================== */
+    ========================================================= */
 
     nav {
 
@@ -810,16 +895,20 @@
         blur(18px);
 
       border-bottom:
-        1px solid rgba(255,23,68,0.14);
+        1px solid
+        rgba(255,23,68,0.14);
 
       box-shadow:
-        0 8px 30px rgba(0,0,0,0.45);
+        0 8px 30px
+        rgba(0,0,0,0.45);
     }
 
 
     .logo {
 
-      font-family: "Orbitron", sans-serif;
+      font-family:
+        "Orbitron",
+        sans-serif;
 
       font-size: 25px;
 
@@ -828,15 +917,15 @@
       letter-spacing: 2px;
 
       background:
-
         linear-gradient(
           90deg,
           #ff1744,
           #ff6d00,
+          #7b00ff,
           #ff1744
         );
 
-      background-size: 200% auto;
+      background-size: 300% auto;
 
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -849,7 +938,8 @@
 
       filter:
         drop-shadow(
-          0 0 8px rgba(255,0,60,0.4)
+          0 0 8px
+          rgba(255,0,60,0.4)
         );
     }
 
@@ -857,7 +947,10 @@
     @keyframes logoRGB {
 
       to {
-        background-position: 200% center;
+
+        background-position:
+          300% center;
+
       }
 
     }
@@ -879,7 +972,9 @@
 
       text-decoration: none;
 
-      font-family: "Orbitron", sans-serif;
+      font-family:
+        "Orbitron",
+        sans-serif;
 
       font-size: 11px;
 
@@ -900,9 +995,11 @@
       position: absolute;
 
       left: 0;
+
       bottom: -8px;
 
       width: 0;
+
       height: 2px;
 
       background: #ff1744;
@@ -919,19 +1016,21 @@
       color: #fff;
 
       text-shadow:
-        0 0 10px rgba(255,23,68,0.8);
+        0 0 10px
+        rgba(255,23,68,0.8);
     }
 
 
     nav ul li a:hover::after {
 
       width: 100%;
+
     }
 
 
-    /* =====================================================
+    /* =========================================================
        HERO
-    ===================================================== */
+    ========================================================= */
 
     .hero {
 
@@ -940,11 +1039,13 @@
       display: flex;
 
       align-items: center;
+
       justify-content: center;
 
       text-align: center;
 
-      padding: 100px 20px 80px;
+      padding:
+        100px 20px 80px;
 
       position: relative;
     }
@@ -957,19 +1058,21 @@
       position: absolute;
 
       width: 520px;
+
       height: 520px;
 
       border:
-        1px solid rgba(255,23,68,0.08);
+        1px solid
+        rgba(255,23,68,0.08);
 
       border-radius: 50%;
 
       box-shadow:
+        0 0 80px
+        rgba(255,23,68,0.05),
 
-        0 0 80px rgba(255,23,68,0.05),
-
-        inset
-        0 0 80px rgba(120,0,255,0.04);
+        inset 0 0 80px
+        rgba(120,0,255,0.04);
 
       animation:
         heroCircle
@@ -984,15 +1087,19 @@
     @keyframes heroCircle {
 
       from {
+
         transform:
           rotate(0deg)
           scale(1);
+
       }
 
       to {
+
         transform:
           rotate(360deg)
           scale(1.08);
+
       }
 
     }
@@ -1017,7 +1124,8 @@
       margin-bottom: 24px;
 
       border:
-        1px solid rgba(255,23,68,0.35);
+        1px solid
+        rgba(255,23,68,0.35);
 
       border-radius: 30px;
 
@@ -1027,7 +1135,8 @@
       color: #ff526f;
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       font-size: 10px;
 
@@ -1036,7 +1145,8 @@
       letter-spacing: 3px;
 
       box-shadow:
-        0 0 18px rgba(255,23,68,0.08);
+        0 0 18px
+        rgba(255,23,68,0.08);
 
       animation:
         tagPulse
@@ -1051,7 +1161,8 @@
       50% {
 
         box-shadow:
-          0 0 30px rgba(255,23,68,0.18);
+          0 0 30px
+          rgba(255,23,68,0.18);
 
       }
 
@@ -1061,7 +1172,8 @@
     .hero h1 {
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       font-size:
         clamp(45px, 8vw, 95px);
@@ -1073,16 +1185,16 @@
       font-weight: 900;
 
       background:
-
         linear-gradient(
           90deg,
           #ffffff,
           #ff1744,
           #ff6d00,
+          #7b00ff,
           #ffffff
         );
 
-      background-size: 250% auto;
+      background-size: 300% auto;
 
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -1095,7 +1207,8 @@
 
       filter:
         drop-shadow(
-          0 0 20px rgba(255,23,68,0.2)
+          0 0 20px
+          rgba(255,23,68,0.2)
         );
     }
 
@@ -1105,7 +1218,7 @@
       to {
 
         background-position:
-          250% center;
+          300% center;
 
       }
 
@@ -1126,15 +1239,15 @@
     }
 
 
-    /* =====================================================
-       SEARCH AREA
-    ===================================================== */
+    /* =========================================================
+       SEARCH PANEL
+    ========================================================= */
 
     .search-wrapper {
 
       width: 90%;
 
-      max-width: 950px;
+      max-width: 900px;
 
       margin:
         -20px auto 65px;
@@ -1142,6 +1255,32 @@
       position: relative;
 
       z-index: 5;
+
+      animation:
+        searchFloat
+        5s
+        ease-in-out
+        infinite;
+    }
+
+
+    @keyframes searchFloat {
+
+      0%,
+      100% {
+
+        transform:
+          translateY(0);
+
+      }
+
+      50% {
+
+        transform:
+          translateY(-4px);
+
+      }
+
     }
 
 
@@ -1162,7 +1301,6 @@
       border-radius: 16px;
 
       background:
-
         linear-gradient(
           90deg,
           #ff003c,
@@ -1189,13 +1327,17 @@
     @keyframes borderRGB {
 
       0% {
+
         background-position:
           0% center;
+
       }
 
       100% {
+
         background-position:
           300% center;
+
       }
 
     }
@@ -1206,7 +1348,7 @@
       width: 100%;
 
       padding:
-        20px 24px;
+        21px 24px;
 
       border-radius: 14px;
 
@@ -1219,36 +1361,43 @@
       outline: none;
 
       font-family:
-        "Rajdhani", sans-serif;
+        "Rajdhani",
+        sans-serif;
 
-      font-size: 16px;
+      font-size: 17px;
 
       font-weight: 600;
 
       letter-spacing: 0.5px;
 
-      transition: 0.25s;
+      transition: 0.3s;
     }
 
 
     .search-box:focus {
 
       box-shadow:
-        0 0 25px rgba(255,23,68,0.18);
+        0 0 30px
+        rgba(255,23,68,0.2),
+
+        inset 0 0 20px
+        rgba(255,23,68,0.03);
+
+      transform:
+        scale(1.005);
     }
 
 
     .search-box::placeholder {
 
       color: #666;
+
     }
 
 
-    /* =====================================================
+    /* =========================================================
        PLAYER UID + TEAMCODE
-       DESKTOP = SIDE BY SIDE
-       MOBILE = VERTICAL
-    ===================================================== */
+    ========================================================= */
 
     .panel-searches {
 
@@ -1280,7 +1429,6 @@
       border-radius: 11px;
 
       background:
-
         linear-gradient(
           90deg,
           #ff1744,
@@ -1306,7 +1454,7 @@
       width: 100%;
 
       padding:
-        14px 17px;
+        15px 17px;
 
       border: 0;
 
@@ -1319,23 +1467,38 @@
       outline: none;
 
       font-family:
-        "Rajdhani", sans-serif;
+        "Rajdhani",
+        sans-serif;
 
       font-size: 14px;
 
       font-weight: 600;
+
+      transition: 0.3s;
+    }
+
+
+    .small-search input:focus {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 0 25px
+        rgba(255,23,68,0.15);
     }
 
 
     .small-search input::placeholder {
 
       color: #666;
+
     }
 
 
-    /* =====================================================
-       SECTIONS
-    ===================================================== */
+    /* =========================================================
+       SECTION
+    ========================================================= */
 
     section {
 
@@ -1360,7 +1523,8 @@
     .section-title h2 {
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       font-size: 28px;
 
@@ -1378,9 +1542,9 @@
     }
 
 
-    /* =====================================================
+    /* =========================================================
        CATEGORY GRID
-    ===================================================== */
+    ========================================================= */
 
     .categories {
 
@@ -1405,7 +1569,6 @@
       border-radius: 18px;
 
       background:
-
         linear-gradient(
           145deg,
           rgba(255,255,255,0.055),
@@ -1413,16 +1576,21 @@
         );
 
       border:
-        1px solid rgba(255,255,255,0.07);
+        1px solid
+        rgba(255,255,255,0.07);
 
       text-align: center;
 
-      transition: 0.35s;
+      transition:
+        transform 0.35s,
+        border-color 0.35s,
+        box-shadow 0.35s;
 
       overflow: hidden;
 
       box-shadow:
-        0 15px 45px rgba(0,0,0,0.25);
+        0 15px 45px
+        rgba(0,0,0,0.25);
     }
 
 
@@ -1439,7 +1607,6 @@
       padding: 1px;
 
       background:
-
         linear-gradient(
           135deg,
           transparent 35%,
@@ -1468,10 +1635,10 @@
       position: absolute;
 
       width: 150px;
+
       height: 150px;
 
       background:
-
         radial-gradient(
           circle,
           rgba(255,23,68,0.14),
@@ -1481,6 +1648,7 @@
       filter: blur(20px);
 
       top: -65px;
+
       right: -50px;
 
       border-radius: 50%;
@@ -1498,10 +1666,11 @@
         rgba(255,23,68,0.35);
 
       box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.5),
 
-        0 20px 50px rgba(0,0,0,0.5),
-
-        0 0 30px rgba(255,23,68,0.09);
+        0 0 30px
+        rgba(255,23,68,0.09);
     }
 
 
@@ -1520,15 +1689,27 @@
 
       filter:
         drop-shadow(
-          0 0 8px rgba(255,255,255,0.12)
+          0 0 8px
+          rgba(255,255,255,0.12)
         );
+
+      transition: 0.3s;
+    }
+
+
+    .category:hover .category-icon {
+
+      transform:
+        scale(1.12)
+        rotate(-4deg);
     }
 
 
     .category h3 {
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       font-size: 14px;
 
@@ -1556,7 +1737,6 @@
       border-radius: 7px;
 
       background:
-
         linear-gradient(
           90deg,
           #d60035,
@@ -1567,7 +1747,8 @@
       color: white;
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       font-size: 9px;
 
@@ -1580,7 +1761,8 @@
       transition: 0.25s;
 
       box-shadow:
-        0 0 15px rgba(255,23,68,0.16);
+        0 0 15px
+        rgba(255,23,68,0.16);
     }
 
 
@@ -1590,13 +1772,14 @@
         scale(1.06);
 
       box-shadow:
-        0 0 25px rgba(255,23,68,0.35);
+        0 0 25px
+        rgba(255,23,68,0.35);
     }
 
 
-    /* =====================================================
+    /* =========================================================
        COLLECTION
-    ===================================================== */
+    ========================================================= */
 
     #collectionSection {
 
@@ -1608,7 +1791,8 @@
 
       display: flex;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
       align-items: center;
 
@@ -1621,7 +1805,8 @@
     .collection-header h2 {
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       font-size: 25px;
     }
@@ -1630,7 +1815,8 @@
     .back-btn {
 
       border:
-        1px solid rgba(255,23,68,0.35);
+        1px solid
+        rgba(255,23,68,0.35);
 
       background:
         rgba(255,23,68,0.06);
@@ -1645,15 +1831,16 @@
       cursor: pointer;
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       font-size: 9px;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        EMOTE GRID
-    ===================================================== */
+    ========================================================= */
 
     .emote-grid {
 
@@ -1669,7 +1856,8 @@
     .emote-card {
 
       border:
-        1px solid rgba(255,255,255,0.07);
+        1px solid
+        rgba(255,255,255,0.07);
 
       background:
         rgba(255,255,255,0.025);
@@ -1693,10 +1881,11 @@
         rgba(255,23,68,0.4);
 
       box-shadow:
+        0 15px 35px
+        rgba(0,0,0,0.4),
 
-        0 15px 35px rgba(0,0,0,0.4),
-
-        0 0 25px rgba(255,23,68,0.08);
+        0 0 25px
+        rgba(255,23,68,0.08);
     }
 
 
@@ -1713,7 +1902,6 @@
       font-size: 60px;
 
       background:
-
         radial-gradient(
           circle,
           rgba(255,23,68,0.12),
@@ -1721,7 +1909,8 @@
         );
 
       border-bottom:
-        1px solid rgba(255,255,255,0.06);
+        1px solid
+        rgba(255,255,255,0.06);
     }
 
 
@@ -1753,7 +1942,8 @@
 
       margin-top: 12px;
 
-      padding: 5px 8px;
+      padding:
+        5px 8px;
 
       border-radius: 5px;
 
@@ -1770,9 +1960,9 @@
     }
 
 
-    /* =====================================================
+    /* =========================================================
        ABOUT
-    ===================================================== */
+    ========================================================= */
 
     .about-box {
 
@@ -1780,34 +1970,74 @@
 
       margin: auto;
 
-      padding: 40px;
+      padding: 45px;
 
-      border-radius: 18px;
+      border-radius: 20px;
 
       background:
-
         linear-gradient(
           145deg,
           rgba(255,255,255,0.045),
-          rgba(255,255,255,0.015)
+          rgba(255,255,255,0.012)
         );
 
       border:
-        1px solid rgba(255,255,255,0.08);
+        1px solid
+        rgba(255,255,255,0.08);
 
       text-align: center;
 
       box-shadow:
-        0 20px 60px rgba(0,0,0,0.35);
+        0 20px 60px
+        rgba(0,0,0,0.35);
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+
+    .about-box::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 250px;
+
+      height: 250px;
+
+      top: -130px;
+
+      left: 50%;
+
+      transform:
+        translateX(-50%);
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(255,23,68,0.14),
+          transparent 65%
+        );
+
+      filter: blur(25px);
+
+      pointer-events: none;
     }
 
 
     .about-box h2 {
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       margin-bottom: 18px;
+
+      position: relative;
+
+      z-index: 1;
     }
 
 
@@ -1818,30 +2048,55 @@
       line-height: 1.9;
 
       font-size: 14px;
+
+      position: relative;
+
+      z-index: 1;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        CREATOR PROFILE
-    ===================================================== */
+    ========================================================= */
 
     .creator-profile {
 
-      margin-top: 28px;
+      max-width: 900px;
 
-      padding: 25px;
+      margin:
+        25px auto 0;
 
-      border-radius: 15px;
+      padding: 30px;
+
+      display: grid;
+
+      grid-template-columns:
+        110px 1fr;
+
+      gap: 25px;
+
+      align-items: center;
+
+      border-radius: 18px;
 
       background:
-        rgba(0,0,0,0.35);
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.04),
+          rgba(255,255,255,0.012)
+        );
 
       border:
-        1px solid rgba(255,23,68,0.18);
+        1px solid
+        rgba(255,23,68,0.18);
 
       position: relative;
 
       overflow: hidden;
+
+      box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.3);
     }
 
 
@@ -1851,76 +2106,185 @@
 
       position: absolute;
 
-      top: 0;
-      left: -100%;
-
-      width: 100%;
-      height: 1px;
+      inset: 0;
 
       background:
-
         linear-gradient(
-          90deg,
+          120deg,
           transparent,
-          #ff1744,
-          #7b00ff,
+          rgba(255,23,68,0.06),
           transparent
         );
 
+      transform:
+        translateX(-100%);
+
       animation:
-        profileLine
-        4s
-        linear
+        creatorShine
+        5s
+        ease-in-out
         infinite;
     }
 
 
-    @keyframes profileLine {
+    @keyframes creatorShine {
 
-      to {
-        left: 100%;
+      0%,
+      55% {
+
+        transform:
+          translateX(-100%);
+
       }
 
+      75%,
+      100% {
+
+        transform:
+          translateX(100%);
+
+      }
+
+    }
+
+
+    .creator-avatar {
+
+      width: 100px;
+
+      height: 100px;
+
+      border-radius: 20px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background:
+        linear-gradient(
+          145deg,
+          #17171d,
+          #060609
+        );
+
+      border:
+        1px solid
+        rgba(255,23,68,0.4);
+
+      font-family:
+        "Orbitron",
+        sans-serif;
+
+      font-size: 35px;
+
+      font-weight: 900;
+
+      color: #ff1744;
+
+      box-shadow:
+        0 0 25px
+        rgba(255,23,68,0.12),
+
+        inset 0 0 25px
+        rgba(255,23,68,0.04);
+
+      position: relative;
+
+      z-index: 1;
+
+      animation:
+        avatarPulse
+        3s
+        ease-in-out
+        infinite;
+    }
+
+
+    @keyframes avatarPulse {
+
+      50% {
+
+        box-shadow:
+          0 0 35px
+          rgba(255,23,68,0.22),
+
+          inset 0 0 30px
+          rgba(255,23,68,0.07);
+
+      }
+
+    }
+
+
+    .creator-info {
+
+      position: relative;
+
+      z-index: 1;
     }
 
 
     .creator-label {
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
+
+      font-size: 9px;
 
       color: #ff1744;
 
-      font-size: 10px;
-
       letter-spacing: 3px;
 
-      margin-bottom: 18px;
+      margin-bottom: 8px;
     }
 
 
     .creator-name {
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       font-size: 24px;
 
-      font-weight: 900;
+      font-weight: 800;
+
+      margin-bottom: 15px;
 
       background:
-
         linear-gradient(
           90deg,
           #fff,
           #ff1744,
-          #ff6d00
+          #ff6d00,
+          #fff
         );
 
-      -webkit-background-clip: text;
+      background-size: 250% auto;
 
-      -webkit-text-fill-color:
-        transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      animation:
+        creatorNameRGB
+        4s
+        linear
+        infinite;
+    }
+
+
+    @keyframes creatorNameRGB {
+
+      to {
+
+        background-position:
+          250% center;
+
+      }
+
     }
 
 
@@ -1929,101 +2293,101 @@
       display: grid;
 
       grid-template-columns:
-        repeat(2, 1fr);
+        1fr 1fr;
 
-      gap: 12px;
-
-      margin-top: 20px;
+      gap: 10px;
     }
 
 
-    .creator-item {
+    .creator-detail {
 
-      padding: 13px;
+      padding:
+        10px 12px;
 
-      border-radius: 9px;
+      border-radius: 8px;
 
       background:
         rgba(255,255,255,0.025);
 
       border:
-        1px solid rgba(255,255,255,0.06);
+        1px solid
+        rgba(255,255,255,0.05);
 
-      text-align: left;
+      font-size: 12px;
+
+      color: #777;
     }
 
 
-    .creator-item span {
-
-      display: block;
-
-      color: #555;
-
-      font-size: 9px;
-
-      font-family:
-        "Orbitron", sans-serif;
-
-      letter-spacing: 1px;
-
-      margin-bottom: 5px;
-    }
-
-
-    .creator-item strong {
+    .creator-detail strong {
 
       color: #ddd;
 
-      font-size: 13px;
+      display: block;
+
+      margin-bottom: 3px;
+
+      font-size: 10px;
+
+      letter-spacing: 1px;
     }
 
 
-    /* =====================================================
-       DEVELOPMENT NOTICE
-    ===================================================== */
+    /* =========================================================
+       PROJECT STATUS
+    ========================================================= */
 
-    .development-notice {
+    .project-status {
 
-      margin-top: 25px;
+      max-width: 900px;
 
-      padding: 18px;
+      margin:
+        18px auto 0;
+
+      padding:
+        17px 20px;
 
       border-radius: 12px;
 
       background:
-        rgba(255,23,68,0.035);
+        rgba(255,174,0,0.035);
 
       border:
-        1px solid rgba(255,23,68,0.15);
+        1px solid
+        rgba(255,174,0,0.15);
 
       color: #777;
 
-      font-size: 13px;
+      font-size: 12px;
 
       line-height: 1.7;
+
+      text-align: center;
     }
 
 
-    .development-notice strong {
+    .project-status strong {
 
-      color: #ff5270;
+      color: #ffb000;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        FOOTER
-    ===================================================== */
+    ========================================================= */
 
     footer {
 
       margin-top: 70px;
 
-      padding: 35px 20px;
+      padding:
+        35px 20px;
 
       text-align: center;
 
       border-top:
-        1px solid rgba(255,255,255,0.06);
+        1px solid
+        rgba(255,255,255,0.06);
 
       color: #555;
 
@@ -2039,13 +2403,14 @@
       color: #ff1744;
 
       text-shadow:
-        0 0 10px rgba(255,23,68,0.4);
+        0 0 10px
+        rgba(255,23,68,0.4);
     }
 
 
-    /* =====================================================
-       POPUP
-    ===================================================== */
+    /* =========================================================
+       COMING SOON POPUP
+    ========================================================= */
 
     .popup {
 
@@ -2083,7 +2448,6 @@
       border-radius: 20px;
 
       background:
-
         linear-gradient(
           145deg,
           #15151a,
@@ -2091,15 +2455,17 @@
         );
 
       border:
-        1px solid rgba(255,23,68,0.35);
+        1px solid
+        rgba(255,23,68,0.35);
 
       text-align: center;
 
       box-shadow:
+        0 25px 80px
+        rgba(0,0,0,0.7),
 
-        0 25px 80px rgba(0,0,0,0.7),
-
-        0 0 45px rgba(255,23,68,0.1);
+        0 0 45px
+        rgba(255,23,68,0.1);
 
       animation:
         popupIn
@@ -2139,7 +2505,8 @@
 
       filter:
         drop-shadow(
-          0 0 15px rgba(255,23,68,0.4)
+          0 0 15px
+          rgba(255,23,68,0.4)
         );
     }
 
@@ -2149,12 +2516,14 @@
       margin-bottom: 12px;
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       color: #ff1744;
 
       text-shadow:
-        0 0 15px rgba(255,23,68,0.35);
+        0 0 15px
+        rgba(255,23,68,0.35);
     }
 
 
@@ -2180,7 +2549,6 @@
       border-radius: 8px;
 
       background:
-
         linear-gradient(
           90deg,
           #d60035,
@@ -2191,7 +2559,8 @@
       color: white;
 
       font-family:
-        "Orbitron", sans-serif;
+        "Orbitron",
+        sans-serif;
 
       font-size: 10px;
 
@@ -2211,13 +2580,42 @@
         scale(1.05);
 
       box-shadow:
-        0 0 20px rgba(255,23,68,0.35);
+        0 0 20px
+        rgba(255,23,68,0.35);
     }
 
 
-    /* =====================================================
+    /* =========================================================
+       DESKTOP POLISH
+    ========================================================= */
+
+    @media (min-width: 1001px) {
+
+      .search-wrapper {
+
+        max-width: 950px;
+
+      }
+
+      .search-box {
+
+        text-align: left;
+
+      }
+
+      .panel-searches {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+    }
+
+
+    /* =========================================================
        TABLET
-    ===================================================== */
+    ========================================================= */
 
     @media (max-width: 1000px) {
 
@@ -2225,21 +2623,22 @@
 
         grid-template-columns:
           repeat(2, 1fr);
-      }
 
+      }
 
       .emote-grid {
 
         grid-template-columns:
           repeat(2, 1fr);
+
       }
 
     }
 
 
-    /* =====================================================
+    /* =========================================================
        MOBILE
-    ===================================================== */
+    ========================================================= */
 
     @media (max-width: 600px) {
 
@@ -2247,24 +2646,28 @@
 
         padding:
           0 18px;
+
       }
 
 
       .logo {
 
         font-size: 19px;
+
       }
 
 
       nav ul {
 
         gap: 12px;
+
       }
 
 
       nav ul li a {
 
         font-size: 8px;
+
       }
 
 
@@ -2274,19 +2677,23 @@
 
         padding:
           70px 20px;
+
       }
 
 
       .hero p {
 
         font-size: 14px;
+
       }
 
 
       .hero::before {
 
         width: 330px;
+
         height: 330px;
+
       }
 
 
@@ -2296,20 +2703,49 @@
 
         width: 92%;
 
-        margin-bottom:
-          30px;
+        margin:
+          -15px auto 30px;
+
       }
 
 
-      /* MOBILE UID + TEAMCODE
-         UP TO DOWN */
+      .search-box {
+
+        padding:
+          17px 18px;
+
+        font-size: 15px;
+
+      }
+
+
+      /* MOBILE = UP TO DOWN */
 
       .panel-searches {
 
-        grid-template-columns:
-          1fr;
+        display: flex;
+
+        flex-direction: column;
 
         gap: 12px;
+
+        margin-top: 14px;
+
+      }
+
+
+      .small-search {
+
+        width: 100%;
+
+      }
+
+
+      .small-search input {
+
+        padding:
+          15px 16px;
+
       }
 
 
@@ -2319,6 +2755,7 @@
 
         padding:
           50px 0;
+
       }
 
 
@@ -2326,6 +2763,7 @@
 
         grid-template-columns:
           1fr;
+
       }
 
 
@@ -2333,16 +2771,17 @@
 
         grid-template-columns:
           1fr;
+
       }
 
 
       .collection-header {
 
-        flex-direction:
-          column;
+        flex-direction: column;
 
         align-items:
           flex-start;
+
       }
 
 
@@ -2350,6 +2789,29 @@
 
         padding:
           28px 20px;
+
+      }
+
+
+      /* CREATOR MOBILE */
+
+      .creator-profile {
+
+        grid-template-columns:
+          1fr;
+
+        text-align: center;
+
+        padding:
+          28px 20px;
+
+      }
+
+
+      .creator-avatar {
+
+        margin: auto;
+
       }
 
 
@@ -2357,22 +2819,47 @@
 
         grid-template-columns:
           1fr;
+
+      }
+
+
+      .creator-name {
+
+        font-size: 20px;
+
+      }
+
+
+      .project-status {
+
+        padding:
+          15px;
+
       }
 
 
       .welcome-title {
 
         font-size: 38px;
+
       }
 
 
-      .launcher-logo {
+      .welcome-mini {
 
-        font-size:
-          58px;
+        font-size: 8px;
 
-        letter-spacing:
-          2px;
+        letter-spacing: 3px;
+
+      }
+
+
+      .welcome-sub {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
       }
 
 
@@ -2380,17 +2867,87 @@
 
         font-size: 8px;
 
-        letter-spacing:
-          4px;
+        letter-spacing: 4px;
+
       }
 
 
       .launcher-status {
 
-        margin-top:
-          45px;
+        margin-top: 40px;
 
         font-size: 8px;
+
+        letter-spacing: 2px;
+
+      }
+
+
+      .launcher-loader {
+
+        width:
+          75vw;
+
+      }
+
+    }
+
+
+    /* =========================================================
+       VERY SMALL PHONES
+    ========================================================= */
+
+    @media (max-width: 380px) {
+
+      nav ul {
+
+        gap: 8px;
+
+      }
+
+
+      nav ul li a {
+
+        font-size: 7px;
+
+      }
+
+
+      .launcher-logo {
+
+        font-size: 48px;
+
+      }
+
+
+      .welcome-title {
+
+        font-size: 31px;
+
+      }
+
+    }
+
+
+    /* =========================================================
+       REDUCE MOTION ACCESSIBILITY
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration:
+          0.01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        scroll-behavior:
+          auto !important;
+
       }
 
     }
@@ -2403,20 +2960,21 @@
 <body>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        RGB TOP LINE
-  ===================================================== -->
+  ========================================================= -->
 
   <div class="rgb-line"></div>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        REXUS GAMING LAUNCHER
-  ===================================================== -->
+  ========================================================= -->
 
   <div
     class="launcher-screen"
-    id="launcherScreen">
+    id="launcherScreen"
+  >
 
     <div class="launcher-bg"></div>
 
@@ -2432,27 +2990,25 @@
 
       <div
         class="launcher-status"
-        id="launcherStatus">
-
+        id="launcherStatus"
+      >
         POWERING UP...
-
       </div>
 
       <div class="launcher-loader">
 
         <div
           class="launcher-progress"
-          id="launcherProgress">
-        </div>
+          id="launcherProgress"
+        ></div>
 
       </div>
 
       <div
         class="launcher-percent"
-        id="launcherPercent">
-
+        id="launcherPercent"
+      >
         0%
-
       </div>
 
     </div>
@@ -2460,13 +3016,14 @@
   </div>
 
 
-  <!-- =====================================================
-       WELCOME INTRO
-  ===================================================== -->
+  <!-- =========================================================
+       SECOND WELCOME INTRO
+  ========================================================= -->
 
   <div
     class="welcome-screen"
-    id="welcomeScreen">
+    id="welcomeScreen"
+  >
 
     <div class="welcome-content">
 
@@ -2491,9 +3048,9 @@
   </div>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        NAVBAR
-  ===================================================== -->
+  ========================================================= -->
 
   <nav>
 
@@ -2526,13 +3083,14 @@
   </nav>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        HERO
-  ===================================================== -->
+  ========================================================= -->
 
   <header
     class="hero"
-    id="home">
+    id="home"
+  >
 
     <div class="hero-content">
 
@@ -2555,9 +3113,9 @@
   </header>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        SEARCH PANEL
-  ===================================================== -->
+  ========================================================= -->
 
   <div class="search-wrapper">
 
@@ -2571,7 +3129,7 @@
         id="searchInput"
         class="search-box"
         placeholder="🔎  Search Emotes..."
-        autocomplete="off">
+      >
 
     </div>
 
@@ -2580,15 +3138,13 @@
 
     <div class="panel-searches">
 
-
       <div class="small-search">
 
         <input
           type="text"
           id="playerUID"
           placeholder="👤  Player UID"
-          inputmode="numeric"
-          autocomplete="off">
+        >
 
       </div>
 
@@ -2599,19 +3155,18 @@
           type="text"
           id="teamCode"
           placeholder="🎮  Teamcode"
-          autocomplete="off">
+        >
 
       </div>
-
 
     </div>
 
   </div>
 
 
-  <!-- =====================================================
-       EMOTE CATEGORIES
-  ===================================================== -->
+  <!-- =========================================================
+       CATEGORIES
+  ========================================================= -->
 
   <section id="emotes">
 
@@ -2630,7 +3185,8 @@
 
     <div
       class="categories"
-      id="categoryGrid">
+      id="categoryGrid"
+    >
 
 
       <!-- RARE -->
@@ -2651,10 +3207,9 @@
 
         <button
           class="view-btn"
-          onclick="openCategory('Rare Emotes')">
-
+          onclick="openCategory('Rare Emotes')"
+        >
           VIEW EMOTES
-
         </button>
 
       </div>
@@ -2678,10 +3233,9 @@
 
         <button
           class="view-btn"
-          onclick="openCategory('Max Gun Emotes')">
-
+          onclick="openCategory('Max Gun Emotes')"
+        >
           VIEW EMOTES
-
         </button>
 
       </div>
@@ -2705,10 +3259,9 @@
 
         <button
           class="view-btn"
-          onclick="openCategory('New Emotes')">
-
+          onclick="openCategory('New Emotes')"
+        >
           VIEW EMOTES
-
         </button>
 
       </div>
@@ -2732,10 +3285,9 @@
 
         <button
           class="view-btn"
-          onclick="openCategory('Squad Emotes')">
-
+          onclick="openCategory('Squad Emotes')"
+        >
           VIEW EMOTES
-
         </button>
 
       </div>
@@ -2759,26 +3311,25 @@
 
         <button
           class="view-btn"
-          onclick="openCategory('Duo Emotes')">
-
+          onclick="openCategory('Duo Emotes')"
+        >
           VIEW EMOTES
-
         </button>
 
       </div>
-
 
     </div>
 
   </section>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        COLLECTION
-  ===================================================== -->
+  ========================================================= -->
 
   <section
-    id="collectionSection">
+    id="collectionSection"
+  >
 
     <div class="collection-header">
 
@@ -2789,21 +3340,21 @@
         </h2>
 
         <p
-          style="color:#666; margin-top:7px;">
-
+          style="
+            color:#666;
+            margin-top:7px;
+          "
+        >
           Fan-made preview collection
-
         </p>
 
       </div>
 
-
       <button
         class="back-btn"
-        onclick="closeCollection()">
-
+        onclick="closeCollection()"
+      >
         ← BACK TO CATEGORIES
-
       </button>
 
     </div>
@@ -2811,15 +3362,15 @@
 
     <div
       class="emote-grid"
-      id="emoteGrid">
-    </div>
+      id="emoteGrid"
+    ></div>
 
   </section>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        ABOUT
-  ===================================================== -->
+  ========================================================= -->
 
   <section id="about">
 
@@ -2830,11 +3381,13 @@
       </h2>
 
       <p>
-        The story behind the project
+        A fan-made gaming project built for the community.
       </p>
 
     </div>
 
+
+    <!-- ABOUT BOX -->
 
     <div class="about-box">
 
@@ -2842,39 +3395,48 @@
         Fan-Made Gaming Project
       </h2>
 
-
       <p>
 
-        ꓣⲉⲭυⲋ is an independent fan-made gaming
-        project created for fun and entertainment.
-        This website is currently under development,
-        so some features and emote collections are
-        not available yet.
+        ꓣⲉⲭυⲋ is an independent fan-made project
+        created for the Free Fire community.
+        This website is made for fun, gaming,
+        exploration and showcasing emote-related content
+        through a modern gaming interface.
 
         <br><br>
 
-        Once the website is fully completed,
-        you will be able to use the available
-        emote features properly through the panel.
+        The website is currently under development
+        and some features are not complete yet.
+        Once the project is fully completed,
+        supported emotes will be available to use
+        through the website's planned features.
 
         <br><br>
 
         This project does not modify game files,
-        game accounts, or provide anti-ban services.
+        game accounts or provide anti-ban services.
         Free Fire and related trademarks belong to
         their respective owners.
 
       </p>
 
+    </div>
 
-      <!-- CREATOR PROFILE -->
 
-      <div class="creator-profile">
+    <!-- CREATOR PROFILE -->
+
+    <div class="creator-profile">
+
+      <div class="creator-avatar">
+        R
+      </div>
+
+
+      <div class="creator-info">
 
         <div class="creator-label">
           CREATOR PROFILE
         </div>
-
 
         <div class="creator-name">
           ꓣⲉⲭυⲋ
@@ -2884,169 +3446,151 @@
         <div class="creator-details">
 
 
-          <div class="creator-item">
-
-            <span>
-              CREATOR
-            </span>
+          <div class="creator-detail">
 
             <strong>
-              Rehan
+              🎮 PROJECT
             </strong>
+
+            Free Fire Emote Panel
 
           </div>
 
 
-          <div class="creator-item">
-
-            <span>
-              PROJECT
-            </span>
+          <div class="creator-detail">
 
             <strong>
-              Free Fire Emote Panel
+              👥 COMMUNITY
             </strong>
+
+            Free Fire Community
 
           </div>
 
 
-          <div class="creator-item">
-
-            <span>
-              PLAYER UID
-            </span>
+          <div class="creator-detail">
 
             <strong>
-              18366453719
+              🆔 PLAYER UID
             </strong>
+
+            18366453719
 
           </div>
 
 
-          <div class="creator-item">
-
-            <span>
-              PROJECT STATUS
-            </span>
+          <div class="creator-detail">
 
             <strong>
-              Under Development
+              🚧 STATUS
             </strong>
 
+            Under Development
+
           </div>
-
-
-        </div>
-
-
-        <div class="development-notice">
-
-          <strong>
-            🚧 DEVELOPMENT NOTICE
-          </strong>
-
-          <br>
-
-          This website is currently being developed
-          for fun. Some features may not work yet.
-          More gaming features and emote functionality
-          will be added as the project becomes complete.
 
         </div>
 
       </div>
+
+    </div>
+
+
+    <!-- PROJECT STATUS -->
+
+    <div class="project-status">
+
+      <strong>
+        🚧 PROJECT STATUS:
+      </strong>
+
+      This website is currently incomplete and
+      continuously being developed.
+      More emotes, features and gaming tools
+      will be added in future updates.
 
     </div>
 
   </section>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        FOOTER
-  ===================================================== -->
+  ========================================================= -->
 
   <footer>
 
     <p>
-
       © 2026
-      <strong>ꓣⲉⲭυⲋ</strong>
-
+      <strong>
+        ꓣⲉⲭυⲋ
+      </strong>
     </p>
 
-
     <p
-      style="margin-top:8px;">
-
+      style="
+        margin-top:8px;
+      "
+    >
       Fan-made website.
       Not affiliated with Garena.
-
     </p>
 
   </footer>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        COMING SOON POPUP
-  ===================================================== -->
+  ========================================================= -->
 
   <div
     class="popup"
-    id="popup">
-
+    id="popup"
+  >
 
     <div class="popup-box">
 
-
       <div
         class="popup-icon"
-        id="popupIcon">
-
+        id="popupIcon"
+      >
         🚧
-
       </div>
 
-
       <h2
-        id="popupTitle">
-
+        id="popupTitle"
+      >
         COMING SOON
-
       </h2>
 
-
       <p
-        id="popupText">
-
+        id="popupText"
+      >
         We are working on this category.
-
       </p>
-
 
       <button
         class="close-btn"
-        onclick="closePopup()">
-
+        onclick="closePopup()"
+      >
         CLOSE
-
       </button>
-
 
     </div>
 
   </div>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        JAVASCRIPT
-  ===================================================== -->
+  ========================================================= -->
 
   <script>
 
 
-    /* =====================================================
+    /* =========================================================
        CATEGORY POPUP
-    ===================================================== */
+    ========================================================= */
 
     function openCategory(category) {
 
@@ -3064,22 +3608,21 @@
       document.getElementById(
         "popupText"
       ).textContent =
-        "We are currently working on " +
+        "We are working on " +
         category +
-        ". This feature will be available when the website is complete.";
+        " for the ꓣⲉⲭυⲋ community.";
 
 
       document.getElementById(
         "popup"
-      ).style.display =
-        "flex";
+      ).style.display = "flex";
 
     }
 
 
-    /* =====================================================
+    /* =========================================================
        CLOSE COLLECTION
-    ===================================================== */
+    ========================================================= */
 
     function closeCollection() {
 
@@ -3098,9 +3641,9 @@
     }
 
 
-    /* =====================================================
+    /* =========================================================
        CLOSE POPUP
-    ===================================================== */
+    ========================================================= */
 
     function closePopup() {
 
@@ -3112,9 +3655,9 @@
     }
 
 
-    /* =====================================================
+    /* =========================================================
        OUTSIDE POPUP CLICK
-    ===================================================== */
+    ========================================================= */
 
     document.getElementById(
       "popup"
@@ -3134,9 +3677,9 @@
     );
 
 
-    /* =====================================================
+    /* =========================================================
        EMOTE SEARCH
-    ===================================================== */
+    ========================================================= */
 
     document.getElementById(
       "searchInput"
@@ -3171,7 +3714,8 @@
               card.style.display =
                 "";
 
-            } else {
+            }
+            else {
 
               card.style.display =
                 "none";
@@ -3185,9 +3729,9 @@
     );
 
 
-    /* =====================================================
+    /* =========================================================
        REXUS GAMING LAUNCHER
-    ===================================================== */
+    ========================================================= */
 
     window.addEventListener(
       "load",
@@ -3220,7 +3764,7 @@
 
           "INITIALIZING EMOTE PANEL...",
 
-          "PREPARING REXUS...",
+          "PREPARING ꓣⲉⲭυⲋ...",
 
           "SYSTEM READY"
 
@@ -3243,7 +3787,7 @@
 
 
               if (
-                progress < 25
+                progress < 20
               ) {
 
                 status.textContent =
@@ -3252,7 +3796,7 @@
               }
 
               else if (
-                progress < 50
+                progress < 40
               ) {
 
                 status.textContent =
@@ -3261,7 +3805,7 @@
               }
 
               else if (
-                progress < 75
+                progress < 65
               ) {
 
                 status.textContent =
@@ -3270,7 +3814,7 @@
               }
 
               else if (
-                progress < 95
+                progress < 90
               ) {
 
                 status.textContent =
@@ -3309,17 +3853,16 @@
               "none";
 
           },
-          5900
+          6200
         );
 
       }
     );
 
 
-    /* =====================================================
+    /* =========================================================
        PLAYER UID
-       DEMO INPUT
-    ===================================================== */
+    ========================================================= */
 
     document.getElementById(
       "playerUID"
@@ -3334,10 +3877,9 @@
     );
 
 
-    /* =====================================================
+    /* =========================================================
        TEAMCODE
-       DEMO INPUT
-    ===================================================== */
+    ========================================================= */
 
     document.getElementById(
       "teamCode"
@@ -3352,8 +3894,33 @@
     );
 
 
+    /* =========================================================
+       INPUT BLUR EFFECT
+    ========================================================= */
+
+    document
+      .querySelectorAll(
+        ".small-search input"
+      )
+      .forEach(
+        function(input) {
+
+          input.addEventListener(
+            "blur",
+            function() {
+
+              this.style.boxShadow =
+                "none";
+
+            }
+          );
+
+        }
+      );
+
+
   </script>
 
-</body>
 
+</body>
 </html>
